@@ -9,7 +9,7 @@ session_token   | string     | not null, indexed, unique
 password_digest | string     | not null
 email           | string     | not null
 description     | text       |
-user_img        | attachment |
+img_url         | string     |
 
 ## tracks
 column name | data type  | details
@@ -19,7 +19,7 @@ user_id     | integer    | not null, foreign key, indexed
 title       | string     | not null
 track_url   | string     | not null
 description | string     |
-track_img   | attachment |
+img_url     | string     |
 
 ## comments
 column name | data type  | details
