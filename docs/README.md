@@ -39,7 +39,7 @@ and seed data:
 
 ## Implementation Timeline (11 days)
 
-### Phase 1: Backend setup, Front End Authentication, Navbar (1 day)
+### Phase 1: Backend setup, Front End Authentication, Navbar (1.5 days)
 Objective: Functioning rails project with front-end auth and navbar
 Components:
 - SessionContainer
@@ -58,7 +58,7 @@ Components:
 - TrackFormContainer
 - TrackForm
 
-### Phase 3: Playbar (2.5 days)
+### Phase 3: Playbar (3.5 days)
 Objective: Tracks can be streamed without interruption
 Components:
 - PlaybarContainer
@@ -74,21 +74,14 @@ Components:
 - UserHeader
 - UserSidebar
 
-### Phase 5: User Show Page (1.5 day)
-Objective: Users have a show page with a track index listing
-Components:
-- UserShowContainer
-- UserHeader
-- UserSidebar
-
-### Phase 6: Splash Page (1 day)
+### Phase 5: Splash Page (1 day)
 Objective: Root splash page renders gif or greeting component
 Components:
 - Splash
 - GreetingContainer
 - Greeting
 
-### Phase 7: Footer / More Styling (1 day)
+### Phase 6: Footer / More Styling (1 day)
 Objective: Add footer component and links for style/perfect
 Components:
 - Footer
