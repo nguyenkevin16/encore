@@ -38,9 +38,9 @@ and seed data:
 [api-endpoints]: ./api-endpoints.md
 [schema]: ./schema.md
 
-## Implementation Timeline (11 days)
+## Implementation Timeline (9 days)
 
-### Phase 1: Backend setup, Front End Authentication, Navbar (1.5 days)
+### Phase 1: Backend setup, Front End Authentication, Navbar (2 days)
 Objective: Functioning rails project with front-end auth and navbar
 Components:
 - SessionContainer
@@ -49,7 +49,7 @@ Components:
 - Nav
 - NavSession
 
-### Phase 2: Tracks Model, API, and components (2.5 days)
+### Phase 2: Tracks Model, API, and components (2 days)
 Objective: Tracks can be created, read, edited, and destroyed through the API
 Components:
 - TrackIndex
@@ -59,7 +59,7 @@ Components:
 - TrackFormContainer
 - TrackForm
 
-### Phase 3: Playbar (3.5 days)
+### Phase 3: Playbar (2 days)
 Objective: Tracks can be streamed without interruption
 Components:
 - PlaybarContainer
@@ -68,7 +68,7 @@ Components:
 - PlayDescription
 - PlayTime
 
-### Phase 4: User Show Page (1.5 day)
+### Phase 4: User Show Page (1 day)
 Objective: Users have a show page with a track index listing
 Components:
 - UserShowContainer
