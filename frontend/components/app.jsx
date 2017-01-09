@@ -1,12 +1,10 @@
 import React from 'react';
 
 const App = ({ children }) => (
-  <div>
-    <h1>
-      Encore
-    </h1>
-
-    { children }
+  <div className='aligner'>
+    <div className='aligner-item'>
+      { children }
+    </div>
   </div>
 );
 

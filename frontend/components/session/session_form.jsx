@@ -41,27 +41,31 @@ class SessionForm extends React.Component {
         return <Link to='/login'/>;
       }
     };
+    const submitButton = formType === '/login' ? 'Login' : 'Create';
 
     return (
       <div className='form'>
         <form className='session-form' onSubmit={ this.handleSubmit }>
-          <h1>{ formHeader }</h1>
-          { linkHeader() }
+          <div className='session-form-header'>
+            <h1>{ formHeader }</h1>
+            { linkHeader() }
+          </div>
 
-          <input onChange={ this.handleChange('username') }
-            value={ this.state.username }
-            placeholder='username'/>
+          <div className='session-form-element'>
+            <input onChange={ this.handleChange('username') }
+              value={ this.state.username }
+              placeholder='username'/>
+          </div>
 
-          <br/>
+          <div className='session-form-element'>
+            <input onChange={ this.handleChange('password') }
+              type='password'
+              value={ this.state.password }
+              placeholder='password'/>
+          </div>
 
-          <input onChange={ this.handleChange('password') }
-            type='password'
-            value={ this.state.password }
-            placeholder='password'/>
-
-          <br/>
-
-          <button>Create!</button>
+          <button type='submit'
+                 className='session-form-button'>{submitButton}</button>
         </form>
       </div>
     );

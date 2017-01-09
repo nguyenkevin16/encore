@@ -1,4 +1,38 @@
-div .form {
-  display: flex
-  border:
+.form {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+
+  padding: 10px;
+  margin: 10px;
+
+  border: 2px solid grey;
+}
+
+.session-form-header {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.session-form-header h1 {
+  font-size: 25px;
+}
+
+.session-form-element {
+  border: 1px solid grey;
+  border-radius: 2px;
+
+  padding: 4px;
+  margin: 15px;
+}
+
+.session-form-button {
+  border: 2px solid grey;
+  border-radius: 2px;
+
+  padding: 5px;
+  margin: 10px;
 }

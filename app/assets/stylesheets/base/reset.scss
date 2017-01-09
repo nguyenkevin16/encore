@@ -13,3 +13,16 @@ label, input, textarea {
   box-sizing: inherit;
   background: transparent;
 }
+
+body, header, h1, a, ul, li,
+h2, p, label, input, textarea {
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #484848;
+}
+
+#root {
+  height: 100%;
+}
