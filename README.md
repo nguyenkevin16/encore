@@ -51,7 +51,8 @@ Components:
 
 ### Phase 2: Tracks Model, API, and components (2 days)
 Objective: Tracks can be created, read, edited, and destroyed through the API
-Components:
+
+>Components:
 - TrackIndex
 - TrackIndexItem
 - TrackShowContainer
@@ -61,7 +62,8 @@ Components:
 
 ### Phase 3: Playbar (2 days)
 Objective: Tracks can be streamed without interruption
-Components:
+
+>Components:
 - PlaybarContainer
 - Playbar
 - PlayButtons
@@ -70,19 +72,22 @@ Components:
 
 ### Phase 4: User Show Page (1 day)
 Objective: Users have a show page with a track index listing
-Components:
+
+>Components:
 - UserShowContainer
 - UserHeader
 - UserSidebar
 
 ### Phase 5: Splash Page (1 day)
 Objective: Root splash page renders gif or greeting component
-Components:
+
+>Components:
 - Splash
 - GreetingContainer
 - Greeting
 
 ### Phase 6: Footer / More Styling (1 day)
 Objective: Add footer component and links for style/perfect
-Components:
+
+>Components:
 - Footer
