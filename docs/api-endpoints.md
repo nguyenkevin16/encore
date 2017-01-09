@@ -34,3 +34,4 @@ Tracks
 Comments
   - GET /api/tracks/:id/comments
   - POST /api/comments
+  - DELETE /api/comments/:comment_id
