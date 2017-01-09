@@ -15,6 +15,7 @@
     createComment { errors: [] },
   }
 
+  <!-- For discover/homepage or User Show Page -->
   tracks: {
     {
       0: {
@@ -37,6 +38,7 @@
     }
   }
 
+  <!-- For use of persistent playbar -->
   current_track: {
     title: '',
     user_id: '',
@@ -46,6 +48,7 @@
     img_url: ''
   }
 
+  <!-- For current track show page only -->
   comments: {
     0: {
       track_id: '',
