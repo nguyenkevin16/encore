@@ -5,6 +5,7 @@ import Modal from 'react-modal';
 import SessionFormHeader from './session_form_header';
 import SessionFormFooter from './session_form_footer';
 import SessionFormInputs from './session_form_inputs';
+import SessionFormErrors from './session_form_errors';
 
 class SessionForm extends React.Component {
   constructor() {
@@ -50,6 +51,7 @@ class SessionForm extends React.Component {
 
           <div className='session-form'>
             <SessionFormHeader formType={formType}/>
+            <SessionFormErrors errors={errors}/>
             <SessionFormInputs formType={formType}
               processForm={this.props.processForm}/>
             <SessionFormFooter formType={formType}/>

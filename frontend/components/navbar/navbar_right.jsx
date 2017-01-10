@@ -8,7 +8,7 @@ const links = url => e => {
 
 const NavbarRight = ({ logout, loggedIn, currentUser }) => {
   const buttons = () => {
-    if (currentUser) {
+    if (loggedIn) {
       return (
         <div className='navbar-right'>
           <button onClick={ logout }>
