@@ -6,10 +6,9 @@ const links = url => e => {
     hashHistory.push(url);
 };
 
-const NavbarRight = ({ logout }) => {
+const NavbarRight = ({ logout, loggedIn, currentUser }) => {
   const buttons = () => {
-    console.log(logout);
-    if (window.currentUser) {
+    if (currentUser) {
       return (
         <div className='navbar-right'>
           <button onClick={ logout }>

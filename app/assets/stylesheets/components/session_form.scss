@@ -35,4 +35,13 @@
 .session-form-button {
   border-radius: 2px;
   padding: 5px;
+
+  background-color: #a7adba;
+  font-weight: 400;
+}
+
+.session-form-button:hover {
+  transition: all 0.4s ease 0s;
+  background-color: #ffeead;
+  color: black;
 }

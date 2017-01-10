@@ -36,7 +36,7 @@ class SessionForm extends React.Component {
         bottom         : 'auto',
         marginRight    : '-50%',
         transform      : 'translate(-50%, -50%)'
-      }
+      },
     };
 
     return (
