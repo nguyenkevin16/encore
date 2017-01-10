@@ -7,15 +7,32 @@
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-}
 
-.session-form-inputs, .session-form-header, .session-form-footer {
   padding: 15px;
   margin: 5px;
+  width: 100%;
 }
 
 .session-form {
-  width: 25%;
-  border: 2px solid black;
+  width: 100%;
+}
+
+.session-form-footer {
+  justify-content: space-between;
+  height: 45px;
+}
+
+.session-form-input {
+  width: 100%;
+}
+
+.session-form-input, .session-form-button {
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+}
+
+.session-form-button {
   border-radius: 2px;
+  padding: 5px;
 }
