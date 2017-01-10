@@ -1,10 +1,10 @@
 import React from 'react';
+import Navbar from './navbar/navbar';
 
 const App = ({ children }) => (
-  <div className='aligner'>
-    <div className='aligner-item'>
-      { children }
-    </div>
+  <div>
+    <Navbar />
+    { children }
   </div>
 );
 
