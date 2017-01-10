@@ -4,12 +4,13 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 import App from './app';
 import SessionFormContainer from './session/session_form_container';
-import GreetingContainer from './greeting/greeting_container';
+import Splash from './splash/splash';
 
 const Root = ({ store }) => (
   <Provider store={store}>
     <Router history={hashHistory}>
       <Route path='/' component={App}>
+        <IndexRoute component={Splash}/>
         <Route path='/login' component={SessionFormContainer}/>
         <Route path='/signup' component={SessionFormContainer}/>
       </Route>
