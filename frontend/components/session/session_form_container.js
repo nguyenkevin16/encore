@@ -8,13 +8,13 @@ const mapStateToProps = ({ loggedIn, errors }) => ({
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  const formTypeString = ownProps.location.pathname;
+  const formType = ownProps.location.pathname;
   const formToProcess =
-    formTypeString === '/login' ?
+    formType === '/login' ?
     (user) => dispatch(login(user)) : (user) => dispatch(signup(user));
 
   return ({
-    formType: formTypeString,
+    formType: formType,
     processForm: formToProcess
   });
 };

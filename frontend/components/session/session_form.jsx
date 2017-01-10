@@ -1,79 +1,22 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
 
 import SessionFormHeader from './session_form_header';
+import SessionFormFooter from './session_form_footer';
+import SessionFormInputs from './session_form_inputs';
 
 class SessionForm extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      username: "",
-      password: ""
-    };
-
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.redirect = this.redirect.bind(this);
-   }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    const user = Object.assign({}, this.state);
-    this.props.processForm(user)
-      .then(() => this.redirect());
-  }
-
-  handleChange(property) {
-    return e => (this.setState({ [property]: e.target.value }));
-  }
-
-  redirect() {
-    this.props.router.push('/');
-  }
-
   render() {
-    const { loggedIn, formType, errors } = this.props;
-
-    const formHeader = formType === '/login' ? 'Log In' : 'Sign Up';
-    const submitButton = formType === '/login' ? 'Login' : 'Create';
-    const linkHeader = () => {
-      if (formType === '/login') {
-        return <Link to='/signup'>{'Don\'t have an account?'}</Link>;
-      } else {
-        return <Link to='/login' >{'Already have an account?'}</Link>;
-      }
-    };
+    const { formType, errors } = this.props;
 
     return (
-      <div className='session-form-modal'>
-        <form className='session-form'
-          onSubmit={ this.handleSubmit }>
-
-          <SessionFormHeader formHeader={formHeader}/>
-
-          <div className='session-form-inputs'>
-            <input className='session-form-input'
-              onChange={ this.handleChange('username') }
-              value={ this.state.username }
-              placeholder='username'/>
-
-            <input className='session-form-input'
-              onChange={ this.handleChange('password') }
-              type='password'
-              value={ this.state.password }
-              placeholder='password'/>
-          </div>
-
-          <button className='session-form-button'
-            type='submit'>{submitButton}</button>
-
-          <Link to='/'>Cancel</Link>
-          { linkHeader() }
-        </form>
+      <div className='session-form'>
+        <SessionFormHeader formType={formType}/>
+        <SessionFormInputs formType={formType}
+          processForm={this.props.processForm}/>
+        <SessionFormFooter formType={formType}/>
       </div>
     );
   }
 }
 
-export default withRouter(SessionForm);
+export default SessionForm;
