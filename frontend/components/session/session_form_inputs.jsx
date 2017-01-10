@@ -31,7 +31,9 @@ class SessionFormInputs extends React.Component {
     const submitButton = formType === '/login' ? 'Login' : 'Create';
 
     return (
-      <form className='session-form-inputs'>
+      <form className='session-form-inputs'
+        onSubmit={ this.handleSubmit }>
+
         <input className='session-form-input'
           onChange={ this.handleChange('username') }
           value={ this.state.username }
@@ -43,8 +45,9 @@ class SessionFormInputs extends React.Component {
           value={ this.state.password }
           placeholder='password'/>
 
-        <button className='session-form-button'
-          type='submit'>{submitButton}</button>
+        <button className='session-form-button'>
+          {submitButton}
+        </button>
       </form>
     );
   }

@@ -3,10 +3,10 @@ import React from 'react';
 import NavbarRight from './navbar_right';
 import NavbarLeft from './navbar_left';
 
-const Navbar = () => (
+const Navbar = ({ logout }) => (
   <div className='navbar'>
     <NavbarLeft/>
-    <NavbarRight/>
+    <NavbarRight logout={ logout }/>
   </div>
 );
 

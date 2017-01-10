@@ -6,16 +6,33 @@ const links = url => e => {
     hashHistory.push(url);
 };
 
-const NavbarRight = () => (
-  <div className='navbar-right'>
-    <button onClick={ links('/signup') }>
-      Sign Up
-    </button>
+const NavbarRight = ({ logout }) => {
+  const buttons = () => {
+    console.log(logout);
+    if (window.currentUser) {
+      return (
+        <div className='navbar-right'>
+          <button onClick={ logout }>
+            Logout
+          </button>
+        </div>
+      );
+    } else {
+      return (
+        <div className='navbar-right'>
+          <button onClick={ links('/signup') }>
+            Sign Up
+          </button>
 
-    <button onClick={ links('/login') }>
-      Log In
-    </button>
-  </div>
-);
+          <button onClick={ links('/login') }>
+            Log In
+          </button>
+        </div>
+      );
+    }
+  };
+
+  return buttons();
+};
 
 export default NavbarRight;
