@@ -4,7 +4,7 @@
   "description": "== README",
   "main": "index.js",
   "scripts": {
-    "postinstall": "./node_modules/.bin/webpack",
+    "postinstall": "./node_modules/.bin/webpack"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +26,6 @@
   },
   "engines": {
     "node": "6.2.1",
-    "npm": "3.9.3",
+    "npm": "3.9.3"
   },
 }
