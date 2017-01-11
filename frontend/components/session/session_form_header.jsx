@@ -6,6 +6,7 @@ const SessionFormHeader = ({ formType }) => {
 
   return (
     <div className='session-form-header'>
+      <i className="material-icons">music_note</i>
       <h3>{ formHeader }</h3>
     </div>
   );
