@@ -60,7 +60,8 @@ class SessionForm extends React.Component {
             <SessionFormErrors errors={errors}/>
             <SessionFormInputs formType={formType}
               processForm={this.props.processForm}/>
-            <SessionFormFooter formType={formType}/>
+            <SessionFormFooter formType={formType}
+              login={this.props.login}/>
           </div>
         </Modal>
       </div>

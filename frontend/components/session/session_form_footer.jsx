@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 
-const SessionFormFooter = ({ formFooter, formType }) => {
+const SessionFormFooter = ({ formFooter, formType, login }) => {
 
   const otherFormLink = () => {
     if (formType === '/login') {
@@ -11,10 +11,21 @@ const SessionFormFooter = ({ formFooter, formType }) => {
     }
   };
 
+  const guestLogin = () => {
+   const user = { username: 'guest', password: 'password' };
+   login(user)
+     .then(() => redirect());
+  };
+
+  const redirect = () => {
+    hashHistory.push('/');
+  };
+
   return (
     <div className='session-form-footer'>
       <Link to='/'>Cancel</Link>
       { otherFormLink() }
+      <a onClick={ guestLogin }>Demo account</a>
     </div>
   );
 };
