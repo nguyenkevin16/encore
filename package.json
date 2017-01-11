@@ -3,12 +3,8 @@
   "version": "1.0.0",
   "description": "== README",
   "main": "index.js",
-  "engines": {
-    "node": "6.2.1",
-    "npm": "3.9.3"
-  },
   "scripts": {
-    "postinstall": "./node_modules/.bin/webpack"
+    "postinstall": "./node_modules/.bin/webpack",
   },
   "keywords": [],
   "author": "",
@@ -27,5 +23,9 @@
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0",
     "webpack": "^1.14.0"
+  },
+  "engines": {
+    "node": "6.2.1",
+    "npm": "3.9.3"
   },
 }
