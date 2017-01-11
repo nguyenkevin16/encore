@@ -20,6 +20,7 @@ class SessionForm extends React.Component {
   }
 
   closeModal() {
+    this.props.clearErrors();
     this.props.router.push('/');
   }
 
