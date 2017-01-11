@@ -1,9 +1,40 @@
 .welcome-container {
   display: flex;
+  position: relative;
   max-width: 100%;
-}
 
-.welcome-container img {
-  width: 100%;
-  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .welcome-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 30%;
+    bottom: 50%;
+    z-index: 1;
+
+    width: 100%;
+    height: 20%;
+    background: rgba(0, 0, 0, 0.6);
+
+    h2, h3 {
+      color: white;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+  }
 }
