@@ -6,9 +6,13 @@
   color: white;
 }
 
+.navbar-right {
+  justify-content: flex-end;
+}
+
 .navbar-right, .navbar-left {
-  margin: 10px 50px;
-  width: 145px;
+  margin: 0 20px;
+  width: 200px;
 }
 
 .navbar {
@@ -29,6 +33,7 @@
   border: 2px solid black;
   border-radius: 2px;
   padding: 3px 10px;
+  margin: 0 5px;
 
   background-color: #a7adba;
   font-weight: 400;
