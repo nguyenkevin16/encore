@@ -1,6 +1,7 @@
 # Encore
 
-[encore.audio](http://www.herokuapp.com)
+[encore.audio](https://encore-audio.herokuapp.com/)
+
 [trello](https://trello.com/b/w5o51KVc/encore)
 
 ## Minimum Viable Product
@@ -42,7 +43,8 @@ and seed data:
 
 ### Phase 1: Backend setup, Front End Authentication, Navbar (2 days)
 Objective: Functioning rails project with front-end auth and navbar
-Components:
+
+>Components:
 - SessionContainer
 - SessionForm
 - NavContainer
