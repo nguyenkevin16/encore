@@ -34,12 +34,12 @@ class SessionFormInputs extends React.Component {
       <form className='session-form-inputs'
         onSubmit={ this.handleSubmit }>
 
-        <input className='session-form-input'
+        <input className='session-form-input username'
           onChange={ this.handleChange('username') }
           value={ this.state.username }
           placeholder='username'/>
 
-        <input className='session-form-input'
+        <input className='session-form-input password'
           onChange={ this.handleChange('password') }
           type='password'
           value={ this.state.password }
