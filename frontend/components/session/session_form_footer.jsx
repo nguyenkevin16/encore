@@ -4,7 +4,7 @@ import { Link, hashHistory } from 'react-router';
 const SessionFormFooter = ({ formFooter, formType, login }) => {
 
   const otherFormLink = () => {
-    if (formType === '/login') {
+    if (formType === 'login') {
       return <Link to='/signup'>{'Don\'t have an account?'}</Link>;
     } else {
       return <Link to='/login' >{'Already have an account?'}</Link>;

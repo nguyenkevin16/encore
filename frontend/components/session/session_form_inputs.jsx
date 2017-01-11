@@ -22,7 +22,7 @@ class SessionFormInputs extends React.Component {
 
   render() {
     const { formType } = this.props;
-    const submitButton = formType === '/login' ? 'Login' : 'Create';
+    const submitButton = formType === 'login' ? 'Login' : 'Create';
 
     return (
       <form className='session-form-inputs'

@@ -5,7 +5,7 @@ import WelcomeDescriptions from './welcome_descriptions';
 
 const WelcomePage = () => (
   <div className='welcome-container'>
-    <img src="https://images.pexels.com/photos/96857/pexels-photo-96857.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"/>
+    <img src="https://res.cloudinary.com/nguyenkevin16/image/upload/v1484176396/pexels-photo-96857_dxn3ak.jpg"/>
 
     <WelcomeMessage />
     <WelcomeDescriptions />

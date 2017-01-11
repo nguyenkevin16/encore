@@ -2,7 +2,7 @@ import React from 'react';
 
 const SessionFormHeader = ({ formType }) => {
 
-  const formHeader = formType === '/login' ? 'Log In' : 'New Account';
+  const formHeader = formType === 'login' ? 'Log In' : 'New Account';
 
   return (
     <div className='session-form-header'>
