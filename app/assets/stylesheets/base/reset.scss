@@ -1,6 +1,8 @@
 html, body, header, nav, h1, a,
-ul, li, button, div, h2, p, form,
-label, input, textarea, h3 {
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small, h3 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -14,23 +16,38 @@ label, input, textarea, h3 {
   background: transparent;
 }
 
-body, header, h1, a, ul, li,
-h2, p, label, input, textarea, h3 {
-  font-family: "Helvetica Neue";
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 1.43;
-  color: #484848;
+ul {
+  list-style: none;
 }
 
-button:hover {
-  cursor: pointer;
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  /*
+  Get rid of native styling. Read more here:
+  http://css-tricks.com/almanac/properties/a/appearance/
+  */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-a:hover {
+button,
+input[type="submit"] {
   cursor: pointer;
 }
 
 #root {
   height: 100%;
+}
+
+/* Clearfix */
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
 }
