@@ -13,12 +13,7 @@ const SessionFormFooter = ({ formFooter, formType, login }) => {
 
   const guestLogin = () => {
    const user = { username: 'guest', password: 'password' };
-   login(user)
-     .then(() => redirect());
-  };
-
-  const redirect = () => {
-    hashHistory.push('/');
+   login(user);
   };
 
   const fillOutAndEnter = (username, password) => () => {

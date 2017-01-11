@@ -1,37 +1,28 @@
 import React from 'react';
-import { hashHistory } from 'react-router';
 
-const links = url => e => {
-    e.preventDefault();
-    hashHistory.push(url);
-};
+import NavbarRightLoggedIn from './navbar_right_loggedin.jsx';
+import NavbarRightLoggedOut from './navbar_right_loggedout.jsx';
 
-const NavbarRight = ({ logout, loggedIn, currentUser }) => {
-  const buttons = () => {
+const NavbarRight = (
+  { loggedIn, logout, currentUser, errors, clearErrors }) => {
+
+  const displayButtons = () => {
     if (loggedIn) {
-      return (
-        <div className='navbar-right'>
-          <button onClick={ logout }>
-            Logout
-          </button>
-        </div>
-      );
+      return <NavbarRightLoggedIn
+        logout={logout}
+        currentUser={currentUser} />;
     } else {
-      return (
-        <div className='navbar-right'>
-          <button onClick={ links('/signup') }>
-            Sign Up
-          </button>
-
-          <button onClick={ links('/login') }>
-            Log In
-          </button>
-        </div>
-      );
+      return <NavbarRightLoggedOut
+        errors={errors}
+        clearErrors={clearErrors} />;
     }
   };
 
-  return buttons();
+  return (
+    <div className='navbar-right'>
+      { displayButtons() }
+    </div>
+  );
 };
 
 export default NavbarRight;

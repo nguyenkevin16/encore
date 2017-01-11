@@ -8,22 +8,16 @@ class SessionFormInputs extends React.Component {
     this.state = { username: "", password: "" };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.redirect = this.redirect.bind(this);
-   }
+    }
 
   handleSubmit(e) {
-   e.preventDefault();
-   const user = Object.assign({}, this.state);
-   this.props.processForm(user)
-     .then(() => this.redirect());
+    e.preventDefault();
+    const user = Object.assign({}, this.state);
+    this.props.processForm(user);
   }
 
   handleChange(property) {
    return e => (this.setState({ [property]: e.target.value }));
-  }
-
-  redirect() {
-   this.props.router.push('/');
   }
 
   render() {
