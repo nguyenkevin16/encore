@@ -46,6 +46,8 @@ class SessionForm extends React.Component {
 
     return (
       <div id='session-form-modal'>
+        <img src="https://images.pexels.com/photos/96857/pexels-photo-96857.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"/>
+
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
