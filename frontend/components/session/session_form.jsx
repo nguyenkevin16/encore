@@ -39,6 +39,9 @@ class SessionForm extends React.Component {
         marginRight    : '-50%',
         transform      : 'translate(-50%, -50%)'
       },
+      overlay : {
+        backgroundColor: 'rgba(255, 255, 255, 0.11)'
+      }
     };
 
     return (
