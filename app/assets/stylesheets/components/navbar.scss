@@ -28,9 +28,10 @@
   cursor: pointer;
 }
 
-.navbar-right, .navbar-left {
+.navbar-right, .navbar-left, .navbar-left h3 {
   margin: 0 20px;
   width: 200px;
+  height: 100%;
 }
 
 .navbar {
@@ -48,13 +49,8 @@
 }
 
 .navbar-right button {
-  border: 2px solid black;
-  border-radius: 2px;
   padding: 3px 10px;
   margin: 0 5px;
-
-  background-color: #a7adba;
-  font-weight: 400;
 }
 
 .navbar-right button:hover {
