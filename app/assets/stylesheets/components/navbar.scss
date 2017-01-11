@@ -20,6 +20,14 @@
   align-items: center;
 }
 
+.navbar-left img {
+  margin-right: 15px;
+}
+
+.navbar-left:hover {
+  cursor: pointer;
+}
+
 .navbar-right, .navbar-left {
   margin: 0 20px;
   width: 200px;
