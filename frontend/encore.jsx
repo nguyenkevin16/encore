@@ -4,14 +4,9 @@ import Modal from 'react-modal';
 import Root from './components/root';
 import configureStore from './store/store';
 
-// TODO: testing; remove later
-import { login,
-         logout,
-         signup } from './actions/session_actions';
-
 document.addEventListener('DOMContentLoaded', () => {
-  let store;
   const root = document.getElementById('root');
+  let store;
 
   if (window.currentUser) {
     const preloadedState = { session: { currentUser: window.currentUser } };
@@ -25,7 +20,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // TODO: testing
   window.store = store;
-  window.login = login;
-  window.logout = logout;
-  window.signup = signup;
 });
