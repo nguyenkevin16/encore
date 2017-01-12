@@ -4,6 +4,8 @@ import Modal from 'react-modal';
 import Root from './components/root';
 import configureStore from './store/store';
 
+import { fetchUser } from './actions/user_actions';
+
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   let store;
@@ -20,4 +22,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // TODO: testing
   window.store = store;
+  window.fetchUser = fetchUser;
 });
