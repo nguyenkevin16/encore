@@ -6,6 +6,7 @@ const FooterLinks = () => (
     <Link>About</Link>
     <a href='https://github.com/nguyenkevin16/encore'>Github</a>
     <a>Portfolio</a>
+    <Link>Credits</Link>
   </div>
 );
 
