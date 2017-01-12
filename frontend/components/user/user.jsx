@@ -2,7 +2,6 @@ import React from 'react';
 
 import UserImage from './user_image';
 
-
 class User extends React.Component {
   render() {
     const { user } = this.props;

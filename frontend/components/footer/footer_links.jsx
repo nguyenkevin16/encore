@@ -5,7 +5,7 @@ const FooterLinks = () => (
   <div className='footer-links'>
     <Link>About</Link>
     <a href='https://github.com/nguyenkevin16/encore'>Github</a>
-    <a>Portfolio</a>
+    <a href='https://www.linkedin.com/in/nguyenkevin16/'>LinkedIn</a>
     <Link>Credits</Link>
   </div>
 );
