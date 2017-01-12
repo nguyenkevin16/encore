@@ -1,32 +1,21 @@
 import React from 'react';
 
 import UserImage from './user_image';
+import UserDetails from './user_details';
+import TrackIndexContainer from '../track/track_index_container';
 
 class User extends React.Component {
-
-  uploadTrack(e) {
-    e.preventDefault();
-
-    cloudinary.openUploadWidget({
-      cloud_name: window.CLOUDINARY_OPTIONS.cloud_name,
-      upload_preset: window.CLOUDINARY_OPTIONS.upload_preset
-    },
-      (error, result) => {
-
-      }
-    );
-  }
-
   render() {
     const { user } = this.props;
 
     return (
       <div className='user-show'>
-        <UserImage />
+        <div className='user-show-header'>
+          <UserImage user={user} />
+          <UserDetails user={user} />
+        </div>
 
-        <h1>{ user.username }</h1>
-
-        <button onClick={ this.uploadTrack }>Upload Track</button>
+        <TrackIndexContainer />
       </div>
     );
   }

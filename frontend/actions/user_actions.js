@@ -11,3 +11,8 @@ export const fetchUser = id => dispatch => (
   APIUtils.fetchUser(id).then(
     user => { dispatch(receiveUser(user)); })
 );
+
+export const updateUser = user => dispatch => (
+  APIUtils.updateUser(user).then(
+    updatedUser => { dispatch(receiveUser(updatedUser)); })
+);
