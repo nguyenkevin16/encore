@@ -7,7 +7,7 @@ export const receiveUser = (user) => ({
   user
 });
 
-export const fetchUser = (id) => dispatch => (
-  APIUtils.fetchUser(id)
-    .then(user => dispatch(receiveUser(user)))
+export const fetchUser = id => dispatch => (
+  APIUtils.fetchUser(id).then(
+    user => { dispatch(receiveUser(user)); })
 );

@@ -6,7 +6,7 @@ const userReducer = (state = {}, action) => {
 
   switch(action.type) {
     case RECEIVE_USER:
-      return action.user;
+      return merge({}, action.user);
     default:
       return state;
   }
