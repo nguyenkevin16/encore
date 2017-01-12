@@ -8,7 +8,7 @@ import { fetchTracks,
          fetchTrack,
          createTrack,
          updateTrack,
-         deleteTrack } from './utils/track_api_util';
+         deleteTrack } from './actions/track_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -32,3 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.updateTrack = updateTrack;
   window.deleteTrack = deleteTrack;
 });
+
+// TODO: Testing
+// Track.create!(title: 'title', track_url: 'track_url', user_id: 1)

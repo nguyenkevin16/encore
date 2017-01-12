@@ -17,6 +17,3 @@ class Track < ActiveRecord::Base
 
   belongs_to :user
 end
-
-# TODO: Testing
-# Track.create!(title: 'title', track_url: 'track_url', user_id: 1)

@@ -1,1 +1,1 @@
-json.extract! track, :title, :track_url, :user_id
+json.extract! track, :id, :title, :track_url, :user_id
