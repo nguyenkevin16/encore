@@ -36,7 +36,8 @@ button {
 }
 
 button,
-input[type="submit"] {
+input[type="submit"],
+a {
   cursor: pointer;
 }
 
