@@ -6,7 +6,7 @@ const SessionFormHeader = ({ formType }) => {
 
   return (
     <div className='session-form-header'>
-      <img src='http://res.cloudinary.com/nguyenkevin16/image/upload/v1484099848/headphone-symbol_iotteg.png'/>
+      <img src='https://res.cloudinary.com/nguyenkevin16/image/upload/v1484099848/headphone-symbol_iotteg.png'/>
       <h3>{ formHeader }</h3>
     </div>
   );
