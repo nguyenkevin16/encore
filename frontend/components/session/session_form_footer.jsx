@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 
-const SessionFormFooter = ({ formFooter, formType, login }) => {
+const SessionFormFooter = ({ formFooter, formType, login, closeAndOpenModal, closeModal }) => {
 
   const otherFormLink = () => {
     if (formType === 'login') {
-      return <Link to='/signup'>{'Don\'t have an account?'}</Link>;
+      return <a onClick={ closeAndOpenModal('signup') }>{'Don\'t have an account?'}</a>;
     } else {
-      return <Link to='/login' >{'Already have an account?'}</Link>;
+      return <a onClick={ closeAndOpenModal('login') }>{'Already have an account?'}</a>;
     }
   };
 
@@ -41,7 +41,7 @@ const SessionFormFooter = ({ formFooter, formType, login }) => {
 
   return (
     <div className='session-form-footer'>
-      <Link to='/'>Cancel</Link>
+      <a onClick={ closeModal }>Cancel</a>
       { otherFormLink() }
       <a onClick={ fillOutAndEnter('guest', 'password') }>Demo account</a>
     </div>

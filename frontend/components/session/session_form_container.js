@@ -5,7 +5,9 @@ import SessionForm from './session_form';
 
 const mapStateToProps = (state, ownProps) => ({
   formType: ownProps.formType,
-  errors: ownProps.errors
+  errors: ownProps.errors,
+  closeAndOpenModal: ownProps.closeAndOpenModal,
+  closeModal: ownProps.closeModal
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => {

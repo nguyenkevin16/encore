@@ -24,6 +24,8 @@ class NavbarRightLoggedOut extends React.Component {
 
     this.state = { modalIsOpen: false, formType: '' };
     this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeAndOpenModal = this.closeAndOpenModal.bind(this);
   }
 
   componentDidMount() {
@@ -37,6 +39,12 @@ class NavbarRightLoggedOut extends React.Component {
   closeModal() {
     this.props.clearErrors();
     this.setState({ modalIsOpen: false });
+  }
+
+  closeAndOpenModal(formType) {
+    return () => {
+      this.openModal(formType)();
+    };
   }
 
   render() {
@@ -58,7 +66,9 @@ class NavbarRightLoggedOut extends React.Component {
 
           <SessionFormContainer
             formType={ this.state.formType }
-            errors={ this.props.errors }/>
+            errors={ this.props.errors }
+            closeAndOpenModal={ this.closeAndOpenModal }
+            closeModal={ this.closeModal }/>
         </Modal>
       </div>
     );

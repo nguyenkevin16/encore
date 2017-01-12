@@ -5,7 +5,7 @@ import SessionFormFooter from './session_form_footer';
 import SessionFormInputs from './session_form_inputs';
 import SessionFormErrors from './session_form_errors';
 
-const SessionForm = ({ formType, errors, processForm, login }) => {
+const SessionForm = ({ formType, errors, processForm, login, closeAndOpenModal, closeModal }) => {
   return (
     <div className='session-form'>
       <SessionFormHeader formType={formType}/>
@@ -13,7 +13,9 @@ const SessionForm = ({ formType, errors, processForm, login }) => {
       <SessionFormInputs formType={formType}
         processForm={processForm}/>
       <SessionFormFooter formType={formType}
-        login={login}/>
+        login={login}
+        closeAndOpenModal={closeAndOpenModal}
+        closeModal={closeModal}/>
     </div>
   );
 };
