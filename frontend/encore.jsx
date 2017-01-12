@@ -4,7 +4,11 @@ import Modal from 'react-modal';
 import Root from './components/root';
 import configureStore from './store/store';
 
-import { fetchUser } from './actions/user_actions';
+import { fetchTracks,
+         fetchTrack,
+         createTrack,
+         updateTrack,
+         deleteTrack } from './utils/track_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -22,5 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // TODO: testing
   window.store = store;
-  window.fetchUser = fetchUser;
+  window.fetchTracks = fetchTracks;
+  window.fetchTrack = fetchTrack;
+  window.createTrack = createTrack;
+  window.updateTrack = updateTrack;
+  window.deleteTrack = deleteTrack;
 });
