@@ -5,8 +5,41 @@ class TrackFormInputs extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { username: "", password: "" };
+    this.state = {
+      title: "",
+      decription: "",
+      track_url: "",
+      img_url: ""
+    };
+
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.uploadImg = this.uploadImg.bind(this);
+  }
+
+  uploadImg(e) {
+    e.preventDefault();
+
+    cloudinary.openUploadWidget({
+      cloud_name: window.CLOUDINARY_OPTIONS.cloud_name,
+      upload_preset: window.CLOUDINARY_OPTIONS.upload_preset
+    },
+      (error, result) => {
+        this.setState({ img_url: result[0].secure_url });
+      }
+    );
+  }
+
+  uploadAudio(e) {
+    e.preventDefault();
+
+    cloudinary.openUploadWidget({
+      cloud_name: window.CLOUDINARY_OPTIONS.cloud_name,
+      upload_preset: window.CLOUDINARY_OPTIONS.upload_preset
+    },
+      (error, result) => {
+        this.setState({ track_url: result[0].secure_url });
+      }
+    );
   }
 
   handleSubmit(e) {
@@ -37,9 +70,17 @@ class TrackFormInputs extends React.Component {
           value={ this.state.description }
           placeholder='description'/>
 
-        <button className='track-form-button'>
-          {submitButton}
+        <button onClick={ this.uploadAudio }>
+          Upload Audio
         </button>
+
+        <button onClick={ this.uploadImg }>
+          Upload Image
+        </button>
+
+        <input type='submit'
+          className='track-form-button'
+          value={submitButton}/>
       </form>
     );
   }
