@@ -41,8 +41,12 @@ a {
   cursor: pointer;
 }
 
-#root {
+html, body, #root {
   height: 100%;
+}
+
+[data-reactroot] {
+  height: calc(100% - 130px);
 }
 
 /* Clearfix */

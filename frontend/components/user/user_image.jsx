@@ -12,7 +12,13 @@ class UserAvatar extends React.Component {
 
     cloudinary.openUploadWidget({
       cloud_name: window.CLOUDINARY_OPTIONS.cloud_name,
-      upload_preset: window.CLOUDINARY_OPTIONS.upload_preset
+      upload_preset: window.CLOUDINARY_OPTIONS.upload_preset,
+      cropping: 'server',
+      cropping_aspect_ratio: 1,
+      folder: 'track_photos',
+      max_image_width: 125,
+      max_image_height: 125,
+      theme: 'minimal'
     },
       (error, result) => {
         this.props.updateUser({
