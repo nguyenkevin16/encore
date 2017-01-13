@@ -1,6 +1,8 @@
 .track-index {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: flex-start;;
   align-self: flex-start;
   width: 80%;
   height: 100%;
@@ -33,5 +35,16 @@
     background: rgba(167, 173, 186, 1);
     color: black;
     cursor: pointer;
+  }
+}
+
+.track-index-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+
+  label {
+    color: white;
   }
 }

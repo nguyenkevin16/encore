@@ -7,6 +7,7 @@ import WelcomePage from './welcome/welcome';
 import UserContainer from './user/user_container';
 
 import { fetchUser } from '../actions/user_actions';
+import { fetchTracks } from '../actions/track_actions';
 
 const Root = ({ store }) => (
   <Provider store={store}>
@@ -19,8 +20,9 @@ const Root = ({ store }) => (
   </Provider>
 );
 
-const _loadUser = store => (nextState) => (
-  store.dispatch(fetchUser(nextState.params.userId))
-);
+const _loadUser = store => (nextState) => {
+  store.dispatch(fetchUser(nextState.params.userId));
+  store.dispatch(fetchTracks());
+};
 
 export default Root;
