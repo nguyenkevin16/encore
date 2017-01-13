@@ -13,7 +13,8 @@ class TrackIndex extends React.Component {
       <TrackIndexItem
         key={i}
         track={track}
-        artist={this.props.user}/>
+        artist={this.props.user}
+        deleteTrack={this.props.deleteTrack}/>
     ));
 
     return (
