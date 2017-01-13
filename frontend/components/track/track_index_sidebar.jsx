@@ -51,7 +51,8 @@ class TrackIndexSidebar extends React.Component {
           style={customStyles}
           contentLabel="Session Form Modal">
 
-          <TrackFormContainer formType='create'/>
+          <TrackFormContainer formType='create'
+            closeModal={this.closeModal}/>
         </Modal>
       </div>
     );

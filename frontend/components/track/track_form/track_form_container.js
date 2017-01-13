@@ -4,7 +4,8 @@ import { createTrack,
 import TrackForm from './track_form';
 
 const mapStateToProps = (state, ownProps) => ({
-  formType: ownProps.formType
+  formType: ownProps.formType,
+  closeModal: ownProps.closeModal
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => {

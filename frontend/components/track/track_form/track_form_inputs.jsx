@@ -7,13 +7,14 @@ class TrackFormInputs extends React.Component {
 
     this.state = {
       title: "",
-      decription: "",
+      description: "",
       track_url: "",
       img_url: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.uploadImg = this.uploadImg.bind(this);
+    this.uploadAudio = this.uploadAudio.bind(this);
   }
 
   uploadImg(e) {
@@ -21,7 +22,13 @@ class TrackFormInputs extends React.Component {
 
     cloudinary.openUploadWidget({
       cloud_name: window.CLOUDINARY_OPTIONS.cloud_name,
-      upload_preset: window.CLOUDINARY_OPTIONS.upload_preset
+      upload_preset: window.CLOUDINARY_OPTIONS.upload_preset,
+      cropping: 'server',
+      cropping_aspect_ratio: 1,
+      folder: 'track_photos',
+      max_image_width: 125,
+      max_image_height: 125,
+      theme: 'minimal'
     },
       (error, result) => {
         this.setState({ img_url: result[0].secure_url });
@@ -34,7 +41,11 @@ class TrackFormInputs extends React.Component {
 
     cloudinary.openUploadWidget({
       cloud_name: window.CLOUDINARY_OPTIONS.cloud_name,
-      upload_preset: window.CLOUDINARY_OPTIONS.upload_preset
+      upload_preset: window.CLOUDINARY_OPTIONS.upload_preset,
+      sources: ['local'],
+      multiple: false,
+      folder: 'track_audio',
+      theme: 'minimal'
     },
       (error, result) => {
         this.setState({ track_url: result[0].secure_url });
@@ -46,6 +57,7 @@ class TrackFormInputs extends React.Component {
     e.preventDefault();
     const track = Object.assign({}, this.state);
     this.props.processForm(track);
+    this.props.closeModal();
   }
 
   handleChange(property) {
