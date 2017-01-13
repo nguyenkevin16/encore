@@ -21,13 +21,14 @@ class UserAvatar extends React.Component {
   }
 
   render() {
-    console.log(this.props.user);
+    const { user } = this.props;
 
     return (
       <div className='user-avatar'>
+        <img src={ user.avatar_url }
+             className='avatar-url'></img>
 
-        <button className='user-avatar-upload'
-          onClick={ this.uploadAvatar }>
+        <button onClick={ this.uploadAvatar }>
           Change Photo
         </button>
       </div>

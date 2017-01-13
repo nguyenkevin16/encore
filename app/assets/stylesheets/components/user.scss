@@ -27,4 +27,34 @@
 
   background-color: #4f5b66;
   border: 1px solid black;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  button {
+    display: none;
+    position: relative;
+    padding: 5px;
+    border: 1px solid black;
+    background: rgba(101, 115, 126, 0.6);
+    color: white;
+
+    top: -50px;
+    left: 15px;
+  }
+
+  button:hover {
+    transition: all 0.4s ease 0s;
+    background: rgba(167, 173, 186, 1);
+    color: black;
+    cursor: pointer;
+  }
+}
+
+.user-avatar:hover {
+  button {
+    display: block;
+  }
 }

@@ -8,10 +8,12 @@
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  avatar_url      :string
+#  description     :text
 #
 
 class User < ActiveRecord::Base
-  after_initialize :ensure_session_token
+  after_initialize :ensure_session_token, :ensure_avatar_img
   validates :username, :password_digest, :session_token, presence: true
   validates :username, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
@@ -45,6 +47,10 @@ class User < ActiveRecord::Base
     user = User.find_by_username(username)
     return nil if user.nil?
     user.is_password?(password) ? user : nil
+  end
+
+  def ensure_avatar_img
+    self.avatar_url ||= 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484264933/default_avatar_zbymyn.jpg'
   end
 
   attr_reader :password
