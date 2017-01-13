@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import TrackFormContainer from './track_form_container';
+import TrackFormContainer from './track_form/track_form_container';
 
 const customStyles = {
   content : {

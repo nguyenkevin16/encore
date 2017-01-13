@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { createTrack,
-         updateTrack } from '../../actions/track_actions';
+         updateTrack } from '../../../actions/track_actions';
 import TrackForm from './track_form';
 
 const mapStateToProps = (state, ownProps) => ({

@@ -79,7 +79,8 @@ class TrackFormInputs extends React.Component {
             value={ this.state.description }
             placeholder='description'/>
 
-          <button onClick={ this.uploadAudio }>
+          <button className='track-form-input button'
+            onClick={ this.uploadAudio }>
             Upload Audio
           </button>
         </div>

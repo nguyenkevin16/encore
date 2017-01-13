@@ -14,7 +14,7 @@
 
 .track-form-inputs {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
@@ -41,6 +41,7 @@
   flex-wrap: wrap;
 
   button {
+    margin-top: 5px;
     padding: 5px;
     border: 1px solid black;
     background: rgba(101, 115, 126, 0.6);
@@ -55,7 +56,7 @@
   }
 }
 
-.track-form-input, .track-form-button {
+.track-form-input {
   border: 1px solid black;
   margin: 5px;
   padding: 5px;
@@ -110,13 +111,14 @@
 
   button {
     position: relative;
+    width: 90%;
     padding: 5px;
     border: 1px solid black;
     background: rgba(101, 115, 126, 0.6);
     color: white;
 
     top: 0px;
-    left: 15px;
+    left: 0px;
   }
 
   button:hover {
