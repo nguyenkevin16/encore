@@ -5,12 +5,7 @@ class TrackFormInputs extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      title: "",
-      description: "",
-      track_url: "",
-      img_url: ""
-    };
+    this.state = this.props.track;
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.uploadImg = this.uploadImg.bind(this);

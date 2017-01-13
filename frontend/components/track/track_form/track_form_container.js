@@ -3,10 +3,24 @@ import { createTrack,
          updateTrack } from '../../../actions/track_actions';
 import TrackForm from './track_form';
 
-const mapStateToProps = (state, ownProps) => ({
-  formType: ownProps.formType,
-  closeModal: ownProps.closeModal
-});
+const mapStateToProps = (state, ownProps) => {
+  let track = {
+    title: "",
+    description: "",
+    track_url: "",
+    img_url: ""
+  };
+
+  if (ownProps.track) {
+    track = ownProps.track;
+  }
+
+  return {
+    formType: ownProps.formType,
+    closeModal: ownProps.closeModal,
+    track
+  };
+};
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   const formToProcess = ownProps.formType === 'create' ?
