@@ -1,0 +1,64 @@
+.track-form, .track-form-inputs,
+.track-form-header, .track-form-footer {
+  // border: 2px solid red;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  padding: 15px;
+  margin: 5px;
+  width: 100%;
+}
+
+.track-form {
+  width: 100%;
+}
+
+.track-form-footer, .track-form-header {
+  justify-content: space-between;
+  height: 65px;
+}
+
+.track-form-input {
+  width: 100%;
+}
+
+.track-form-input, .track-form-button {
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+}
+
+.track-form-button {
+  border-radius: 2px;
+  padding: 5px;
+  width: 30%;
+  text-align: center;
+
+  background-color: #a7adba;
+  font-weight: 400;
+}
+
+.track-form-button:hover {
+  transition: all 0.4s ease 0s;
+  background-color: #ffeead;
+  color: black;
+}
+
+#track-form-modal {
+  display: flex;
+  max-width: 100%;
+}
+
+#track-form-modal img {
+  width: 100%;
+  height: 100%;
+}
+
+.track-form-header h3 {
+  font-size: 25px;
+  font-weight: 200;
+}
