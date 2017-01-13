@@ -23,10 +23,10 @@ const SessionFormFooter = ({ formFooter, formType, login, closeAndOpenModal, clo
 
     fillField(username, $usernameInput);
     setTimeout(
-      () => fillField(password, $passwordInput), (username.length * 50)
+      () => fillField(password, $passwordInput), (username.length * 80)
     );
     setTimeout(
-      () => guestLogin(), ((username.length + password.length) * 60)
+      () => guestLogin(), ((username.length + password.length) * 90)
     );
   };
 
