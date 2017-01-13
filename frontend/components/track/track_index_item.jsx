@@ -63,6 +63,10 @@ class TrackIndexItem extends React.Component {
             <button onClick={ this.handleDelete }>Delete Track</button>
             <button onClick={ this.openModal }>Edit Track</button>
           </div>
+
+          <audio controls>
+            <source src={ track.track_url } type='audio/mpeg'/>
+          </audio>
         </div>
 
         <Modal
