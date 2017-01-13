@@ -59,8 +59,10 @@ class TrackIndexItem extends React.Component {
           <label>Artist: { artist.username }</label>
           <label>Description: { track.description }</label>
 
-          <button onClick={ this.handleDelete }>Delete Track</button>
-          <button onClick={ this.openModal }>Edit Track</button>
+          <div className='track-index-buttons'>
+            <button onClick={ this.handleDelete }>Delete Track</button>
+            <button onClick={ this.openModal }>Edit Track</button>
+          </div>
         </div>
 
         <Modal
