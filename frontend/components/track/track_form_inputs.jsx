@@ -60,23 +60,29 @@ class TrackFormInputs extends React.Component {
       <form className='track-form-inputs'
         onSubmit={ this.handleSubmit }>
 
-        <input className='track-form-input title'
-          onChange={ this.handleChange('title') }
-          value={ this.state.title }
-          placeholder='title'/>
+        <div className='track-form-input-avatar'>
+          <img src={ this.state.img_url }></img>
 
-        <textarea className='track-form-input description'
-          onChange={ this.handleChange('description') }
-          value={ this.state.description }
-          placeholder='description'/>
+          <button onClick={ this.uploadImg }>
+            Upload Image
+          </button>
+        </div>
 
-        <button onClick={ this.uploadAudio }>
-          Upload Audio
-        </button>
+        <div className='track-form-input-fields'>
+          <input className='track-form-input title'
+            onChange={ this.handleChange('title') }
+            value={ this.state.title }
+            placeholder='title'/>
 
-        <button onClick={ this.uploadImg }>
-          Upload Image
-        </button>
+          <textarea className='track-form-input description'
+            onChange={ this.handleChange('description') }
+            value={ this.state.description }
+            placeholder='description'/>
+
+          <button onClick={ this.uploadAudio }>
+            Upload Audio
+          </button>
+        </div>
 
         <input type='submit'
           className='track-form-button'

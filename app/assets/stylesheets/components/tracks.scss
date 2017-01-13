@@ -1,6 +1,37 @@
 .track-index {
-  background-color: #c0c5ce;
+  display: flex;
+  justify-content: center;
   align-self: flex-start;
   width: 80%;
   height: 100%;
+
+  background-color: #65737e;
+}
+
+.track-index-sidebar {
+  display: flex;
+  justify-content: center;
+  border-left: 1px solid black;
+  width: 20%;
+  height: 100%;
+
+  background-color: #a7adba;
+
+  button {
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    margin: 15px;
+    padding: 5px;
+    border: 1px solid black;
+    background: rgba(101, 115, 126, 0.6);
+    color: white;
+  }
+
+  button:hover {
+    transition: all 0.4s ease 0s;
+    background: rgba(167, 173, 186, 1);
+    color: black;
+    cursor: pointer;
+  }
 }

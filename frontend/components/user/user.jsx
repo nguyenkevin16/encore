@@ -3,6 +3,7 @@ import React from 'react';
 import UserImage from './user_image';
 import UserDetails from './user_details';
 import TrackIndexContainer from '../track/track_index_container';
+import TrackIndexSidebar from '../track/track_index_sidebar';
 
 class User extends React.Component {
   render() {
@@ -15,7 +16,10 @@ class User extends React.Component {
           <UserDetails user={user} />
         </div>
 
-        <TrackIndexContainer />
+        <div className='user-tracks'>          
+          <TrackIndexContainer />
+          <TrackIndexSidebar />
+        </div>
       </div>
     );
   }

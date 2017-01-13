@@ -1,11 +1,22 @@
-.track-form, .track-form-inputs,
-.track-form-header, .track-form-footer {
+.track-form, .track-form-header {
   // border: 2px solid red;
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
+
+  padding: 5px;
+  margin: 5px;
+  width: 100%;
+}
+
+.track-form-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   flex-wrap: wrap;
 
   padding: 15px;
@@ -22,14 +33,34 @@
   height: 65px;
 }
 
-.track-form-input {
-  width: 100%;
+.track-form-input-fields {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  button {
+    padding: 5px;
+    border: 1px solid black;
+    background: rgba(101, 115, 126, 0.6);
+    color: white;
+  }
+
+  button:hover {
+    transition: all 0.4s ease 0s;
+    background: rgba(167, 173, 186, 1);
+    color: black;
+    cursor: pointer;
+  }
 }
 
 .track-form-input, .track-form-button {
   border: 1px solid black;
   margin: 5px;
   padding: 5px;
+  width: 100%;
+  height: 100%;
 }
 
 .track-form-button {
@@ -37,6 +68,7 @@
   padding: 5px;
   width: 30%;
   text-align: center;
+  margin-top: 50px;
 
   background-color: #a7adba;
   font-weight: 400;
@@ -61,4 +93,36 @@
 .track-form-header h3 {
   font-size: 25px;
   font-weight: 200;
+}
+
+.track-form-input-avatar {
+  width: 125px;
+  height: 125px;
+  margin: 20px;
+
+  background-color: #4f5b66;
+  border: 1px solid black;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  button {
+    position: relative;
+    padding: 5px;
+    border: 1px solid black;
+    background: rgba(101, 115, 126, 0.6);
+    color: white;
+
+    top: 0px;
+    left: 15px;
+  }
+
+  button:hover {
+    transition: all 0.4s ease 0s;
+    background: rgba(167, 173, 186, 1);
+    color: black;
+    cursor: pointer;
+  }
 }
