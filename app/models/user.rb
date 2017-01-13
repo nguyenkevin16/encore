@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
   end
 
   def ensure_avatar_img
-    self.avatar_url ||= 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484264933/default_avatar_zbymyn.jpg'
+    self.avatar_url ||= 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484264933/System/default_avatar_zbymyn.jpg'
   end
 
   attr_reader :password

@@ -87,7 +87,7 @@ class TrackFormInputs extends React.Component {
             placeholder='description'/>
 
           <input className='track-form-input track'
-              value={ this.state.img_url }
+              value={ this.state.track_url }
               placeholder='audio url goes here'
               disabled/>
 

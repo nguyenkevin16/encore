@@ -34,3 +34,19 @@ Track.create!(
   track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484345132/track_audio/otodiocseltmh7lcgs3p.mp3',
   user_id: 1
 )
+
+Track.create!(
+  title: 'Slide',
+  description: 'Goo Goo Dolls',
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484347004/track_photos/bkvpsexade4mkg3rb3yb.png',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484347056/track_audio/uutgymcegc0iahvtm2on.mp3',
+  user_id: 1
+)
+
+Track.create!(
+  title: 'Dancing in the Moonlight',
+  description: 'King Harvest',
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484347815/track_photos/vcq42qxfdiu9ccfnbs6o.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484347830/track_audio/m74vleqjmst1jekdklni.mp3',
+  user_id: 1
+)
