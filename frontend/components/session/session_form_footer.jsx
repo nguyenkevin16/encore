@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link, hashHistory } from 'react-router';
+import { Link, withRouter } from 'react-router';
 
-const SessionFormFooter = ({ formFooter, formType, login, closeAndOpenModal, closeModal }) => {
+const SessionFormFooter = ({ formFooter, formType, login, closeAndOpenModal, closeModal, router }) => {
 
   const otherFormLink = () => {
     if (formType === 'login') {
@@ -14,6 +14,7 @@ const SessionFormFooter = ({ formFooter, formType, login, closeAndOpenModal, clo
   const guestLogin = () => {
    const user = { username: 'guest', password: 'password' };
    login(user);
+   router.push(`users/1`);
   };
 
   const fillOutAndEnter = (username, password) => () => {
@@ -48,4 +49,4 @@ const SessionFormFooter = ({ formFooter, formType, login, closeAndOpenModal, clo
   );
 };
 
-export default SessionFormFooter;
+export default withRouter(SessionFormFooter);

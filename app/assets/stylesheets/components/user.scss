@@ -20,6 +20,22 @@
   border-bottom: 1px solid black;
 }
 
+.user-details {
+  max-width: 80%;
+
+  h1 {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 30px;
+    color: white;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+
 .user-avatar {
   width: 125px;
   height: 125px;
