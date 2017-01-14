@@ -46,11 +46,23 @@
 .navbar-link {
   font-size: 20px;
   color: white;
+  border-right: 2px solid white;
+  padding-right: 25px;
+}
+
+.navbar-link:last-of-type {
+  padding-left: 25px;
+}
+
+.navbar-link:hover {
+  transition: all 0.4s ease 0s;
+  color: black;
 }
 
 .navbar-right button {
   padding: 3px 10px;
   margin: 0 5px;
+  cursor: pointer;
 }
 
 .navbar-right button:hover {

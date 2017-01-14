@@ -6,6 +6,7 @@ const NavbarLeft = () => (
     <h3>
       <img src='https://res.cloudinary.com/nguyenkevin16/image/upload/v1484099572/System/headphone-symbol_1_wyttnq.png'/>
       <Link to='/' className='navbar-link'>encore</Link>
+      <Link to='discover' className='navbar-link'>discover</Link>
     </h3>
   </div>
 );
