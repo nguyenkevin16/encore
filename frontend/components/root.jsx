@@ -22,9 +22,10 @@ const Root = ({ store }) => (
   </Provider>
 );
 
+
+// onEnter={ _loadUser(store) }
 const _loadUser = store => (nextState) => {
   store.dispatch(fetchUser(nextState.params.userId));
-  store.dispatch(fetchTracks());
 };
 
 export default Root;

@@ -22,8 +22,8 @@ class TrackIndexItem extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleDelete = this.handleDelete.bind(this);
     this.state = { modalIsOpen: false };
+    this.handleDelete = this.handleDelete.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
   }

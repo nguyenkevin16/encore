@@ -5,11 +5,10 @@ import TrackIndexItem from './track_index_item';
 class TrackIndex extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   render() {
-    const tracks = this.props.tracks.map((track, i) => (
+    const tracks = this.props.user.tracks.map((track, i) => (
       <TrackIndexItem
         key={i}
         track={track}

@@ -7,7 +7,7 @@ import TrackIndexSidebar from '../track/track_index_sidebar';
 
 class User extends React.Component {
   render() {
-    const { user, updateUser, currentUser, tracks } = this.props;
+    const { user, updateUser, currentUser } = this.props;
 
     return (
       <div className='user-show'>
@@ -18,8 +18,7 @@ class User extends React.Component {
 
         <div className='user-tracks'>
           <TrackIndexContainer user={user}
-            currentUser={currentUser}
-            tracks={tracks} />
+            currentUser={currentUser}/>
           <TrackIndexSidebar user={user}
             currentUser={currentUser}/>
         </div>
