@@ -50,8 +50,7 @@ class TrackFormInputs extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const track = Object.assign({}, this.state);
-    this.props.processForm(track);
+    this.props.processForm(this.state);
     this.props.closeModal();
   }
 

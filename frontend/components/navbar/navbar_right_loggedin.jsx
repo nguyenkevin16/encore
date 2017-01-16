@@ -16,9 +16,8 @@ const NavbarRightLoggedIn = (props) => {
         Logout
       </button>
 
-      <button onClick={ _redirect }>
-        { currentUser.username }
-      </button>
+      <img onClick={ _redirect }
+        src={currentUser.avatar_url}/>
     </div>
   );
 };
