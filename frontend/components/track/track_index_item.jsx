@@ -26,6 +26,7 @@ class TrackIndexItem extends React.Component {
     this.handleDelete = this.handleDelete.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
+    this.showButtons = this.showButtons.bind(this);
   }
 
   handleDelete() {
@@ -45,8 +46,21 @@ class TrackIndexItem extends React.Component {
     this.setState({ modalIsOpen: false });
   }
 
+  showButtons() {
+    if (!this.props.currentUser || Object.keys(this.props.user).length === 0) {
+      return;
+    } else if (this.props.currentUser.id === this.props.user.id) {
+      return (
+        <div className='track-index-buttons'>
+          <button onClick={ this.handleDelete }>Delete Track</button>
+          <button onClick={ this.openModal }>Edit Track</button>
+        </div>
+      );
+    }
+  }
+
   render() {
-    const { track, artist, deleteTrack } = this.props;
+    const { track, user, deleteTrack } = this.props;
 
     return (
       <div className='track-index-item'>
@@ -56,13 +70,10 @@ class TrackIndexItem extends React.Component {
 
         <div className='track-index-item-details'>
           <label>Title: { track.title }</label>
-          <label>Artist: { artist.username }</label>
+          <label>Artist: { user.username }</label>
           <label>Description: { track.description }</label>
 
-          <div className='track-index-buttons'>
-            <button onClick={ this.handleDelete }>Delete Track</button>
-            <button onClick={ this.openModal }>Edit Track</button>
-          </div>
+          { this.showButtons() }
 
           <audio controls>
             <source src={ track.track_url } type='audio/mpeg'/>

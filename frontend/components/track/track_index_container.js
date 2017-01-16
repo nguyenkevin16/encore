@@ -11,7 +11,8 @@ const mapStateToProps = (state, ownProps) => {
   }
 
   return {
-    user
+    user,
+    currentUser: ownProps.currentUser
   };
 };
 

@@ -25,6 +25,7 @@ class TrackIndexSidebar extends React.Component {
     this.state = { modalIsOpen: false };
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
+    this.showButton = this.showButton.bind(this);
   }
 
   componentDidMount() {
@@ -40,10 +41,18 @@ class TrackIndexSidebar extends React.Component {
     this.setState({ modalIsOpen: false });
   }
 
+  showButton() {
+    if (!this.props.currentUser || Object.keys(this.props.user).length === 0) {
+      return;
+    } else if (this.props.currentUser.id === this.props.user.id) {
+      return (<button onClick={ this.openModal }>Upload Track</button>);
+    }
+  }
+
   render() {
     return (
       <div className='track-index-sidebar'>
-        <button onClick={ this.openModal }>Upload Track</button>
+        { this.showButton() }
 
         <Modal
           isOpen={this.state.modalIsOpen}
