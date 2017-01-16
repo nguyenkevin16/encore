@@ -12,12 +12,19 @@
 
 .track-index-sidebar {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
   border-left: 1px solid black;
   height: 100%;
   width: 20%;
 
   background-color: #a7adba;
+
+  h3 {
+    padding: 15px;
+    font-size: 18px;
+  }
 
   button {
     width: 80%;

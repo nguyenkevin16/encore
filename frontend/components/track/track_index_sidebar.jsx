@@ -53,6 +53,8 @@ class TrackIndexSidebar extends React.Component {
     return (
       <div className='track-index-sidebar'>
         { this.showButton() }
+        
+        <h3>{ this.props.user.description }</h3>
 
         <Modal
           isOpen={this.state.modalIsOpen}
