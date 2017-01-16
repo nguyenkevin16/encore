@@ -6,7 +6,7 @@ const TrackFormHeader = ({ formType }) => {
 
   return (
     <div className='track-form-header'>
-      <img src='https://res.cloudinary.com/nguyenkevin16/image/upload/v1484099848/headphone-symbol_iotteg.png'/>
+      <img src='https://res.cloudinary.com/nguyenkevin16/image/upload/v1484099848/System/headphone-symbol_iotteg.png'/>
       <h3>{ formHeader }</h3>
     </div>
   );
