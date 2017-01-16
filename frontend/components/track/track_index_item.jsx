@@ -27,6 +27,7 @@ class TrackIndexItem extends React.Component {
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
     this.showButtons = this.showButtons.bind(this);
+    this.handlePlay = this.handlePlay.bind(this);
   }
 
   handleDelete() {
@@ -59,6 +60,13 @@ class TrackIndexItem extends React.Component {
     }
   }
 
+  handlePlay() {
+    this.props.receivePlaybarData({
+      track_url: this.props.track.track_url,
+      display: true
+    });
+  }
+
   render() {
     const { track, user, deleteTrack } = this.props;
 
@@ -75,9 +83,9 @@ class TrackIndexItem extends React.Component {
 
           { this.showButtons() }
 
-          <audio controls>
-            <source src={ track.track_url } type='audio/mpeg'/>
-          </audio>
+          <button onClick={ this.handlePlay }>
+            Play
+          </button>
         </div>
 
         <Modal

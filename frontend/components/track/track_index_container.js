@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import TrackIndex from './track_index';
 
 import { deleteTrack } from '../../actions/track_actions';
+import { receivePlaybarData } from '../../actions/playbar_actions';
 
 const mapStateToProps = (state, ownProps) => {
   let user = { tracks: [] };
@@ -17,7 +18,8 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  deleteTrack: (id) => dispatch(deleteTrack(id))
+  deleteTrack: (id) => dispatch(deleteTrack(id)),
+  receivePlaybarData: (playbarInfo) => dispatch(receivePlaybarData(playbarInfo))
 });
 
 export default connect(

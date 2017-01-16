@@ -1,16 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const DiscoverItem = ({ track }) => (
-  <div className='discover-item'>
-    <Link to={`users/${track.user_id}`}>
-      <img src={ track.img_url } />
-    </Link>
+const DiscoverItem = ({ track, receivePlaybarData }) => {
+  const handlePlay = () => {
+    receivePlaybarData({
+      track_url: track.track_url,
+      display: true
+    });
+  };
 
-    <audio controls>
-      <source src={ track.track_url } type='audio/mpeg'/>
-    </audio>
-  </div>
-);
+  return (
+    <div className='discover-item'>
+      <Link to={`users/${track.user_id}`}>
+        <img src={ track.img_url } />
+      </Link>
+
+      <button onClick={ handlePlay }>
+        Play
+      </button>
+    </div>
+  );
+};
 
 export default DiscoverItem;

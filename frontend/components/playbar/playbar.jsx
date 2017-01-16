@@ -3,27 +3,37 @@ import React from 'react';
 class Playbar extends React.Component {
   constructor(props) {
     super(props);
-    this.renderAudio = this.renderAudio.bind(this);
   }
 
   renderAudio() {
     if (this.props.display === true) {
       return (
-        <audio controls>
-          <source src={ this.props.track_url } type='audio/mpeg'/>
-        </audio>
+        <source src={ this.props.track_url } type='audio/mpeg'/>
       );
     } else {
       return;
     }
   }
 
-  render() {
-    console.log(this.props.track_url);
+  handleAudio() {
+    if (this.props.display === true) {
+      let audio = document.getElementById('playbar');
+      audio.load();
+      audio.autoplay = true;
+    }
+  }
 
+  render() {
     return (
       <div className='playbar'>
-        { this.renderAudio() }
+        <audio controls id='playbar'>
+          {
+            this.renderAudio()
+          }
+          {
+            this.handleAudio()
+          }
+        </audio>
       </div>
     );
   }

@@ -11,7 +11,8 @@ class Discover extends React.Component {
     const tracks = this.props.tracks.map((track, i) => (
       <DiscoverItem
         key={i}
-        track={track}/>
+        track={track}
+        receivePlaybarData={this.props.receivePlaybarData}/>
     ));
 
     return (
