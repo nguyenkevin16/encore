@@ -73,7 +73,8 @@ class TrackIndexItem extends React.Component {
     return (
       <div className='track-index-item'>
         <img className='track-index-item-img'
-          src={ track.img_url }>
+          src={ track.img_url }
+          onClick={ this.handlePlay }>
         </img>
 
         <div className='track-index-item-details'>
@@ -82,10 +83,6 @@ class TrackIndexItem extends React.Component {
           <label>Description: { track.description }</label>
 
           { this.showButtons() }
-
-          <button onClick={ this.handlePlay }>
-            Play
-          </button>
         </div>
 
         <Modal
