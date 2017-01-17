@@ -1,5 +1,5 @@
 .discover {
-  height: calc(100% - 120px);
+  height: 100%;
   padding: 50px;
   overflow: auto;
 
@@ -7,22 +7,47 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  background-color: #a7adba;
+  background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/c_crop,w_1259/v1484611121/discover-background_qj2h60.jpg');
+  background-size: cover;
 }
 
 .discover-item {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  margin: 20px;
-  padding: 5px;
+  margin: 15px;
+  padding: 8px;
 
   border: 2px solid black;
-  height: 310px;
+  height: 260px;
 
   background-color: #4f5b66;
 
   img {
-    width: 300px;
-    height: 300px;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+  }
+
+  a {
+    background-color: #343d46;
+    padding: 5px;
+    border: 1px solid black;
+  }
+
+  a:hover {
+    h3 {
+      color: #C7F464;
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+  }
+
+  h5 {
+    color: #c0c5ce;
   }
 }

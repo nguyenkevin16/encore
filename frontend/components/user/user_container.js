@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import User from './user';
 
 import { updateUser, fetchUser } from '../../actions/user_actions';
-import { tracksForUser } from '../../utils/selectors';
 import { fetchTracks } from '../../actions/track_actions';
 
 const mapStateToProps = (state, ownProps) => ({
