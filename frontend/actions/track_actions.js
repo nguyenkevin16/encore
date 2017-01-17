@@ -32,12 +32,12 @@ export const fetchTrack = (id) => dispatch => {
 };
 
 export const createTrack = (track) => dispatch => {
-  APIUtils.createTrack(track)
+  return APIUtils.createTrack(track)
     .then(newTrack => dispatch(receiveTrack(newTrack)));
 };
 
 export const updateTrack = (track) => dispatch => {
-  APIUtils.updateTrack(track)
+  return APIUtils.updateTrack(track)
     .then(updatedTrack => dispatch(receiveTrack(updatedTrack)));
 };
 

@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { createTrack,
          updateTrack } from '../../../actions/track_actions';
 import TrackForm from './track_form';
+import { fetchUser } from '../../../actions/user_actions';
 
 const mapStateToProps = (state, ownProps) => {
   let track = {
@@ -27,7 +28,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     (track) => dispatch(createTrack(track)) : (track) => dispatch(updateTrack(track));
 
   return ({
-    processForm: formToProcess
+    processForm: formToProcess,
+    fetchUser: (userId) => dispatch(fetchUser(userId))
   });
 };
 

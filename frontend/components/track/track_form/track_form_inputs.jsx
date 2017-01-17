@@ -51,6 +51,7 @@ class TrackFormInputs extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state);
+    this.props.fetchUser(this.state.user_id);
     this.props.closeModal();
   }
 
