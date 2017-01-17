@@ -1,14 +1,11 @@
 .discover {
   height: 100%;
+  min-height: 800px;
   padding: 50px;
   overflow: auto;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-  background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/c_crop,w_1259/v1484611121/discover-background_qj2h60.jpg');
-  background-size: cover;
 }
 
 .discover-item {
@@ -60,13 +57,13 @@
 }
 
 .discover-overlay {
-    background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484595550/System/play-button.png') center center no-repeat;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin: -241px 1px 0 0;
-    height: 200px;
-    position: relative;
-    top: 18px;
-    z-index: 10;
+  background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484595550/System/play-button.png') center center no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: -241px 1px 0 0;
+  height: 200px;
+  position: relative;
+  top: 18px;
+  z-index: 10;
 }
 
 .discover-overlay:hover {

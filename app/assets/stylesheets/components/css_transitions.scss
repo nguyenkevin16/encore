@@ -1,0 +1,44 @@
+// .example-enter {
+//   opacity: 0.01;
+// }
+//
+// .example-enter.example-enter-active {
+//   opacity: 1;
+//   transition: opacity 500ms ease-in;
+// }
+//
+// .example-leave {
+//   opacity: 1;
+// }
+//
+// .example-leave.example-leave-active {
+//   opacity: 0.01;
+//   transition: opacity 300ms ease-in;
+// }
+//
+// .example-appear {
+//   opacity: 0.01;
+// }
+//
+// .example-appear.example-appear-active {
+//   opacity: 1;
+//   transition: opacity .5s ease-in;
+// }
+
+// Main child components
+// .main-enter {
+//   transform: translate(100%);
+// }
+// .main-enter.main-enter-active {
+//   transform: translate(0%);
+//   transition: transform 500ms ease-in;
+// }
+// .main-leave {
+//   transform: translate(0%);
+// }
+// .main-leave.main-leave-active {
+//   transform: translate(-100%);
+//   transition: transform 500ms ease-in;
+// }
+
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
