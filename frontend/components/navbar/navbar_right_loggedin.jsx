@@ -11,7 +11,7 @@ const NavbarRightLoggedIn = (props) => {
   };
 
   return (
-    <div className='navbar-right-buttons'>
+    <div className='navbar-right-content'>
       <button onClick={ logout }>
         Logout
       </button>

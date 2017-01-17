@@ -49,7 +49,7 @@ class NavbarRightLoggedOut extends React.Component {
 
   render() {
     return (
-      <div className='navbar-right-buttons'>
+      <div className='navbar-right-content'>
         <button onClick={ this.openModal('signup') }>
           Sign Up
         </button>
