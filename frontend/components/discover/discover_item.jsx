@@ -16,7 +16,6 @@ const DiscoverItem = ({ track, receivePlaybarData }) => {
 
       <Link to={`users/${track.user.id}`}>
         <h3>{ track.user.username }</h3>
-        <h5>{ track.description }</h5>
       </Link>
     </div>
   );

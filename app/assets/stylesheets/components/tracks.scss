@@ -18,6 +18,7 @@
   height: 100%;
   width: 20%;
 
+  overflow: auto;
   background-color: #4f5b66;
 
   h3 {
@@ -52,6 +53,7 @@
   padding: 10px;
   margin: 10px;
   width: 96%;
+  height: 210px;
 
   background-color: #4f5b66;
   border: 2px solid black;
@@ -88,9 +90,10 @@
 
 .track-index-item-details {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   flex-wrap: wrap;
+  height: 100%;
 
   label {
     font-size: 18px;
@@ -117,7 +120,7 @@
 
 .track-index-buttons {
   display: flex;
-  width: 35%;
+  width: 300px;
 }
 
 .track-item-overlay {

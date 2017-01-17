@@ -20,7 +20,7 @@ class SessionFormFooter extends React.Component {
   }
 
   guestLogin() {
-    const user = { username: 'guest', password: 'password' };
+    const user = { username: 'train', password: 'password' };
     this.props.login(user);
     this.props.router.push(`users/1`);
   }
@@ -57,7 +57,7 @@ class SessionFormFooter extends React.Component {
       <div className='session-form-footer'>
         <a onClick={ closeModal }>Cancel</a>
         { this.otherFormLink() }
-        <a onClick={ this.fillOutAndEnter('guest', 'password') }>Demo account</a>
+        <a onClick={ this.fillOutAndEnter('train', 'password') }>Demo account</a>
       </div>
     );
   }
