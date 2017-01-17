@@ -22,8 +22,8 @@
   background-color: #4f5b66;
 
   h3 {
-    padding: 15px;
-    font-size: 18px;
+    padding: 35px;
+    font-size: 15px;
     color: white;
   }
 
@@ -58,7 +58,7 @@
   background-color: #4f5b66;
   border: 2px solid black;
 
-  label {
+  h3, h5 {
     color: white;
   }
 
@@ -90,13 +90,22 @@
 
 .track-index-item-details {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
   height: 100%;
+  width: 50%;
+  overflow: auto;
 
-  label {
+  h3 {
     font-size: 18px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  h5 {
+    font-size: 14px;
+    width: 100%;
   }
 
   button {

@@ -35,6 +35,18 @@ User.create!(
     12 million albums worldwide.",
 )
 
+User.create!(
+  username: 'hozier',
+  password: 'password',
+  avatar_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484680416/track_photos/zg6isdfnz99fbz16mpfh.jpg',
+  description: "Andrew Hozier-Byrne (born 17 March 1990), known professionally
+    by the mononym Hozier, is an Irish musician, singer and songwriter from
+    County Wicklow. He released his debut EP, featuring the hit single
+    'Take Me' to 'Church', in 2013 and his second EP, From Eden, in 2014.
+    His debut studio album, Hozier, was released in Ireland in September
+    2014 and globally in October 2014.",
+)
+
 Track.create!(
   title: 'Drops of Jupiter',
   description: '"Drops of Jupiter (Tell Me)" (simply "Drops of Jupiter" on the album) is a Grammy Award-winning song written and recorded by American rock band Train.',
@@ -57,4 +69,20 @@ Track.create!(
   img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484347004/track_photos/bkvpsexade4mkg3rb3yb.png',
   track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484347056/track_audio/uutgymcegc0iahvtm2on.mp3',
   user_id: 2
+)
+
+Track.create!(
+  title: 'Cherry Wine',
+  description: "'Cherry Wine' is a song by Hozier released in February 2016 as the final single from the 2014 album Hozier.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484680474/track_photos/wpkeg3xt2xbdeeq8twxs.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484680644/track_audio/olorluiab7ue8ddymqcv.mp3',
+  user_id: 3
+)
+
+Track.create!(
+  title: 'Work Song',
+  description: "'Work Song' is a song written and performed by Irish musician Hozier. It was released as the fourth single from his debut studio album Hozier (2014). It was released as the album's fifth single to United States rock radio on 16 March 2015.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484680474/track_photos/wpkeg3xt2xbdeeq8twxs.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484681937/track_audio/crafcdmledjxpezxr7no.mp3',
+  user_id: 3
 )

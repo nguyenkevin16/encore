@@ -15,7 +15,8 @@ const DiscoverItem = ({ track, receivePlaybarData }) => {
       <div className='discover-overlay' onClick={ handlePlay }/>
 
       <Link to={`users/${track.user.id}`}>
-        <h3>{ track.user.username }</h3>
+        <h3>{ track.title }</h3>
+        <h5>{ track.user.username }</h5>
       </Link>
     </div>
   );

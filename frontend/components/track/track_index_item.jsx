@@ -13,7 +13,7 @@ const customStyles = {
     transform      : 'translate(-50%, -50%)'
   },
   overlay : {
-    zIndex: 2,
+    zIndex: 15,
     backgroundColor: 'rgba(0, 0, 0, 0.4)'
   }
 };
@@ -76,12 +76,11 @@ class TrackIndexItem extends React.Component {
         <div className='track-item-overlay' onClick={ this.handlePlay }/>
 
         <div className='track-index-item-details'>
-          <label>Title: { track.title }</label>
-          <label>Artist: { user.username }</label>
-          <label>Description: { track.description }</label>
-
+          <h3>{ track.title }</h3>
+          <h5>{ track.description }</h5>
           { this.showButtons() }
         </div>
+
 
         <Modal
           isOpen={this.state.modalIsOpen}
