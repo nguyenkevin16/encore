@@ -11,7 +11,8 @@ const DiscoverItem = ({ track, receivePlaybarData }) => {
 
   return (
     <div className='discover-item'>
-      <img src={ track.img_url } onClick={ handlePlay } />
+      <img src={ track.img_url }/>
+      <div className='discover-overlay' onClick={ handlePlay }/>
 
       <Link to={`users/${track.user.id}`}>
         <h3>{ track.user.username }</h3>

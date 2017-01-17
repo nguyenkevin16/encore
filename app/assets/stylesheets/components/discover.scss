@@ -23,10 +23,15 @@
 
   background-color: #4f5b66;
 
+  position: relative;
+
   img {
     border: 1px solid black;
     width: 200px;
     height: 200px;
+
+    z-index: 9;
+    text-align: center;
   }
 
   a {
@@ -50,4 +55,25 @@
   h5 {
     color: #c0c5ce;
   }
+}
+
+.discover-overlay {
+    background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484595550/System/play-button.png') center center no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: -241px 1px 0 0;
+    height: 200px;
+    position: relative;
+    top: 18px;
+    z-index: 10;
+}
+
+.discover-overlay:hover {
+  transition: all 0.4s ease 0s;
+  background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484676444/System/play-button_2_lfji5p.png') center center no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: -241px 1px 0 0;
+  height: 200px;
+  position: relative;
+  top: 18px;
+  z-index: 10;
 }

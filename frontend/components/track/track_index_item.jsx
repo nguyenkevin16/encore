@@ -72,10 +72,8 @@ class TrackIndexItem extends React.Component {
 
     return (
       <div className='track-index-item'>
-        <img className='track-index-item-img'
-          src={ track.img_url }
-          onClick={ this.handlePlay }>
-        </img>
+        <img className='track-index-item-img' src={ track.img_url }/>
+        <div className='track-item-overlay' onClick={ this.handlePlay }/>
 
         <div className='track-index-item-details'>
           <label>Title: { track.title }</label>

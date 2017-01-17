@@ -47,6 +47,7 @@
 
 .track-index-item {
   display: block;
+  position: relative;
 
   padding: 10px;
   margin: 10px;
@@ -74,9 +75,14 @@
   background-color: black;
   border: 1px solid black;
 
+  position: relative;
+
   img {
     height: 100%;
     width: 100%;
+
+    z-index: 9;
+    text-align: center;
   }
 }
 
@@ -112,4 +118,27 @@
 .track-index-buttons {
   display: flex;
   width: 35%;
+}
+
+.track-item-overlay {
+  background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484595550/System/play-button.png') center center no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  height: 202px;
+  width: 202px;
+  top: 13px;
+  left: 13px;
+  z-index: 10;
+}
+
+.track-item-overlay:hover {
+  transition: all 0.4s ease 0s;
+  background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484676444/System/play-button_2_lfji5p.png') center center no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  height: 202px;
+  width: 202px;
+  top: 13px;
+  left: 13px;
+  z-index: 10;
 }
