@@ -6,8 +6,7 @@
   width: 80%;
   max-height: 100%;
   overflow: auto;
-
-  background-color: #65737e;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .track-index-sidebar {
@@ -19,7 +18,7 @@
   height: 100%;
   width: 20%;
 
-  background-color: #a7adba;
+  background-color: #4f5b66;
 
   h3 {
     padding: 15px;
@@ -50,9 +49,10 @@
 
   padding: 10px;
   margin: 10px;
-  width: 97%;
+  width: 96%;
 
   background-color: #4f5b66;
+  border: 2px solid black;
 
   label {
     color: white;
