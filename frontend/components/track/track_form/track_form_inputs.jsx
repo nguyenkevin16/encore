@@ -85,15 +85,15 @@ class TrackFormInputs extends React.Component {
             value={ this.state.description }
             placeholder='description'/>
 
-          <input className='track-form-input track'
-              value={ this.state.track_url }
-              placeholder='audio url goes here'
-              disabled/>
-
           <button className='track-form-input button'
             onClick={ this.uploadAudio }>
             Upload Audio
+
+            <input
+              value={ this.state.track_url }
+              disabled/>
           </button>
+
         </div>
 
         <input type='submit'
