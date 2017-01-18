@@ -6,6 +6,7 @@ import AppContainer from './app_container.js';
 import WelcomePage from './welcome/welcome';
 import UserContainer from './user/user_container';
 import DiscoverContainer from './discover/discover_container';
+import TrackShowContainer from './track/track_show_container';
 
 import { fetchUser } from '../actions/user_actions';
 import { fetchTracks } from '../actions/track_actions';
@@ -13,10 +14,11 @@ import { fetchTracks } from '../actions/track_actions';
 const Root = ({ store }) => (
   <Provider store={store}>
     <Router history={hashHistory}>
-      <Route path='/' component={AppContainer}>
+      <Route path='/' component={AppContainer} onEnter={ store.dispatch(fetchTracks()) }>
         <IndexRoute component={WelcomePage}/>
-        <Route path='discover' component={DiscoverContainer} onEnter={ store.dispatch(fetchTracks()) }/>
+        <Route path='discover' component={DiscoverContainer}/>
         <Route path='users/:userId' component={UserContainer} onEnter={ _loadUser(store) }/>
+        <Route path='tracks/:trackId' component={TrackShowContainer} />
       </Route>
     </Router>
   </Provider>

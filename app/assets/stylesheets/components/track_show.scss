@@ -1,0 +1,83 @@
+.track-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 900px;
+}
+
+.track-show-subcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 600px;
+  padding: 50px;
+
+  background: rgba(45, 45, 45, 0.6);
+  border: 1px solid black;
+
+  img {
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+  }
+}
+
+.track-show-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  h3, h5, h4 {
+    color: white;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+  }
+
+  a:hover {
+    h4 {
+      color: #C7F464;
+    }
+  }
+
+  h5 {
+    font-size: 14px;
+    width: 80%;
+  }
+}
+
+.track-show-overlay {
+  background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484595550/System/play-button.png') center center no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  height: 402px;
+  width: 402px;
+  top: 50px;
+  left: 150px;
+  z-index: 3;
+}
+
+.track-show-overlay:hover {
+  transition: all 0.4s ease 0s;
+  background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484676444/System/play-button_2_lfji5p.png') center center no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  height: 402px;
+  width: 402px;
+  top: 50px;
+  left: 150px;
+  z-index: 3;
+}

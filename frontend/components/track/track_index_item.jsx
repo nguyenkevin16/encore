@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import { Link } from 'react-router';
 import TrackFormContainer from './track_form/track_form_container';
 
 const customStyles = {
@@ -77,8 +78,10 @@ class TrackIndexItem extends React.Component {
         <div className='track-item-overlay' onClick={ this.handlePlay }/>
 
         <div className='track-index-item-details'>
-          <h3>{ track.title }</h3>
-          <h5>{ track.description }</h5>
+          <Link to={`tracks/${track.id}`}>
+            <h3>{ track.title }</h3>
+            <h5>{ track.description }</h5>
+          </Link>
           { this.showButtons() }
         </div>
 
