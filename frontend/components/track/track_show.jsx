@@ -34,6 +34,10 @@ class TrackShow extends React.Component {
             <h5>{ track.description }</h5>
           </div>
         </div>
+
+        <div className='track-comments'>
+          Comments go here!
+        </div>
       </div>
     );
   }

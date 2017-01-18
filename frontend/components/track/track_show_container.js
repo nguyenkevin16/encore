@@ -5,7 +5,6 @@ import { deleteTrack } from '../../actions/track_actions';
 import { receivePlaybarData } from '../../actions/playbar_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(ownProps.params.trackId);
   let track = state.tracks[ownProps.params.trackId];
 
   if (!track) {

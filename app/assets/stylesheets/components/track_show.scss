@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: absolute;
+  position: relative;
   width: 600px;
   padding: 50px;
 
@@ -80,4 +80,20 @@
   top: 50px;
   left: 150px;
   z-index: 3;
+}
+
+.track-comments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin-top: 25px;
+  width: 600px;
+  padding: 50px;
+
+  background: rgba(45, 45, 45, 0.6);
+  border: 1px solid black;
+
+  color: white;
 }
