@@ -47,6 +47,13 @@ User.create!(
     2014 and globally in October 2014.",
 )
 
+User.create!(
+  username: 'Jackson 5',
+  password: 'password',
+  avatar_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484344439/track_photos/uyn8o41we302cknd9chp.jpg',
+  description: "The Jackson 5, or Jackson Five, also known as The Jacksons in later years, is an American popular music group. Formed in 1964 under the name the Jackson Brothers, the founding members were Jackie, Tito, Jermaine, Marlon and Michael.",
+)
+
 Track.create!(
   title: 'Drops of Jupiter',
   description: '"Drops of Jupiter (Tell Me)" (simply "Drops of Jupiter" on the album) is a Grammy Award-winning song written and recorded by American rock band Train.',
@@ -85,4 +92,20 @@ Track.create!(
   img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484680474/track_photos/wpkeg3xt2xbdeeq8twxs.jpg',
   track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484681937/track_audio/crafcdmledjxpezxr7no.mp3',
   user_id: 3
+)
+
+Track.create!(
+  title: 'Take Me to Church',
+  description: "'Take Me to Church' is a song by Irish musician Hozier for his debut extended play (EP) Take Me to Church (2013), as well as his self-titled debut album (2014).",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484711993/track_photos/hu3fbha47mgnh9tzdads.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484711974/track_audio/qg8pghbauzrbaxqzvrlq.mp3',
+  user_id: 3
+)
+
+Track.create!(
+  title: 'I Want You Back',
+  description: "'I Want You Back' is a 1969 song by the Jackson 5 which became a number-one hit for the band and the Motown label in early 1970.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484344439/track_photos/uyn8o41we302cknd9chp.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484333205/track_audio/urejde2e2yuzuexnqey5.mp3',
+  user_id: 4
 )

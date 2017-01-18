@@ -15,6 +15,7 @@ class Playbar extends React.Component {
       music: document.getElementById('music'),
       playButton: document.getElementById('playButton'),
       playHead: document.getElementById('playhead'),
+      timeline: document.getElementById('timeline'),
     });
   }
 
@@ -23,6 +24,7 @@ class Playbar extends React.Component {
       music: document.getElementById('music'),
       playButton: document.getElementById('playButton'),
       playHead: document.getElementById('playhead'),
+      timeline: document.getElementById('timeline'),
     });
   }
 
@@ -85,7 +87,7 @@ class Playbar extends React.Component {
       <div id='audioplayer'>
         { this.renderInfo() }
 
-        <div id='audiocontrols'>          
+        <div id='audiocontrols'>
           <button id="playButton"
             className="play"
             onClick={ this.playAudio }></button>
