@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show, :update]
     resource :session, only: [:create, :destroy]
     resources :tracks, except: [:edit, :new]
+    resources :comments, only: [:create, :update, :destroy]
   end
 end

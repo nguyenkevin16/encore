@@ -111,7 +111,31 @@ Track.create!(
 )
 
 Comment.create!(
-  body: 'test comment',
+  body: 'test comment 1',
+  user_id: 3,
+  track_id: 1
+)
+
+Comment.create!(
+  body: 'test comment 2',
+  user_id: 3,
+  track_id: 1
+)
+
+Comment.create!(
+  body: 'test comment 3',
+  user_id: 3,
+  track_id: 1
+)
+
+Comment.create!(
+  body: 'test comment 4',
+  user_id: 3,
+  track_id: 1
+)
+
+Comment.create!(
+  body: 'test comment 5',
   user_id: 3,
   track_id: 1
 )

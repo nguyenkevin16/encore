@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Comment from '../comments/comment';
 
 class TrackShow extends React.Component {
   constructor(props) {
     super(props);
 
     this.handlePlay = this.handlePlay.bind(this);
+    this.renderComments = this.renderComments.bind(this);
   }
 
   handlePlay() {
@@ -15,27 +17,32 @@ class TrackShow extends React.Component {
     });
   }
 
-  render() {
-    const { track } = this.props;
+  renderComments() {
+    const { track, createComment } = this.props;
 
     const comments = track.comments.map(comment => {
       return (
-        <div className='comment' key={comment.id}>
-          <h4> { comment.body } </h4>
-          <h4> { ` - ${comment.username}` }</h4>
-        </div>
+        <Comment track={track}
+          comment={comment}
+          currentUser={this.props.currentUser}
+          fetchTracks={this.props.fetchTracks}
+          deleteComment={this.props.deleteComment}
+          updateComment={this.props.updateComment}
+          key={comment.id} />
       );
     });
 
-    const renderComments = () => {
-      if (comments.length !== 0) {
-        return(
-          <div className='track-comments'>
-            { comments }
-          </div>
-        );
-      }
-    };
+    if (comments.length !== 0) {
+      return(
+        <div className='track-comments'>
+          { comments }
+        </div>
+      );
+    }
+  }
+
+  render() {
+    const { track, createComment } = this.props;
 
     return (
       <div className='track-show'>
@@ -54,7 +61,7 @@ class TrackShow extends React.Component {
           </div>
         </div>
 
-        { renderComments() }
+        { this.renderComments() }
       </div>
     );
   }
