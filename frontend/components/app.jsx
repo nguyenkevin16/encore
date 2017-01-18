@@ -16,8 +16,8 @@
 //
 //         <ReactCSSTransitionGroup
 //           transitionName="main"
-//           transitionEnterTimeout={1000}
-//           transitionLeaveTimeout={1000}>
+//           transitionEnterTimeout={0}
+//           transitionLeaveTimeout={0}>
 //
 //           { React.cloneElement(this.props.children, {key: page}) }
 //

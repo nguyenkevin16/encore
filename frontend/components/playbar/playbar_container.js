@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import Playbar from './playbar';
 
 const mapStateToProps = (state, ownProps) => ({
-  track_url: ownProps.playbar.track_url,
+  track: ownProps.playbar.track,
   display: ownProps.playbar.display
 });
 

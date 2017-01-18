@@ -27,17 +27,11 @@
 
 // Main child components
 // .main-enter {
-//   transform: translate(100%);
+//   transform: translateY(100%);
 // }
+//
 // .main-enter.main-enter-active {
-//   transform: translate(0%);
-//   transition: transform 500ms ease-in;
-// }
-// .main-leave {
-//   transform: translate(0%);
-// }
-// .main-leave.main-leave-active {
-//   transform: translate(-100%);
+//   transform: translateY(0%);
 //   transition: transform 500ms ease-in;
 // }
 

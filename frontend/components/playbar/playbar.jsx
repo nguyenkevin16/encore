@@ -8,7 +8,7 @@ class Playbar extends React.Component {
   renderAudio() {
     if (this.props.display === true) {
       return (
-        <source src={ this.props.track_url } type='audio/mpeg'/>
+        <source src={ this.props.track.track_url } type='audio/mpeg'/>
       );
     } else {
       return;
@@ -27,12 +27,8 @@ class Playbar extends React.Component {
     return (
       <div className='playbar'>
         <audio controls id='playbar'>
-          {
-            this.renderAudio()
-          }
-          {
-            this.handleAudio()
-          }
+          { this.renderAudio() }
+          { this.handleAudio() }
         </audio>
       </div>
     );

@@ -62,7 +62,7 @@ class TrackIndexItem extends React.Component {
 
   handlePlay() {
     this.props.receivePlaybarData({
-      track_url: this.props.track.track_url,
+      track: this.props.track,
       display: true
     });
   }

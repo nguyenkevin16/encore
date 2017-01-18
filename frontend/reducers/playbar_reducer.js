@@ -2,7 +2,7 @@ import { RECEIVE_PLAYBAR_DATA } from '../actions/playbar_actions';
 import { merge } from 'lodash';
 
 const _defaultState = {
-  track_url: null,
+  track: null,
   display: false
 };
 
@@ -13,7 +13,7 @@ const playbarReducer = (state = _defaultState, action) => {
   switch(action.type) {
     case RECEIVE_PLAYBAR_DATA:
       nextState = merge({}, state, {
-        track_url: action.playbarInfo.track_url,
+        track: action.playbarInfo.track,
         display: action.playbarInfo.display
       });
 

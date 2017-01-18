@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const DiscoverItem = ({ track, receivePlaybarData }) => {
   const handlePlay = () => {
     receivePlaybarData({
-      track_url: track.track_url,
+      track,
       display: true
     });
   };
