@@ -3,7 +3,7 @@ import React from 'react';
 const Credits = () => (
   <div className='credits'>
     <div className='credits-content'>
-      Credits go here.
+      <h1>Acknowledgements</h1>
     </div>
   </div>
 );
