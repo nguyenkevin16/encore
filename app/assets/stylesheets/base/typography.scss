@@ -1,10 +1,13 @@
-$sans-serif: "Helvetica Neue";
-
-body, header, h1, a, ul, li,
-h2, p, label, input, textarea, h3 {
-  font-family: $sans-serif;
-  font-weight: 300;
+body, header, a, ul, li,
+h2, p, label, input, textarea,
+h3, h4, h5, h6, h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
   font-size: 14px;
   line-height: 1.43;
   color: black;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
 }
