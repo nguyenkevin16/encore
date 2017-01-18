@@ -1,14 +1,90 @@
-.playbar {
+// .playbar {
+//   position: fixed;
+//   bottom: 0px;
+//   width: 100%;
+//   height: 30px;
+//   z-index: 5;
+//   background-color: #343d46;
+//
+//   audio {
+//     width: 100%;
+//     height: 100%;
+//     background-color: #343d46;
+//   }
+// }
+
+#audioplayer {
   position: fixed;
   bottom: 0px;
-  width: 100%;
-  height: 30px;
-  z-index: 5;
-  background-color: #343d46;
 
-  audio {
-    width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 45px;
+  width: 100%;
+  border-top: 1px solid black;
+
+  z-index: 14;
+  background-color: #4f5b66;
+}
+
+#playButton {
+  height: 35px;
+  width: 35px;
+  border: none;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+  outline: none;
+}
+
+.play{background: url('http://www.alexkatz.me/codepen/img/play.png') ;}
+.pause{background: url('http://www.alexkatz.me/codepen/img/pause.png') ;}
+
+#timeline{
+  width: 50%;
+  height: 2px;
+  float: left;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 1);
+}
+
+#playhead{
+  position: relative;
+  width: 20px;
+  height: 5px;
+  bottom: 1.5px;
+  border-radius: 30%;
+  background: rgba(0, 0, 0, 1);
+}
+
+#track-info {
+  display: flex;
+  align-items: center;
+  width: 22%;
+  height: 100%;
+
+  img {
+    float: left;
+    height: 35px;
+    width: auto;
+    margin: 0 10px;
+    border: 1px solid black;
+  }
+
+  h5 {
+    display: flex;
+    align-items: center;
     height: 100%;
-    background-color: #343d46;
+    font-size: 20px;
+    text-transform: capitalize;
+
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+
+  h5::-webkit-scrollbar {
+    display: none;
   }
 }
