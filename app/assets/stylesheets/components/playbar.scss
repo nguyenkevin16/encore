@@ -28,19 +28,27 @@
   background-color: #4f5b66;
 }
 
-#playButton {
-  height: 35px;
-  width: 35px;
-  border: none;
-  background-size: 50% 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  float: left;
-  outline: none;
+#audiocontrols {
+  display: flex;
+  justify-content: center;
+  margin: 0 15px;
+
+  button {
+    height: 30px;
+    width: 30px;
+    margin: 2px;
+    border: none;
+    background-size: 95% 95%;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+    outline: none;
+  }
 }
 
-.play{background: url('http://www.alexkatz.me/codepen/img/play.png') ;}
-.pause{background: url('http://www.alexkatz.me/codepen/img/pause.png') ;}
+.play{background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484595550/System/play-button_1.png') ;}
+.stop{background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484709462/stop-circular-button_zu5bzn.png') ;}
+.pause{background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484709462/pause-circular-button_bl7vrd.png') ;}
 
 #timeline{
   width: 50%;
@@ -77,7 +85,7 @@
     display: flex;
     align-items: center;
     height: 100%;
-    font-size: 20px;
+    font-size: 15px;
     text-transform: capitalize;
 
     overflow-x: scroll;

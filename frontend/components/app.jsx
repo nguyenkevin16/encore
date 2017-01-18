@@ -40,6 +40,16 @@ import Footer from './footer/footer';
 class App extends React.Component {
 
   render() {
+    const renderPlaybar = () => {
+      if (this.props) {
+        if (this.props.state.playbar.display) {
+          return (
+            <PlaybarContainer playbar={this.props.state.playbar} />
+          );
+        }
+      }
+    };
+
     return (
       <div className='app'>
         <NavbarContainer session={this.props.state.session} />
@@ -47,7 +57,7 @@ class App extends React.Component {
         { this.props.children }
 
         <Footer />
-        <PlaybarContainer playbar={this.props.state.playbar} />
+        { renderPlaybar() }
       </div>
     );
   }

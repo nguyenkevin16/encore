@@ -5,8 +5,17 @@ class Playbar extends React.Component {
     super(props);
 
     this.playAudio = this.playAudio.bind(this);
+    this.hideAudio = this.hideAudio.bind(this);
     this.handleAudio = this.handleAudio.bind(this);
     this.renderInfo = this.renderInfo.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      music: document.getElementById('music'),
+      playButton: document.getElementById('playButton'),
+      playHead: document.getElementById('playhead'),
+    });
   }
 
   componentWillReceiveProps() {
@@ -65,16 +74,26 @@ class Playbar extends React.Component {
     }
   }
 
-  render() {
-    console.log(this.state);
+  hideAudio(e) {
+    e.preventDefault();
+    this.state.music.pause();
+    this.props.receivePlaybarData({ display: false });
+  }
 
+  render() {
     return (
       <div id='audioplayer'>
         { this.renderInfo() }
 
-        <button id="playButton"
-          className="play"
-          onClick={ this.playAudio }></button>
+        <div id='audiocontrols'>          
+          <button id="playButton"
+            className="play"
+            onClick={ this.playAudio }></button>
+
+          <button id="stopButton"
+            className="stop"
+            onClick={ this.hideAudio }></button>
+        </div>
 
         <div id="timeline">
           <div id="playhead"></div>
