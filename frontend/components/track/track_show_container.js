@@ -14,7 +14,8 @@ const mapStateToProps = (state, ownProps) => {
       description: '',
       user: {
         username: ''
-      }
+      },
+      comments: []
     };
   }
 

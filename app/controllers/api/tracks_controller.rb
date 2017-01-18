@@ -1,10 +1,10 @@
 class Api::TracksController < ApplicationController
   def index
-    @tracks = Track.all
+    @tracks = Track.all.includes(:comments)
   end
 
   def show
-    @track = Track.find(params[:id])
+    @track = Track.includes(:comments).find(params[:id])
   end
 
   def create

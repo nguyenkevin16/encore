@@ -17,6 +17,14 @@ class TrackShow extends React.Component {
 
   render() {
     const { track } = this.props;
+    const comments = track.comments.map(comment => {
+      return (
+        <div className='comment' key={comment.id}>
+          <h4> { comment.body } </h4>
+          <h4> { ` - ${comment.username}` }</h4>
+        </div>
+      );
+    });
 
     return (
       <div className='track-show'>
@@ -36,7 +44,7 @@ class TrackShow extends React.Component {
         </div>
 
         <div className='track-comments'>
-          Comments go here!
+          { comments }
         </div>
       </div>
     );

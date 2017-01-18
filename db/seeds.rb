@@ -109,3 +109,9 @@ Track.create!(
   track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484333205/track_audio/urejde2e2yuzuexnqey5.mp3',
   user_id: 4
 )
+
+Comment.create!(
+  body: 'test comment',
+  user_id: 3,
+  track_id: 1
+)
