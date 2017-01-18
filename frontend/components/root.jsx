@@ -7,6 +7,8 @@ import WelcomePage from './welcome/welcome';
 import UserContainer from './user/user_container';
 import DiscoverContainer from './discover/discover_container';
 import TrackShowContainer from './track/track_show_container';
+import About from './about/about';
+import Credits from './credits/credits';
 
 import { fetchUser } from '../actions/user_actions';
 import { fetchTracks } from '../actions/track_actions';
@@ -19,6 +21,8 @@ const Root = ({ store }) => (
         <Route path='discover' component={DiscoverContainer}/>
         <Route path='users/:userId' component={UserContainer} onEnter={ _loadUser(store) }/>
         <Route path='tracks/:trackId' component={TrackShowContainer} />
+        <Route path='about' component={About} />
+        <Route path='credits' component={Credits} />
       </Route>
     </Router>
   </Provider>

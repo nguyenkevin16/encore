@@ -41,3 +41,26 @@
     }
   }
 }
+
+.about, .credits {
+  min-height: 900px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content, .credits-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  padding: 50px;
+  margin-top: 20px;
+
+  background: rgba(45, 45, 45, 0.6);
+  border: 1px solid black;
+
+  color: white;
+}
