@@ -17,6 +17,7 @@ class TrackShow extends React.Component {
 
   render() {
     const { track } = this.props;
+
     const comments = track.comments.map(comment => {
       return (
         <div className='comment' key={comment.id}>
@@ -25,6 +26,16 @@ class TrackShow extends React.Component {
         </div>
       );
     });
+
+    const renderComments = () => {
+      if (comments.length !== 0) {
+        return(
+          <div className='track-comments'>
+            { comments }
+          </div>
+        );
+      }
+    };
 
     return (
       <div className='track-show'>
@@ -43,9 +54,7 @@ class TrackShow extends React.Component {
           </div>
         </div>
 
-        <div className='track-comments'>
-          { comments }
-        </div>
+        { renderComments() }
       </div>
     );
   }

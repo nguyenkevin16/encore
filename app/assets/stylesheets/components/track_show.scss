@@ -97,3 +97,15 @@
 
   color: white;
 }
+
+.comment {
+  width: 75%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
+
+  h4 {
+    font-size: 14px;
+    text-align: center;
+  }
+}
