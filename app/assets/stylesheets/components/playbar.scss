@@ -18,7 +18,7 @@
   bottom: 0px;
 
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   height: 45px;
   width: 100%;
@@ -26,6 +26,22 @@
 
   z-index: 14;
   background-color: #4f5b66;
+}
+
+#audiomiddle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+#playbar-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  width: 22%;
+  height: 100%;
 }
 
 #audiocontrols {
@@ -46,8 +62,19 @@
   }
 }
 
+#stopButton {
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: right;
+  outline: none;
+}
+
 .play{background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484595550/System/play-button_1.png') ;}
-.stop{background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484709462/stop-circular-button_zu5bzn.png') ;}
+.stop{background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484782669/letter-x_mgru3x.png') ;}
 .pause{background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484709462/pause-circular-button_bl7vrd.png') ;}
 
 #timeline{

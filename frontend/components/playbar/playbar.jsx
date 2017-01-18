@@ -87,18 +87,22 @@ class Playbar extends React.Component {
       <div id='audioplayer'>
         { this.renderInfo() }
 
-        <div id='audiocontrols'>
-          <button id="playButton"
-            className="play"
-            onClick={ this.playAudio }></button>
+        <div id='audiomiddle'>
+          <div id='audiocontrols'>
+            <button id="playButton"
+              className="play"
+              onClick={ this.playAudio }></button>
+          </div>
 
+          <div id="timeline">
+            <div id="playhead"></div>
+          </div>
+        </div>
+
+        <div id='playbar-right'>
           <button id="stopButton"
             className="stop"
             onClick={ this.hideAudio }></button>
-        </div>
-
-        <div id="timeline">
-          <div id="playhead"></div>
         </div>
 
         <audio id="music" preload="true">
