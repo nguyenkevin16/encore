@@ -1,13 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Comment from '../comments/comment';
+import { merge } from 'lodash';
 
 class TrackShow extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      body: ''
+    };
+
     this.handlePlay = this.handlePlay.bind(this);
     this.renderComments = this.renderComments.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
+    this.renderForm = this.renderForm.bind(this);
   }
 
   handlePlay() {
@@ -15,6 +23,32 @@ class TrackShow extends React.Component {
       track: this.props.track,
       display: true
     });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.createComment(
+      merge({}, this.state, {track_id: this.props.track.id})
+    );
+    this.props.fetchTracks();
+  }
+
+  update(property) {
+    return e => (this.setState({ [property]: e.target.value }));
+  }
+
+  renderForm() {
+    if (this.props.currentUser) {
+      return (
+        <form className='comment-form'
+          onSubmit={ this.handleSubmit }>
+
+          <textarea onChange={ this.update('body') }></textarea>
+
+          <button>Add Comment</button>
+        </form>
+      );
+    }
   }
 
   renderComments() {
@@ -62,6 +96,7 @@ class TrackShow extends React.Component {
         </div>
 
         { this.renderComments() }
+        { this.renderForm() }
       </div>
     );
   }
