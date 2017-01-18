@@ -32,6 +32,7 @@ class TrackIndexItem extends React.Component {
 
   handleDelete() {
     this.props.deleteTrack(this.props.track.id);
+    this.props.fetchUser(this.props.user.id);
   }
 
   componentDidMount() {

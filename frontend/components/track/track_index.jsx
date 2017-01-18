@@ -15,7 +15,8 @@ class TrackIndex extends React.Component {
         user={this.props.user}
         currentUser={this.props.currentUser}
         deleteTrack={this.props.deleteTrack}
-        receivePlaybarData={this.props.receivePlaybarData}/>
+        receivePlaybarData={this.props.receivePlaybarData}
+        fetchUser={this.props.fetchUser}/>
     ));
 
     return (

@@ -1,45 +1,15 @@
-// import React from 'react';
-// import NavbarContainer from './navbar/navbar_container';
-// import PlaybarContainer from './playbar/playbar_container';
-// import Footer from './footer/footer';
-//
-// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-//
-// class App extends React.Component {
-//
-//   render() {
-//     const page = this.props.location.pathname.substr(1);
-//
-//     return (
-//       <div className='app'>
-//         <NavbarContainer session={this.props.state.session} />
-//
-//         <ReactCSSTransitionGroup
-//           transitionName="main"
-//           transitionEnterTimeout={0}
-//           transitionLeaveTimeout={0}>
-//
-//           { React.cloneElement(this.props.children, {key: page}) }
-//
-//         </ReactCSSTransitionGroup>
-//
-//         <Footer />
-//         <PlaybarContainer playbar={this.props.state.playbar} />
-//       </div>
-//     );
-//   }
-// }
-//
-// export default App;
-
 import React from 'react';
 import NavbarContainer from './navbar/navbar_container';
 import PlaybarContainer from './playbar/playbar_container';
 import Footer from './footer/footer';
 
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 class App extends React.Component {
 
   render() {
+    const page = this.props.location.pathname.substr(1);
+
     const renderPlaybar = () => {
       if (this.props) {
         if (this.props.state.playbar.display) {
@@ -54,7 +24,14 @@ class App extends React.Component {
       <div className='app'>
         <NavbarContainer session={this.props.state.session} />
 
-        { this.props.children }
+        <ReactCSSTransitionGroup
+          transitionName="main"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={500}>
+
+          { React.cloneElement(this.props.children, {key: page}) }
+
+        </ReactCSSTransitionGroup>
 
         <Footer />
         { renderPlaybar() }
@@ -64,3 +41,36 @@ class App extends React.Component {
 }
 
 export default App;
+
+// import React from 'react';
+// import NavbarContainer from './navbar/navbar_container';
+// import PlaybarContainer from './playbar/playbar_container';
+// import Footer from './footer/footer';
+//
+// class App extends React.Component {
+//
+//   render() {
+//     const renderPlaybar = () => {
+//       if (this.props) {
+//         if (this.props.state.playbar.display) {
+//           return (
+//             <PlaybarContainer playbar={this.props.state.playbar} />
+//           );
+//         }
+//       }
+//     };
+//
+//     return (
+//       <div className='app'>
+//         <NavbarContainer session={this.props.state.session} />
+//
+//         { this.props.children }
+//
+//         <Footer />
+//         { renderPlaybar() }
+//       </div>
+//     );
+//   }
+// }
+//
+// export default App;

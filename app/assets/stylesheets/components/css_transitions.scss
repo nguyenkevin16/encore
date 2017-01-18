@@ -26,13 +26,22 @@
 // }
 
 // Main child components
-// .main-enter {
-//   transform: translateY(100%);
-// }
-//
-// .main-enter.main-enter-active {
-//   transform: translateY(0%);
-//   transition: transform 500ms ease-in;
-// }
+.main-enter {
+  transform: translateY(100%);
+}
+
+.main-enter.main-enter-active {
+  transform: translateY(0%);
+  transition: transform 500ms ease-in-out;
+}
+
+.main-leave {
+  transform: translateY(100%);
+}
+
+.main-leave.main-leave-active {
+  transform: translateY(0%);
+  transition: transform 500ms ease-in-out;
+}
 
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
