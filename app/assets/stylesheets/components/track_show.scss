@@ -33,28 +33,30 @@
   flex-direction: column;
   width: 100%;
 
-  h3, h5, h4 {
+  h3, h5 {
     color: white;
   }
 
   h3 {
-    font-size: 18px;
+    font-size: 28px;
     margin-top: 10px;
   }
 
   h4 {
-    font-size: 16px;
+    color: #C7F464;
+    font-size: 26px;
     margin-bottom: 10px;
     text-transform: capitalize;
   }
 
   a:hover {
     h4 {
-      color: #C7F464;
+      text-decoration: underline;
     }
   }
 
   h5 {
+    margin-top: 25px;
     font-size: 14px;
     width: 80%;
   }
@@ -66,7 +68,7 @@
   position: absolute;
   height: 402px;
   width: 402px;
-  top: 50px;
+  top: 147px;
   left: 150px;
   z-index: 3;
 }
@@ -78,7 +80,7 @@
   position: absolute;
   height: 402px;
   width: 402px;
-  top: 50px;
+  top: 147px;
   left: 150px;
   z-index: 3;
 }
@@ -100,13 +102,69 @@
 }
 
 .comment {
+  display: flex;
+  justify-content: space-between;
+
   width: 75%;
   padding: 10px;
+  margin: 3px;
   background: rgba(0, 0, 0, 0.2);
   border: 1px solid black;
 
+  button {
+    padding: 10px;
+    border: 1px solid black;
+    background: rgba(101, 115, 126, 0.6);
+    color: white;
+  }
+
+  button:hover {
+    transition: all 0.4s ease 0s;
+    background: rgba(167, 173, 186, 1);
+    color: black;
+    cursor: pointer;
+  }
+}
+
+.comment-details {
+  display: flex;
+  flex-direction: column;
+
   h4 {
     font-size: 14px;
+  }
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  padding: 10px;
+  margin: 3px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
+
+  textarea {
+    height: 50px;
+    color: white;
+    padding: 10px;
+    margin: 3px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid black;
+  }
+
+  button {
     text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+    background: rgba(101, 115, 126, 0.6);
+    color: white;
+  }
+
+  button:hover {
+    transition: all 0.4s ease 0s;
+    background: rgba(167, 173, 186, 1);
+    color: black;
+    cursor: pointer;
   }
 }

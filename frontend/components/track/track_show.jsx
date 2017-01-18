@@ -66,10 +66,11 @@ class TrackShow extends React.Component {
       );
     });
 
-    if (comments.length !== 0) {
+    if (comments.length !== 0 || this.props.currentUser) {
       return(
         <div className='track-comments'>
           { comments }
+          { this.renderForm() }
         </div>
       );
     }
@@ -81,22 +82,23 @@ class TrackShow extends React.Component {
     return (
       <div className='track-show'>
         <div className='track-show-subcontainer'>
-          <img src={ track.img_url }/>
-          <div className='track-show-overlay' onClick={ this.handlePlay }/>
-
           <div className='track-show-details'>
             <h3>{ track.title }</h3>
 
             <Link to={`users/${track.user.id}`}>
               <h4>{ track.user.username }</h4>
             </Link>
+          </div>
 
+          <img src={ track.img_url }/>
+          <div className='track-show-overlay' onClick={ this.handlePlay }/>
+
+          <div className='track-show-details'>
             <h5>{ track.description }</h5>
           </div>
         </div>
 
         { this.renderComments() }
-        { this.renderForm() }
       </div>
     );
   }

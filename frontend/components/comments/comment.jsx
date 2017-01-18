@@ -22,7 +22,7 @@ class Comment extends React.Component {
 
     const renderButtons = () => {
       if (currentUser) {
-        if (currentUser.username === track.user.username) {
+        if (currentUser.username === comment.username) {
           return (
             <button onClick={ this.deleteComment(comment.id) }>Delete Comment</button>
           );
@@ -32,8 +32,10 @@ class Comment extends React.Component {
 
     return (
       <div className='comment' key={comment.id}>
-        <h4> { comment.body } </h4>
-        <h4> { ` - ${comment.username}` }</h4>
+        <div className='comment-details'>
+          <h4> { comment.body } </h4>
+          <h4> { ` - ${comment.username}` }</h4>
+        </div>
 
         { renderButtons(comment) }
       </div>
