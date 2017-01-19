@@ -37,6 +37,58 @@ class Playbar extends React.Component {
         playButton.className = "play";
       }
     }
+
+    //Makes timeline clickable
+    timeline.addEventListener("click", (event) => {
+    	moveplayhead(event);
+    	music.currentTime = duration * clickPercent(event);
+    }, false);
+
+    // returns click as decimal (.77) of the total timelineWidth
+    function clickPercent(e) {
+    	return (e.pageX - timeline.offsetLeft) / timelineWidth;
+    }
+
+    // Makes playhead draggable
+    playhead.addEventListener('mousedown', mouseDown, false);
+    window.addEventListener('mouseup', mouseUp, false);
+
+    // Boolean value so that mouse is moved on mouseUp only when the
+    // playhead is released
+    var onplayhead = false;
+
+    // mouseDown EventListener
+    function mouseDown() {
+    	onplayhead = true;
+    	window.addEventListener('mousemove', moveplayhead, true);
+    	music.removeEventListener('timeupdate', timeUpdate, false);
+    }
+    // mouseUp EventListener
+    // getting input from all mouse clicks
+    function mouseUp(e) {
+    	if (onplayhead === true) {
+    		moveplayhead(e);
+    		window.removeEventListener('mousemove', moveplayhead, true);
+    		// change current time
+    		music.currentTime = duration * clickPercent(e);
+    		music.addEventListener('timeupdate', timeUpdate, false);
+    	}
+    	onplayhead = false;
+    }
+    // mousemove EventListener
+    // Moves playhead as user drags
+    function moveplayhead(e) {
+    	var newMargLeft = e.pageX - timeline.offsetLeft;
+    	if (newMargLeft >= 0 && newMargLeft <= timelineWidth) {
+    		playhead.style.marginLeft = newMargLeft + "px";
+    	}
+    	if (newMargLeft < 0) {
+    		playhead.style.marginLeft = "0px";
+    	}
+    	if (newMargLeft > timelineWidth) {
+    		playhead.style.marginLeft = timelineWidth + "px";
+    	}
+    }
   }
 
   renderAudio() {
@@ -54,7 +106,9 @@ class Playbar extends React.Component {
       return (
         <div id="track-info">
           <img src={this.props.track.img_url}/>
-          <h5>{ `${this.props.track.title} - ${this.props.track.user.username}` }</h5>
+          <h5>
+            { `${this.props.track.title} - ${this.props.track.user.username}` }
+          </h5>
         </div>
       );
     } else {
@@ -111,10 +165,6 @@ class Playbar extends React.Component {
 
           <div id="timeline">
             <div id="playhead"></div>
-          </div>
-
-          <div id='timeleft'>
-            { this.timeleft() }
           </div>
         </div>
 
