@@ -21,10 +21,12 @@ class UserAvatar extends React.Component {
       theme: 'minimal'
     },
       (error, result) => {
-        this.props.updateUser({
-          id: this.props.user.id,
-          avatar_url: result[0].secure_url
-        });
+        if (result) {          
+          this.props.updateUser({
+            id: this.props.user.id,
+            avatar_url: result[0].secure_url
+          });
+        }
       }
     );
   }

@@ -28,7 +28,9 @@ class TrackFormInputs extends React.Component {
       theme: 'minimal'
     },
       (error, result) => {
-        this.setState({ img_url: result[0].secure_url });
+        if (result) {
+          this.setState({ img_url: result[0].secure_url });
+        }
       }
     );
   }
@@ -45,7 +47,9 @@ class TrackFormInputs extends React.Component {
       theme: 'minimal'
     },
       (error, result) => {
-        this.setState({ track_url: result[0].secure_url });
+        if (result) {
+          this.setState({ track_url: result[0].secure_url });
+        }
       }
     );
   }
