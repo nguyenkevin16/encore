@@ -5,7 +5,6 @@
   width: 80%;
   height: 700px;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .track-index-sidebar {
@@ -13,12 +12,13 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   flex-direction: column;
-  border-left: 1px solid black;
+  border: 1px solid black;
   height: 700px;
   width: 20%;
+  margin: 5px;
 
   overflow: auto;
-  background-color: #4f5b66;
+  background: rgba(255, 255, 255, 0.1);
 
   h3 {
     padding: 35px;
@@ -45,20 +45,16 @@
   }
 }
 
-// .track-index-item:first-of-type {
-//   margin-top: 0;
-// }
-
 .track-index-item {
   display: block;
   position: relative;
 
   padding: 10px;
-  margin-bottom: 5px;
+  margin: 5px 20px;
   width: 85%;
   height: 210px;
 
-  background-color: #4f5b66;
+  background: rgba(255, 255, 255, 0.1);
   border: 1px solid black;
 
   h3 {
