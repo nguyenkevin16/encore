@@ -79,19 +79,16 @@
 
 #timeline{
   width: 50%;
-  height: 2px;
+  height: 5px;
   float: left;
-  border-radius: 15px;
   background: rgba(0, 0, 0, 1);
 }
 
 #playhead{
   position: relative;
-  width: 20px;
-  height: 5px;
-  bottom: 1.5px;
-  border-radius: 30%;
-  background: rgba(0, 0, 0, 1);
+  width: 5px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 #track-info {
