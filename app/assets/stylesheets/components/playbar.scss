@@ -25,7 +25,7 @@
   border-top: 1px solid black;
 
   z-index: 14;
-  background-color: #4f5b66;
+  background-color: #a7adba;
 }
 
 #audiomiddle {
@@ -54,7 +54,7 @@
     width: 30px;
     margin: 2px;
     border: none;
-    background-size: 95% 95%;
+    background-size: 60% 60%;
     background-repeat: no-repeat;
     background-position: center;
     float: left;
@@ -73,15 +73,27 @@
   outline: none;
 }
 
-.play{background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484595550/System/play-button_1.png') ;}
+.play{background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484852474/play-button_2_eqqtx7.png') ;}
 .stop{background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484782669/letter-x_mgru3x.png') ;}
-.pause{background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484709462/pause-circular-button_bl7vrd.png') ;}
+.pause{background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484852510/pause-button_pnhkrz.png') ;}
 
 #timeline{
   width: 50%;
   height: 5px;
   float: left;
   background: rgba(0, 0, 0, 1);
+}
+
+#time {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  width: 90px;
+
+  input {
+    text-align: center;
+    width: 45px;
+  }
 }
 
 #playhead{
@@ -94,7 +106,7 @@
 #track-info {
   display: flex;
   align-items: center;
-  width: 22%;
+  width: 30%;
   height: 100%;
 
   img {
@@ -109,6 +121,7 @@
     display: flex;
     align-items: center;
     height: 100%;
+    width: 80%;
     font-size: 15px;
     text-transform: capitalize;
 

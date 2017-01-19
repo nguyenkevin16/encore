@@ -4,10 +4,6 @@ class Playbar extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      duration: 0,
-    };
-
     this.playAudio = this.playAudio.bind(this);
     this.hideAudio = this.hideAudio.bind(this);
     this.handleAudio = this.handleAudio.bind(this);
@@ -25,11 +21,17 @@ class Playbar extends React.Component {
 
     music.addEventListener('loadedmetadata', () => {
 	    duration = music.duration;
+
+      let $duration = $('#duration');
+      $duration.val(convertTime(duration));
     }, false);
 
     music.addEventListener("timeupdate", timeUpdate, false);
 
     function timeUpdate() {
+      let $currentTime = $('#currentTime');
+      $currentTime.val(convertTime(music.currentTime));
+
       let playPercent = timelineWidth * (music.currentTime / duration);
       playhead.style.marginLeft = playPercent + "px";
       if (music.currentTime === duration) {
@@ -38,7 +40,23 @@ class Playbar extends React.Component {
       }
     }
 
-    //Makes timeline clickable
+    function convertTime(secs) {
+      let minutes = Math.floor(secs / 60);
+      let seconds = Math.floor(secs % 60);
+      let minutesStr = `${minutes}`;
+      let secondsStr = `${seconds}`;
+
+      if (minutes < 10) {
+        minutesStr = '0' + minutesStr;
+      }
+      if (seconds < 10) {
+        secondsStr = '0' + secondsStr;
+      }
+
+      return `${minutesStr}:${secondsStr}`;
+    }
+
+    // Makes timeline clickable
     timeline.addEventListener("click", (event) => {
     	moveplayhead(event);
     	music.currentTime = duration * clickPercent(event);
@@ -63,6 +81,7 @@ class Playbar extends React.Component {
     	window.addEventListener('mousemove', moveplayhead, true);
     	music.removeEventListener('timeupdate', timeUpdate, false);
     }
+
     // mouseUp EventListener
     // getting input from all mouse clicks
     function mouseUp(e) {
@@ -75,6 +94,7 @@ class Playbar extends React.Component {
     	}
     	onplayhead = false;
     }
+
     // mousemove EventListener
     // Moves playhead as user drags
     function moveplayhead(e) {
@@ -165,6 +185,16 @@ class Playbar extends React.Component {
 
           <div id="timeline">
             <div id="playhead"></div>
+          </div>
+
+          <div id="time">
+            <input type='text'
+              id="currentTime"
+              disabled/>
+            { '/' }
+            <input type='text'
+              id="duration"
+              disabled/>
           </div>
         </div>
 

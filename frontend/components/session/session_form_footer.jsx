@@ -46,7 +46,10 @@ class SessionFormFooter extends React.Component {
     let timer = setInterval( () => {
       $field.val($field.val() + value[i]);
       i++;
-      if (i >= value.length) clearInterval(timer);
+
+      if (i >= value.length) {
+        clearInterval(timer);
+      }
     }, 70);
   }
 
