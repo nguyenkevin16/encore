@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => {
     title: "",
     description: "",
     track_url: "",
-    img_url: ""
+    img_url: "",
   };
 
   if (ownProps.track) {

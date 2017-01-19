@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import TrackFormErrors from './track_form_errors';
 
 class TrackFormInputs extends React.Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class TrackFormInputs extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.uploadImg = this.uploadImg.bind(this);
     this.uploadAudio = this.uploadAudio.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   uploadImg(e) {
@@ -49,10 +51,30 @@ class TrackFormInputs extends React.Component {
   }
 
   handleSubmit(e) {
-    e.preventDefault();
-    this.props.processForm(this.state);
-    this.props.fetchUser(this.state.user_id);
-    this.props.closeModal();
+    if (this.state.title !== '' && this.state.track_url !== '') {
+      e.preventDefault();
+      this.props.processForm(this.state);
+      this.props.fetchUser(this.state.user_id);
+      this.props.closeModal();
+    } else {
+      if (this.state.title === '' && this.state.track_url === '') {
+        this.setState({ errors:
+          ['Track title is required', 'Track audio is required']
+        });
+      } else if (this.state.title === '') {
+        this.setState({ errors: ['Track title is required'] });
+      } else if (this.state.track_url === '') {
+        this.setState({ errors: ['Track audio is required'] });
+      }
+    }
+  }
+
+  renderErrors() {
+    if (this.state.errors) {
+      return (
+        <TrackFormErrors errors={this.state.errors}/>
+      );
+    }
   }
 
   handleChange(property) {
@@ -66,6 +88,8 @@ class TrackFormInputs extends React.Component {
     return (
       <form className='track-form-inputs'
         onSubmit={ this.handleSubmit }>
+
+        { this.renderErrors() }
 
         <div className='track-form-input-avatar'>
           <img src={ this.state.img_url }></img>

@@ -62,3 +62,13 @@
   font-size: 25px;
   font-weight: 200;
 }
+
+.session-form-errors {
+  ul {
+    list-style: circle;
+  }
+
+  li {
+    color: red;
+  }
+}

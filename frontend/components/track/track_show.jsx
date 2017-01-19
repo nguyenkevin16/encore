@@ -48,6 +48,12 @@ class TrackShow extends React.Component {
           <button>Add Comment</button>
         </form>
       );
+    } else {
+      return (
+        <form className='comment-form'>
+          <h3> {'You must be logged in to comment.'} </h3>
+        </form>
+      );
     }
   }
 
@@ -66,14 +72,12 @@ class TrackShow extends React.Component {
       );
     });
 
-    if (comments.length !== 0 || this.props.currentUser) {
-      return(
-        <div className='track-comments'>
-          { comments }
-          { this.renderForm() }
-        </div>
-      );
-    }
+    return(
+      <div className='track-comments'>
+        { comments }
+        { this.renderForm() }
+      </div>
+    );
   }
 
   render() {
