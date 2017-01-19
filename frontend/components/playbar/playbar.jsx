@@ -187,13 +187,12 @@ class Playbar extends React.Component {
       + '.png'
     );
 
-    console.log(waveform);
-
     let $timeline = $('#timeline');
     $timeline.css({
       'background': `url('${waveform}')`,
       'background-repeat': 'no-repeat',
-      'background-size': 'contain'
+      'background-size': 'contain',
+      'background-position': 'center'
     });
   }
 
