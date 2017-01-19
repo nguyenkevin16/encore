@@ -8,6 +8,7 @@ class Playbar extends React.Component {
     this.hideAudio = this.hideAudio.bind(this);
     this.handleAudio = this.handleAudio.bind(this);
     this.renderTrackInfo = this.renderTrackInfo.bind(this);
+    this.insertWaveform = this.insertWaveform.bind(this);
   }
 
   componentDidMount() {
@@ -24,6 +25,8 @@ class Playbar extends React.Component {
 
       let $duration = $('#duration');
       $duration.val(convertTime(duration));
+
+      this.insertWaveform();
     }, false);
 
     music.addEventListener("timeupdate", timeUpdate, false);
@@ -169,6 +172,29 @@ class Playbar extends React.Component {
     const music = document.getElementById('music');
     music.pause();
     this.props.receivePlaybarData({ display: false });
+  }
+
+  insertWaveform() {
+    let audioUrl = this.props.track.track_url;
+    let insertIdx = audioUrl.indexOf('upload/') + 7;
+    let endIdx = audioUrl.indexOf('.mp3');
+    let insertUrl = 'h_30,w_325,fl_waveform,co_black,b_none/';
+
+    let waveform = (
+      audioUrl.slice(0, insertIdx)
+      + insertUrl
+      + audioUrl.slice(insertIdx, endIdx)
+      + '.png'
+    );
+
+    console.log(waveform);
+
+    let $timeline = $('#timeline');
+    $timeline.css({
+      'background': `url('${waveform}')`,
+      'background-repeat': 'no-repeat',
+      'background-size': 'contain'
+    });
   }
 
   render() {

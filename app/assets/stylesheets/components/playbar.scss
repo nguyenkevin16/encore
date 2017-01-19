@@ -79,15 +79,13 @@
 
 #timeline{
   width: 50%;
-  height: 5px;
+  height: 40px;
   float: left;
-  background: rgba(0, 0, 0, 1);
 }
 
 #time {
   display: flex;
   justify-content: space-between;
-  margin-left: 10px;
   width: 90px;
 
   input {
@@ -98,9 +96,10 @@
 
 #playhead{
   position: relative;
-  width: 5px;
+  width: 10px;
   height: 100%;
-  background: rgba(255, 255, 255, 0.5);
+  background-color: #C7F464;
+  opacity: 0.5;
 }
 
 #track-info {
