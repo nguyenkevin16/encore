@@ -23,8 +23,8 @@ class TrackFormInputs extends React.Component {
       cropping: 'server',
       cropping_aspect_ratio: 1,
       folder: 'track_photos',
-      max_image_width: 125,
-      max_image_height: 125,
+      max_image_width: 300,
+      max_image_height: 300,
       theme: 'minimal'
     },
       (error, result) => {

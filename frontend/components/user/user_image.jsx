@@ -16,12 +16,12 @@ class UserAvatar extends React.Component {
       cropping: 'server',
       cropping_aspect_ratio: 1,
       folder: 'track_photos',
-      max_image_width: 125,
-      max_image_height: 125,
+      max_image_width: 300,
+      max_image_height: 300,
       theme: 'minimal'
     },
       (error, result) => {
-        if (result) {          
+        if (result) {
           this.props.updateUser({
             id: this.props.user.id,
             avatar_url: result[0].secure_url
