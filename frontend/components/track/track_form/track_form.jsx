@@ -3,7 +3,7 @@ import React from 'react';
 import TrackFormHeader from './track_form_header';
 import TrackFormInputs from './track_form_inputs';
 
-const TrackForm = ({ formType, processForm, closeModal, track, fetchUser }) => {
+const TrackForm = ({ formType, processForm, closeModal, track, fetchUser, userId }) => {
   return (
     <div className='track-form'>
       <TrackFormHeader formType={formType}/>
@@ -11,7 +11,8 @@ const TrackForm = ({ formType, processForm, closeModal, track, fetchUser }) => {
         processForm={processForm}
         closeModal={closeModal}
         track={track}
-        fetchUser={fetchUser}/>
+        fetchUser={fetchUser}
+        userId={userId}/>
     </div>
   );
 };

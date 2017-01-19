@@ -58,7 +58,7 @@ class TrackFormInputs extends React.Component {
     if (this.state.title !== '' && this.state.track_url !== '') {
       e.preventDefault();
       this.props.processForm(this.state);
-      this.props.fetchUser(this.state.user_id);
+      this.props.fetchUser(this.props.userId);
       this.props.closeModal();
     } else {
       if (this.state.title === '' && this.state.track_url === '') {

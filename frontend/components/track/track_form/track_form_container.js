@@ -19,6 +19,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     formType: ownProps.formType,
     closeModal: ownProps.closeModal,
+    userId: state.user.id,
     track
   };
 };
