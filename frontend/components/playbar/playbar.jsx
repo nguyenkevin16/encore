@@ -4,28 +4,39 @@ class Playbar extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      duration: 0,
+    };
+
     this.playAudio = this.playAudio.bind(this);
     this.hideAudio = this.hideAudio.bind(this);
     this.handleAudio = this.handleAudio.bind(this);
-    this.renderInfo = this.renderInfo.bind(this);
+    this.renderTrackInfo = this.renderTrackInfo.bind(this);
   }
 
   componentDidMount() {
-    this.setState({
-      music: document.getElementById('music'),
-      playButton: document.getElementById('playButton'),
-      playHead: document.getElementById('playhead'),
-      timeline: document.getElementById('timeline'),
-    });
-  }
+    const music = document.getElementById('music');
+    const playButton = document.getElementById('playButton');
+    const playhead = document.getElementById('playhead');
+    const timeline = document.getElementById('timeline');
+    let duration;
 
-  componentWillReceiveProps() {
-    this.setState({
-      music: document.getElementById('music'),
-      playButton: document.getElementById('playButton'),
-      playHead: document.getElementById('playhead'),
-      timeline: document.getElementById('timeline'),
-    });
+    let timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
+
+    music.addEventListener('loadedmetadata', () => {
+	    duration = music.duration;
+    }, false);
+
+    music.addEventListener("timeupdate", timeUpdate, false);
+
+    function timeUpdate() {
+      let playPercent = timelineWidth * (music.currentTime / duration);
+      playhead.style.marginLeft = playPercent + "px";
+      if (music.currentTime === duration) {
+        playButton.className = "";
+        playButton.className = "play";
+      }
+    }
   }
 
   renderAudio() {
@@ -38,7 +49,7 @@ class Playbar extends React.Component {
     }
   }
 
-  renderInfo() {
+  renderTrackInfo() {
     if (this.props.track) {
       return (
         <div id="track-info">
@@ -54,48 +65,56 @@ class Playbar extends React.Component {
   }
 
   handleAudio() {
-    if (this.state !== null) {
-      this.state.music.load();
-      this.state.music.autoplay = true;
-      this.state.playButton.className = "";
-      this.state.playButton.className = "pause";
+    const music = document.getElementById('music');
+    const playButton = document.getElementById('playButton');
+
+    if (music) {
+      music.load();
+      playButton.className = "";
+      playButton.className = "pause";
     }
   }
 
   playAudio() {
-    if (this.state !== null) {
-      if (this.state.music.paused) {
-    		this.state.music.play();
-    		this.state.playButton.className = "";
-    		this.state.playButton.className = "pause";
-    	} else {
-    		this.state.music.pause();
-    		this.state.playButton.className = "";
-    		this.state.playButton.className = "play";
-    	}
-    }
+    const music = document.getElementById('music');
+    const playButton = document.getElementById('playButton');
+
+    if (music.paused) {
+  		music.play();
+  		playButton.className = "";
+  		playButton.className = "pause";
+  	} else {
+  		music.pause();
+  		playButton.className = "";
+  		playButton.className = "play";
+  	}
   }
 
   hideAudio(e) {
     e.preventDefault();
-    this.state.music.pause();
+    const music = document.getElementById('music');
+    music.pause();
     this.props.receivePlaybarData({ display: false });
   }
 
   render() {
     return (
       <div id='audioplayer'>
-        { this.renderInfo() }
+        { this.renderTrackInfo() }
 
         <div id='audiomiddle'>
           <div id='audiocontrols'>
             <button id="playButton"
-              className="play"
+              className="pause"
               onClick={ this.playAudio }></button>
           </div>
 
           <div id="timeline">
             <div id="playhead"></div>
+          </div>
+
+          <div id='timeleft'>
+            { this.timeleft() }
           </div>
         </div>
 
@@ -105,7 +124,7 @@ class Playbar extends React.Component {
             onClick={ this.hideAudio }></button>
         </div>
 
-        <audio id="music" preload="true">
+        <audio id="music" preload="true" autoPlay>
           { this.renderAudio() }
           { this.handleAudio() }
         </audio>
