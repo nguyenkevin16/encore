@@ -1,6 +1,6 @@
 # Encore
 
-[encore.audio](https://encore-audio.herokuapp.com/)
+[encore.audio](http://www.encore-audio.us)
 
 [trello](https://trello.com/b/w5o51KVc/encore)
 
