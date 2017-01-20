@@ -12,16 +12,16 @@ the following minimum criteria with adequate CSS styling, smooth/bug-free naviga
 and seed data:
 
 >Minimum Features:
-- [ ] Hosting on Heroku
-- [ ] Sign Up / Sign In / Sign Out / Demo
-- [ ] Production README
-- [ ] Song CRUD
-- [ ] Playing songs with progress bar with continuous play
-- [ ] Comments
-- [ ] User pages
+- [x] Hosting on Heroku
+- [x] Sign Up / Sign In / Sign Out / Demo
+- [x] Production README
+- [x] Song CRUD
+- [x] Playing songs with progress bar with continuous play
+- [x] Comments
+- [x] User pages
 
 >Bonus Features
-- [ ] Track Wave Forms
+- [x] Track Wave Forms
 - [ ] Playlists
 - [ ] Likes
 - [ ] Search
@@ -41,26 +41,27 @@ and seed data:
 
 ## Implementation Timeline (9 days)
 
-### Phase 1: Backend setup, Front End Authentication, Navbar (2 days)
-Objective: Functioning rails project with front-end auth and navbar
+### Phase 1: Backend setup, Front End Authentication, Navbar, Splash Page, Footer Component, Heroku Deployment (2 days)
+Objective: Functioning rails project with front-end auth, navbar, and heroku deployment
 
 >Components:
-- SessionContainer
+- SessionFormContainer
 - SessionForm
-- NavContainer
-- Nav
-- NavSession
+- NavbarContainer
+- Navbar
+- Footer
 
-### Phase 2: Tracks Model, API, and components (2 days)
-Objective: Tracks can be created, read, edited, and destroyed through the API
+### Phase 2: Tracks Model, API, Cloudinary Hosting, and Basic User Show Page (2 days)
+Objective: Tracks can be created, read, edited, and destroyed through the API and hosted via Cloudinary
 
 >Components:
+- TrackIndexContainer
 - TrackIndex
 - TrackIndexItem
-- TrackShowContainer
-- TrackShow
 - TrackFormContainer
 - TrackForm
+- UserContainer
+- User
 
 ### Phase 3: Playbar (2 days)
 Objective: Tracks can be streamed without interruption
@@ -68,28 +69,33 @@ Objective: Tracks can be streamed without interruption
 >Components:
 - PlaybarContainer
 - Playbar
-- PlayButtons
-- PlayDescription
-- PlayTime
 
-### Phase 4: User Show Page (1 day)
-Objective: Users have a show page with a track index listing
+### Phase 4: User Show, Discover, Trending Pages (1 day)
+Objective: Users have a show page with a track index listing, Discover and Trending components display tracks
 
 >Components:
-- UserShowContainer
-- UserHeader
-- UserSidebar
+- UserContainer
+- User
+  - UserDetails
+  - UserImage
+- DiscoverContainer
+- Discover
+- DiscoverItem
+- TrendingContainer
+- Trending
+- TrendingItem
 
-### Phase 5: Splash Page (1 day)
-Objective: Root splash page renders gif or greeting component
+### Phase 5: Track Show Page, Comments Functionality (1 day)
+Objective: Tracks have a show page displaying comments and track information
 
 >Components:
-- Splash
-- GreetingContainer
-- Greeting
+- TrackShowContainer
+- TrackShow
+- Comment
 
-### Phase 6: Footer / More Styling (1 day)
-Objective: Add footer component and links for style/perfect
+### Phase 6: Cleanup, Styles, About, Credits (1 day)
+Objective: Add about and credits pages for general additional info and clean up code/styling
 
 >Components:
-- Footer
+- About
+- Credits
