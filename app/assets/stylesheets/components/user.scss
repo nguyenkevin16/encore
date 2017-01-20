@@ -24,7 +24,7 @@
 }
 
 .user-details {
-  max-width: 50%;
+  width: 50%;
   max-height: 50%;
   overflow: auto;
 
@@ -45,7 +45,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 600px;
 
   button {
     width: 120px;
