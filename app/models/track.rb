@@ -17,4 +17,8 @@ class Track < ActiveRecord::Base
 
   belongs_to :user
   has_many :comments, dependent: :destroy
+
+  def ensure_track_img
+    self.img_url ||= 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484950513/track_photos/tfyrsaosvjj5rhss2wwl.jpg'
+  end
 end
