@@ -2,50 +2,50 @@
 
 ## Persistent Components
 
-NavContainer
-  - Nav
-    * NavSession - buttons to session forms
-    * NavUser - dropdown for user links
-    * NavLogo - button to homepage
-    * NavSearch(bonus)
+NavbarContainer
+  - Navbar
+    * NavbarLeft - links to different pages
+    * NavbarRight - buttons to session modals
+      - NavbarRightLoggedIn
+      - NavbarRightLoggedOut
 
 FooterContainer
   - Footer
-    * FooterConnectLinks (github, linkedIn)
-    * FooterWebpageLinks (about)
+    * FooterLinks - links to github, linkedIn, about, credits
+    * FooterLogo - display component
+    * About
+    * Credits
 
 ## Main Page Components
 
-Splash
-  - GreetingContainer
-    * Greeting
-  - SplashAddContainer
-    * 3 x SplashAdd
+Welcome
+  - Welcome
+    * WelcomeDescriptions
+    * WelcomeMessage
+    * TrendingContainer
+    * Trending
+    * TrendingItem
 
-HomeContainer
-  - HomeTrackComponent
+UserContainer
+  - User
+    * UserDetails
+    * UserImage
+    * TrackIndexContainer
+      - TrackIndex
+      - TrackIndexItem
 
-UserShowContainer
-  - UserHeader
-  - UserSidebar
-  - TrackIndex
-    * TrackIndexItem
+DiscoverContainer
+  - Discover
+  - DiscoverItem
 
 TrackShowContainer
-  - UserHeader
-  - UserSidebar
   - TrackShow
-    * CommentIndex
-      - CommentIndexItem
+    * Comment
 
 ## Pop-Up Components
 
 PlaybarContainer
   - Playbar
-    * PlayButtons
-    * PlayProgressBar
-    * PlayDescription
-    * PlayTime
 
 SessionContainer
   - SessionForm
@@ -57,11 +57,9 @@ TrackFormContainer
 
 |Path   | Component   |
 |-------|-------------|
-| "/" | "Splash" |
-| "/sign-up" | "SessionContainer" |
-| "/sign-in" | "SessionContainer" |
-| "/home" | "HomeContainer" |
-| "/discover" | "HomeContainer" |
-| "/home/user/:userId" | "UserShowContainer" |
-| "/home/user/:userId/create" | "TrackFormContainer" |
-| "/home/track/:trackId" | "TrackShowContainer" |
+| "/"   | "AppContainer" |
+| "/"   | "WelcomePage" |
+| "/discover" | "DiscoverContainer" |
+| "/users/:userId" | "UserContainer" |
+| "/about" | "About" |
+| "/credits" | "Credits" |
