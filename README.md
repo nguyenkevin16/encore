@@ -65,32 +65,25 @@ More information can be found in the [development readme][dev_readme].
 
 ## Notable Technology
 
-### Backend
+>### Backend
 - Encore runs on Ruby on Rails and is hosted on Heroku. The backend is
 essentially just a web server and provides APIs for interacting with
 our database.
-
 - Heroku utilizes a NewRelic APM (application performance management) to
 track uptime and periodically ping the heroku dyno, keeping it awake for
 quicker response.
-
 - PostgreSQL was our database implementation of choice and is easy to
 integrate with Heroku hosting.
-
 - BCrypt was utilized for password-salting and hashing for a secure
 authentication system.
 
-### Frontend
-
+>### Frontend
 - Encore utilizes the React.js framework following a Redux implementation
 to deliver a responsive single-page application.
-
 - NPM and Webpack were our choices for managing packages and bundling
 the React components.
-
 - jQuery was used for managing AJAX API requests to our back-end, but was
 used very sporadically for DOM manipulation. Most DOM manipulation was
 handled by vanilla methods.
-
 - Cloudinary was used for both audio and image storage. The web service
 also allows for the creation of waveforms based on audio tracks.
