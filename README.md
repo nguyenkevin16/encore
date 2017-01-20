@@ -12,37 +12,31 @@ Encore is a personal project by Kevin Nguyen.
 ![welcome-sceenshot][welcome]
 [welcome]: ./docs/images/welcome.png
 
-![trending-screenshot][trending]
-[trending]: ./docs/images/trending.png
-
 ## Features
 
-- User accounts with secure authentication
+#### User accounts with secure authentication
 ![login-screenshot][login]
 [login]: ./docs/images/login.png
 
-- Discover page displaying tracks
+#### Discover page displaying tracks
 ![discover-screenshot][discover]
 [discover]: ./docs/images/discover.png
 
-- User pages showing all tracks uploaded by a user
+#### User pages showing all tracks uploaded by a user
 ![user-screenshot][user]
 [user]: ./docs/images/user.png
 
-- Audio uploading and management
+#### Audio uploading and management
 ![track-form-screenshot][track-form]
 [track-form]: ./docs/images/track_form.png
 
-- Continuous music streaming
+#### Continuous music streaming
 ![playbar-screenshot][playbar]
 [playbar]: ./docs/images/playbar.png
 
-- Track pages showing details and comments
+#### Track pages showing details and comments
 ![track-screenshot][track]
 [track]: ./docs/images/track.png
-
-![comment-screenshot][comment]
-[comment]: ./docs/images/comment.png
 
 ## Project Design
 
