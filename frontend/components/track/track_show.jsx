@@ -31,6 +31,7 @@ class TrackShow extends React.Component {
       merge({}, this.state, {track_id: this.props.track.id})
     );
     this.props.fetchTracks();
+    this.setState({ body: '' });
   }
 
   update(property) {
@@ -43,7 +44,9 @@ class TrackShow extends React.Component {
         <form className='comment-form'
           onSubmit={ this.handleSubmit }>
 
-          <textarea onChange={ this.update('body') }></textarea>
+          <textarea onChange={ this.update('body') }
+            value={this.state.body}>
+          </textarea>
 
           <button>Add Comment</button>
         </form>
