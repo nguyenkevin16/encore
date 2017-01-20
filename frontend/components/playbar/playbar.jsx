@@ -19,8 +19,6 @@ class Playbar extends React.Component {
     const timeline = document.getElementById('timeline');
     let duration;
 
-    let timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
-
     music.addEventListener('loadedmetadata', () => {
 	    duration = music.duration;
 
@@ -32,14 +30,16 @@ class Playbar extends React.Component {
 
     music.addEventListener("timeupdate", timeUpdate, false);
 
+    let timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
+
     function timeUpdate() {
       let $currentTime = $('#currentTime');
       $currentTime.val(convertTime(music.currentTime));
 
       let playPercent = timelineWidth * (music.currentTime / duration);
       playhead.style.marginLeft = playPercent + "px";
+
       if (music.currentTime === duration) {
-        playButton.className = "";
         playButton.className = "play";
       }
     }
@@ -66,7 +66,6 @@ class Playbar extends React.Component {
     	music.currentTime = duration * clickPercent(event);
     }, false);
 
-    // returns click as decimal (.77) of the total timelineWidth
     function clickPercent(e) {
     	return (e.pageX - timeline.offsetLeft) / timelineWidth;
     }
@@ -75,40 +74,47 @@ class Playbar extends React.Component {
     playhead.addEventListener('mousedown', mouseDown, false);
     window.addEventListener('mouseup', mouseUp, false);
 
-    // Boolean value so that mouse is moved on mouseUp only when the
-    // playhead is released
-    var onplayhead = false;
+    // Changed to true when mouse is pressed and changed back
+    // when mouse is released (on mouseup)
+    let onplayhead = false;
 
-    // mouseDown EventListener
+    // mouseDown callback
     function mouseDown() {
     	onplayhead = true;
     	window.addEventListener('mousemove', moveplayhead, true);
     	music.removeEventListener('timeupdate', timeUpdate, false);
     }
 
-    // mouseUp EventListener
-    // getting input from all mouse clicks
+    // mouseUp callback
     function mouseUp(e) {
     	if (onplayhead === true) {
     		moveplayhead(e);
+
+        // playhead has been moved so remove listener
     		window.removeEventListener('mousemove', moveplayhead, true);
-    		// change current time
+
+        // update current time
     		music.currentTime = duration * clickPercent(e);
     		music.addEventListener('timeupdate', timeUpdate, false);
     	}
     	onplayhead = false;
     }
 
-    // mousemove EventListener
     // Moves playhead as user drags
     function moveplayhead(e) {
-    	var newMargLeft = e.pageX - timeline.offsetLeft;
+    	let newMargLeft = e.pageX - timeline.offsetLeft;
+
+      // new margin is within the bounds
     	if (newMargLeft >= 0 && newMargLeft <= timelineWidth) {
     		playhead.style.marginLeft = newMargLeft + "px";
     	}
+
+      // new margin is outside of timeline, set to 0
     	if (newMargLeft < 0) {
     		playhead.style.marginLeft = "0px";
     	}
+
+      // new margin is greater than timeline, set to end
     	if (newMargLeft > timelineWidth) {
     		playhead.style.marginLeft = timelineWidth + "px";
     	}
