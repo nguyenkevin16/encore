@@ -60,8 +60,10 @@ distinction needed to be made to incentivize signing up.
 
 ### Technical Design
 
-More information can be found in the [development readme][dev_readme].
+More information can be found in the [development readme][dev_readme]
+and [documentation][docs].
 [dev_readme]: ./docs/README.md
+[docs]: ./docs
 
 ## Notable Technology
 
