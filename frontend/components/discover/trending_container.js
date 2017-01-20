@@ -6,8 +6,10 @@ const mapStateToProps = (state, ownProps) => {
   let tracks = [];
 
   if (Object.keys(state.tracks).length !== 0) {
-    for (let i = 1; i <= 7; i++) {
-      tracks.push(state.tracks[i]);
+    let allTracks = Object.keys(state.tracks).map(id => state.tracks[id]);
+
+    while (tracks.length <= 5) {
+      tracks.push(allTracks.pop());
     }
   }
 
