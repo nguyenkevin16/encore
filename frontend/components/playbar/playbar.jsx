@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 class Playbar extends React.Component {
   constructor(props) {
@@ -129,9 +130,11 @@ class Playbar extends React.Component {
       return (
         <div id="track-info">
           <img src={this.props.track.img_url}/>
-          <h5>
-            { `${this.props.track.title} - ${this.props.track.user.username}` }
-          </h5>
+          <Link to={`tracks/${this.props.track.id}`}>
+            <h5>
+              { `${this.props.track.title} - ${this.props.track.user.username}` }
+            </h5>
+          </Link>
         </div>
       );
     } else {

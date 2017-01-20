@@ -18,8 +18,8 @@ class User < ActiveRecord::Base
   validates :username, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
-  has_many :tracks
-  has_many :comments
+  has_many :tracks, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   def generate_session_token
     SecureRandom::urlsafe_base64(16)

@@ -16,5 +16,5 @@ class Track < ActiveRecord::Base
   validates :title, :track_url, :user, presence: true
 
   belongs_to :user
-  has_many :comments
+  has_many :comments, dependent: :destroy
 end
