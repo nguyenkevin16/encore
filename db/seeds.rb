@@ -9,36 +9,27 @@
 User.create!(
   username: 'train',
   password: 'password',
-  avatar_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484678619/track_photos/msovvennllhwvhft9muw.jpg',
-  description: 'Train is an American roots rock band from San Francisco, formed in 1993. The band currently consists of Patrick Monahan (vocals), Luis Maldonado (guitar), Hector Maldonado (bass, vocals), Drew Shoals (drums), Jerry Becker (keyboards, guitar), and Jimmy Stafford (part-time lead guitar).',
+  avatar_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484866936/track_photos/mmeeymjgsorhyqoyvmwx.jpg',
+  description: 'Train is an American roots rock band from San Francisco,
+    formed in 1993. The band currently consists of Patrick Monahan
+    (vocals), Luis Maldonado (guitar), Hector Maldonado (bass, vocals),
+    Drew Shoals (drums), Jerry Becker (keyboards, guitar), and Jimmy
+    Stafford (part-time lead guitar).',
 )
 
 User.create!(
   username: 'goo goo dolls',
   password: 'password',
-  avatar_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484679152/track_photos/glivqdv6l0rmdz4ltqbo.jpg',
+  avatar_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484867050/track_photos/zylxlvmbuke87sybbdpj.jpg',
   description: "The Goo Goo Dolls are an American rock band formed in
     1986 in Buffalo, New York, by vocalist and guitarist John Rzeznik,
-    vocalist and bassist Robby Takac, and drummer George Tutuska.
-    Mike Malinin was the band's drummer from January 1995 until
-    December 27, 2013 (but not made an official member until 1998).
-    Although renowned for their commercially successful 1998 single
-    'Iris', they have had several other notable and popular singles
-    including 'Name' and 'Naked' from 1995's A Boy Named Goo. 'Slide',
-    'Black Balloon', 'Dizzy', and 'Broadway' from 1998's Dizzy Up the
-    Girl, 'Here Is Gone' from 2002's Gutterflower, 'Better Days',
-    'Give a Little Bit', and 'Stay with You' from 2006's Let Love In
-    (although 'Give A Little Bit' was originally released on the 2004
-    live CD/DVD album Live in Buffalo: July 4th, 2004), and 'Home'
-    from 2010's Something for the Rest of Us. The Goo Goo Dolls have
-    had 19 top ten singles on various charts, and have sold more than
-    12 million albums worldwide.",
+    vocalist and bassist Robby Takac, and drummer George Tutuska."
 )
 
 User.create!(
   username: 'hozier',
   password: 'password',
-  avatar_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484680416/track_photos/zg6isdfnz99fbz16mpfh.jpg',
+  avatar_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484867108/track_photos/fmiwigb2meyib8ioxl4d.jpg',
   description: "Andrew Hozier-Byrne (born 17 March 1990), known professionally
     by the mononym Hozier, is an Irish musician, singer and songwriter from
     County Wicklow. He released his debut EP, featuring the hit single
@@ -48,94 +39,151 @@ User.create!(
 )
 
 User.create!(
-  username: 'Jackson 5',
+  username: 'stapleton',
   password: 'password',
-  avatar_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484344439/track_photos/uyn8o41we302cknd9chp.jpg',
-  description: "The Jackson 5, or Jackson Five, also known as The Jacksons in later years, is an American popular music group. Formed in 1964 under the name the Jackson Brothers, the founding members were Jackie, Tito, Jermaine, Marlon and Michael.",
+  avatar_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484869212/track_photos/nvtqc7muj8ajvhgrpvkt.jpg',
+  description: 'Christopher Alvin "Chris" Stapleton (born April 15,
+    1978) is an American musician and songwriter. He is an established
+    songwriter with six number-one songs including the five-week number-one
+    "Never Wanted Nothing More" recorded by Kenny Chesney, "Love\'s
+    Gonna Make It Alright" recorded by George Strait, and "Come Back Song"
+    recorded by Darius Rucker.',
+)
+
+User.create!(
+  username: 'atmosphere',
+  password: 'password',
+  avatar_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484870245/track_photos/lhtsqpirc3lmljkendcs.jpg',
+  description: 'Atmosphere is an American hip hop duo from Minneapolis,
+    Minnesota, consisting of rapper Slug (Sean Daley) and DJ/producer
+    Ant (Anthony Davis). Since its formation in 1989, the group has
+    released eight studio albums and ten extended plays.',
 )
 
 Track.create!(
   title: 'Drops of Jupiter',
   description: '"Drops of Jupiter (Tell Me)" (simply "Drops of Jupiter" on the album) is a Grammy Award-winning song written and recorded by American rock band Train.',
-  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484344470/track_photos/q3sq2ac9qsvxluaztdcx.jpg',
-  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484336008/track_audio/dmi0ntz1actyrlpy3tob.mp3',
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484867437/track_photos/wxrqbzfe7uswilpwi2fc.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484867413/track_audio/jnivn2ivzyqdwciurxzb.mp3',
   user_id: 1
 )
 
 Track.create!(
   title: 'Save Me, San Francisco',
   description: "Save Me, San Francisco is the title of California rock band Train's fifth studio album and the first of two albums recorded as a three-piece.",
-  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484345073/track_photos/vp7m2hhcejdcgnx63xyc.jpg',
-  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484345132/track_audio/otodiocseltmh7lcgs3p.mp3',
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484867504/track_photos/q5nkbw0t19vfknh4jfhv.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484867490/track_audio/vedbutw6kxwwbqx64iq9.mp3',
+  user_id: 1
+)
+
+Track.create!(
+  title: 'Calling All Angels',
+  description: "'Calling All Angels' is the title of a 2003 song by the rock band Train. It was included on the band's third studio album, My Private Nation, and produced by Brendan O'Brien.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484867610/track_photos/xk8f3iusegoh3mmm2knq.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484867593/track_audio/pkoadyujp08mgtwnp9wr.mp3',
   user_id: 1
 )
 
 Track.create!(
   title: 'Slide',
   description: '"Slide" is a song recorded by American alternative rock group The Goo Goo Dolls.',
-  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484347004/track_photos/bkvpsexade4mkg3rb3yb.png',
-  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484347056/track_audio/uutgymcegc0iahvtm2on.mp3',
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484867891/track_photos/hyzhr1mo9iaw7g9uvhmt.png',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484867867/track_audio/vbf6aknelrxupyio9o61.mp3',
+  user_id: 2
+)
+
+Track.create!(
+  title: 'So Alive',
+  description: 'Boxes is the eleventh studio album by American rock band Goo Goo Dolls. It was released on May 6, 2016, through Warner Bros. Records.',
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484867989/track_photos/jwgwlwz7h8p2tvhkevq8.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484867974/track_audio/odqt21qfjulyhkce5twn.mp3',
+  user_id: 2
+)
+
+Track.create!(
+  title: 'Name',
+  description: "'Name' is an alternative rock song by the American rock band Goo Goo Dolls. It was released in September 1995 as the third single from the album A Boy Named Goo.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484868252/track_photos/uweo9mywe0rhrogpnkza.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484868166/track_audio/ivhiz1sk4rbtiiunk0cg.mp3',
+  user_id: 2
+)
+
+Track.create!(
+  title: 'Iris',
+  description: "'Iris' is a song by American alternative rock band Goo Goo Dolls. Originally written for the soundtrack of 1998 film City of Angels, the song was later included on the band's sixth album Dizzy Up the Girl.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484868374/track_photos/epr8fa31efntulxwwj65.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484868341/track_audio/unumfjwigvysiagsl9bq.mp3',
   user_id: 2
 )
 
 Track.create!(
   title: 'Cherry Wine',
   description: "'Cherry Wine' is a song by Hozier released in February 2016 as the final single from the 2014 album Hozier.",
-  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484680474/track_photos/wpkeg3xt2xbdeeq8twxs.jpg',
-  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484680644/track_audio/olorluiab7ue8ddymqcv.mp3',
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484868616/track_photos/mmv6qecljqows2g0ejxw.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484868606/track_audio/fjm2nla9nfbzkln237zn.mp3',
   user_id: 3
 )
 
 Track.create!(
   title: 'Work Song',
   description: "'Work Song' is a song written and performed by Irish musician Hozier. It was released as the fourth single from his debut studio album Hozier (2014). It was released as the album's fifth single to United States rock radio on 16 March 2015.",
-  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484680474/track_photos/wpkeg3xt2xbdeeq8twxs.jpg',
-  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484681937/track_audio/crafcdmledjxpezxr7no.mp3',
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484868710/track_photos/nzi0gsvi3ozta8yam73o.png',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484868678/track_audio/hk7exyrve3tw7gguwnwi.mp3',
   user_id: 3
 )
 
 Track.create!(
   title: 'Take Me to Church',
   description: "'Take Me to Church' is a song by Irish musician Hozier for his debut extended play (EP) Take Me to Church (2013), as well as his self-titled debut album (2014).",
-  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484711993/track_photos/hu3fbha47mgnh9tzdads.jpg',
-  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484711974/track_audio/qg8pghbauzrbaxqzvrlq.mp3',
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484868801/track_photos/v1lnhzyiib3nrkmr6vei.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484868772/track_audio/i9l8uhhp6tjh671mh6cw.mp3',
   user_id: 3
 )
 
 Track.create!(
-  title: 'I Want You Back',
-  description: "'I Want You Back' is a 1969 song by the Jackson 5 which became a number-one hit for the band and the Motown label in early 1970.",
-  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484344439/track_photos/uyn8o41we302cknd9chp.jpg',
-  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484333205/track_audio/urejde2e2yuzuexnqey5.mp3',
+  title: 'Jackie and Wilson',
+  description: "'Jackie and Wilson' was released as the sixth single from the self-titled album, 'Hozier', on 29 September 2015.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484868886/track_photos/xj8zjeq2t6rrzowshtp5.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484868869/track_audio/kek0hvpju26fozpml1hk.mp3',
+  user_id: 3
+)
+
+Track.create!(
+  title: 'Tennessee Whiskey',
+  description: "\"Tennessee Whiskey\" is the title of a country song written by Dean Dillon and Linda Hargrove. It was originally recorded by American country music artist David Allan Coe for his album of the same name Tennessee Whiskey, whose version peaked at number 77 on the Billboard Hot Country Singles chart in 1981.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484869543/track_photos/m5gnovlzoo8ujnokehw4.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484869487/track_audio/mqox3hz0mhj5qskylskt.mp3',
   user_id: 4
 )
 
-Comment.create!(
-  body: 'test comment 1',
-  user_id: 3,
-  track_id: 1
+Track.create!(
+  title: 'Fire Away',
+  description: "Traveller is the debut studio album by American country music artist Chris Stapleton. The album was produced by Dave Cobb and was released on May 5, 2015, through Mercury Nashville.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484869543/track_photos/m5gnovlzoo8ujnokehw4.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484869698/track_audio/kvttnwfb0jvxuu3pwp8v.mp3',
+  user_id: 4
 )
 
-Comment.create!(
-  body: 'test comment 2',
-  user_id: 3,
-  track_id: 1
+Track.create!(
+  title: 'Traveller',
+  description: "Described by music critics as an old-school country, Southern rock record, Traveller received critical acclaim and earned Stapleton several awards.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484869543/track_photos/m5gnovlzoo8ujnokehw4.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484869810/track_audio/edadilfakbh72omrh16m.mp3',
+  user_id: 4
 )
 
-Comment.create!(
-  body: 'test comment 3',
-  user_id: 3,
-  track_id: 1
+Track.create!(
+  title: 'Sunshine',
+  description: "The song \"Sunshine\", from the Bad Summer EP, was released as a single. Despite not having a music video or any promotion, the song became popular among the band's core fan base, eventually becoming a staple in live shows. Later, in 2015, the group released a music video through Rhymesayers Entertainment.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484870100/track_photos/jjx3xb6hljlewicdspcs.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484870070/track_audio/py2q71fqxffqkfpkyldv.mp3',
+  user_id: 5
 )
 
-Comment.create!(
-  body: 'test comment 4',
-  user_id: 3,
-  track_id: 1
-)
-
-Comment.create!(
-  body: 'test comment 5',
-  user_id: 3,
-  track_id: 1
+Track.create!(
+  title: 'Yesterday',
+  description: "Likely Atmosphere's most commonly known album of the 21st century, it has gained wide attention from a vast audience, featuring Slug's story-telling-rap style songs such as \"Yesterday\", a song symbolizing Slug's relationship with his father.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484870437/track_photos/ecmj1ilyernntfm6gg8v.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484870366/track_audio/getwhwju3v1bwbocgyr9.mp3',
+  user_id: 5
 )
