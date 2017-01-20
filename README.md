@@ -30,9 +30,9 @@ Encore is a personal project by Kevin Nguyen.
 ![track-form-screenshot][track-form]
 [track-form]: ./docs/images/track_form.png
 
-#### Continuous music streaming
+#### Continuous music streaming with waveform
 ![playbar-screenshot][playbar]
-[playbar]: ./docs/images/playbar.png
+[playbar]: ./docs/images/playbar_2.png
 
 #### Track pages showing details and comments
 ![track-screenshot][track]
@@ -40,6 +40,59 @@ Encore is a personal project by Kevin Nguyen.
 
 ## Project Design
 
+#### Non-User Features
+It was important to allow non-users to view and browse music as they
+scan the site. This prevents 'lock-out' apathy and allows a high-level
+of interaction without ever signing up. Hopefully, this concept will
+help increase throughput and traffic.
+
+Non-users can play audio, and view users and tracks.
+
+#### User Features
+With so much interaction available to non-users already, an important
+distinction needed to be made to incentivize signing up.
+
+Users can upload and manage their own audio and add comments to
+any audio track.
+
+Immediate future plans include more user features outlined below.
+
 ## Notable Technology
 
-## Future Implementations
+#### Backend
+Encore runs on Ruby on Rails and is hosted on Heroku. The backend is
+essentially just a web server and provides APIs for interacting with
+our database.
+
+Heroku utilizes a NewRelic APM (application performance management) to
+track uptime and periodically ping the heroku dyno, keeping it awake for
+quicker response.
+
+PostgreSQL was our database implementation of choice and is easy to
+integrate with Heroku hosting.
+
+BCrypt was utilized for password-salting and hashing for a secure
+authentication system.
+
+#### Frontend
+
+Encore utilizes the React.js framework following a Redux implementation
+to deliver a responsive single-page application.
+
+NPM and Webpack were our choices for managing packages and bundling
+the React components.
+
+jQuery was used for managing AJAX API requests to our back-end, but was
+used very sporadically for DOM manipulation. Most DOM manipulation was
+handled by vanilla methods.
+
+Cloudinary was used for both audio and image storage. The web service
+also allows for the creation of waveforms based on audio tracks.
+
+## Future Plans
+
+>Additional features:
+- Allow visitors to search for users or tracks
+- Allow users to create, view, and share playlists
+- Allow users to queue tracks
+- Allow users to like/favorite tracks
