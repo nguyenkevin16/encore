@@ -6,8 +6,8 @@ stream, and share their music.
 
 Encore is a personal project by Kevin Nguyen.
 
-![Encore home page: http://www.encore-audio.us][welcome]
+![welcome-sceenshot][welcome]
 
 [encore]: http://www.encore-audio.us
 [soundcloud]: http://soundcloud.com
-[welcome]: ./docs/images/welcome.png "Encore welcome page"
+[welcome]: ./docs/images/welcome.png
