@@ -46,53 +46,62 @@ scan the site. This prevents 'lock-out' apathy and allows a high-level
 of interaction without ever signing up. Hopefully, this concept will
 help increase throughput and traffic.
 
-Non-users can play audio, and view users and tracks.
+Non-users can:
+- Play audio
+- View users
+- View tracks
+
+Immediate future plans:
+- Allow visitors to search for users or tracks
 
 #### User Features
 With so much interaction available to non-users already, an important
 distinction needed to be made to incentivize signing up.
 
-Users can upload and manage their own audio and add comments to
-any audio track.
+Users can:
+- Upload audio, images
+- Manage audio, images
+- Edit their profile pages
+- Add comments to audio tracks
 
-Immediate future plans include more user features outlined below.
+Immediate future plans:
+- Allow users to create, view, and share playlists
+- Allow users to queue tracks
+- Allow users to like/favorite tracks
+
+#### Technical Design
+
+More information can be found in the [development readme][dev_readme].
+[dev_readme]: ./docs/README.md
 
 ## Notable Technology
 
 #### Backend
-Encore runs on Ruby on Rails and is hosted on Heroku. The backend is
+- Encore runs on Ruby on Rails and is hosted on Heroku. The backend is
 essentially just a web server and provides APIs for interacting with
 our database.
 
-Heroku utilizes a NewRelic APM (application performance management) to
+- Heroku utilizes a NewRelic APM (application performance management) to
 track uptime and periodically ping the heroku dyno, keeping it awake for
 quicker response.
 
-PostgreSQL was our database implementation of choice and is easy to
+- PostgreSQL was our database implementation of choice and is easy to
 integrate with Heroku hosting.
 
-BCrypt was utilized for password-salting and hashing for a secure
+- BCrypt was utilized for password-salting and hashing for a secure
 authentication system.
 
 #### Frontend
 
-Encore utilizes the React.js framework following a Redux implementation
+- Encore utilizes the React.js framework following a Redux implementation
 to deliver a responsive single-page application.
 
-NPM and Webpack were our choices for managing packages and bundling
+- NPM and Webpack were our choices for managing packages and bundling
 the React components.
 
-jQuery was used for managing AJAX API requests to our back-end, but was
+- jQuery was used for managing AJAX API requests to our back-end, but was
 used very sporadically for DOM manipulation. Most DOM manipulation was
 handled by vanilla methods.
 
-Cloudinary was used for both audio and image storage. The web service
+- Cloudinary was used for both audio and image storage. The web service
 also allows for the creation of waveforms based on audio tracks.
-
-## Future Plans
-
->Additional features:
-- Allow visitors to search for users or tracks
-- Allow users to create, view, and share playlists
-- Allow users to queue tracks
-- Allow users to like/favorite tracks
