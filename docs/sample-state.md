@@ -2,19 +2,13 @@
 {
   session: {
     current_user: {
+      id: 1,
       username: '',
-      email: '',
       description: '',
-      img_url: '',  
-    }
+      avatar_url: '',  
+    },
+    errors: []
   },
-
-  forms: {
-    signUp: { errors: [] },
-    logIn: { errors: [] },
-    createTrack: { errors: [] },
-    createComment { errors: [] },
-  }
 
   <!-- For discover/homepage or User Show Page -->
   tracks: {
@@ -28,11 +22,14 @@
       },
 
       1: {
+        id: 1,
         title: '',
         user_id: '',
         track_url: '',
         description: '',
         img_url: '',
+        user: {},
+        comments: []
       },
 
       ...
@@ -40,30 +37,25 @@
   }
 
   <!-- For use of persistent playbar -->
-  current_track: {
-    title: '',
-    user_id: '',
-    title: '',
-    track_url: '',
-    description: '',
-    img_url: ''
+  playbar: {
+    track: {
+      title: '',
+      user_id: '',
+      title: '',
+      track_url: '',
+      description: '',
+      img_url: ''
+    },
+    display: true,
   }
 
-  <!-- For current track show page only -->
-  comments: {
-    0: {
-      track_id: '',
-      author_id: '',
-      body: '',
-    },
-
-    1: {
-      track_id: '',
-      author_id: '',
-      body: '',
-    }
-
-    ...
+  <!-- For user show page only -->
+  user: {
+    id: 1,
+    username: '',
+    description: '',
+    avatar_url: '',
+    tracks: [],
   }
 }
 ```
