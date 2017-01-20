@@ -5,8 +5,10 @@ import { receivePlaybarData } from '../../actions/playbar_actions';
 const mapStateToProps = (state, ownProps) => {
   let tracks = [];
 
-  for (let i = 1; i <= 7; i++) {
-    tracks.push(state.tracks[i]);
+  if (Object.keys(state.tracks).length !== 0) {
+    for (let i = 1; i <= 7; i++) {
+      tracks.push(state.tracks[i]);
+    }
   }
 
   if (!tracks[0]) {
