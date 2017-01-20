@@ -26,12 +26,14 @@ class TrackShow extends React.Component {
   }
 
   handleSubmit(e) {
-    e.preventDefault();
-    this.props.createComment(
-      merge({}, this.state, {track_id: this.props.track.id})
-    );
-    this.props.fetchTracks();
-    this.setState({ body: '' });
+    if (this.state.body !== '') {
+      e.preventDefault();
+      this.props.createComment(
+        merge({}, this.state, {track_id: this.props.track.id})
+      );
+      this.props.fetchTracks();
+      this.setState({ body: '' });
+    }
   }
 
   update(property) {
