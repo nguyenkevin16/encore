@@ -7,7 +7,6 @@ const mapStateToProps = (state, ownProps) => {
 
   let numTracks = Object.keys(state.tracks).length;
   let startIdx = Math.floor(Math.random() * (numTracks - 7) + 1);
-  console.log(startIdx);
 
   if (startIdx > 0) {
     let endIdx = startIdx + 7;
