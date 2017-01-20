@@ -39,7 +39,7 @@ User.create!(
 )
 
 User.create!(
-  username: 'stapleton',
+  username: 'chris stapleton',
   password: 'password',
   avatar_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484869212/track_photos/nvtqc7muj8ajvhgrpvkt.jpg',
   description: 'Christopher Alvin "Chris" Stapleton (born April 15,
@@ -58,6 +58,31 @@ User.create!(
     Minnesota, consisting of rapper Slug (Sean Daley) and DJ/producer
     Ant (Anthony Davis). Since its formation in 1989, the group has
     released eight studio albums and ten extended plays.',
+)
+
+User.create!(
+  username: 'daughter',
+  password: 'password',
+  avatar_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484870995/track_photos/s6jn0eyqzbydjk7l5tsj.jpg',
+  description: 'Daughter are an indie folk band from England. Fronted
+    by North London native Elena Tonra (born 15 January 1990), they
+    were formed in 2010 after the addition of Swiss-born guitarist Igor
+    Haefeli and drummer Remi Aguilella from France. They have released
+    four EPs, three singles and two albums, and are currently signed to
+    Glassnote (North America) and 4AD (Europe). After playing the
+    local London circuit, they toured supporting Ben Howard around
+    Europe and have since played headlining tours around North America,
+    Europe and Australia.',
+)
+
+User.create!(
+  username: 'jack johnson',
+  password: 'password',
+  avatar_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484872235/track_photos/ou2xfmevikk8nabt3bu5.jpg',
+  description: 'Jack Hody Johnson (born May 18, 1975) is an American
+    singer-songwriter, musician, actor, record producer, documentary
+    filmmaker and a former professional surfer. Johnson is known
+    primarily for his work in the soft rock and acoustic genres.',
 )
 
 Track.create!(
@@ -186,4 +211,68 @@ Track.create!(
   img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484870437/track_photos/ecmj1ilyernntfm6gg8v.jpg',
   track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484870366/track_audio/getwhwju3v1bwbocgyr9.mp3',
   user_id: 5
+)
+
+Track.create!(
+  title: 'Smother',
+  description: "Their first single proper, \"Smother\", was released in October of 2012. It was playlisted by both BBC Radio 1 and 6Music, while being awarded Single of the Week by long-time supporter Huw Stephens.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484871150/track_photos/qh720glao6hrb2pxobtk.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484871123/track_audio/tbbpvov0qplxuxwbfakj.mp3',
+  user_id: 6
+)
+
+Track.create!(
+  title: 'Landfill',
+  description: "",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484871307/track_photos/olxaq6b4omajfg04ay8h.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484871285/track_audio/rxcfhx3nhbt9dojzjs34.mp3',
+  user_id: 6
+)
+
+Track.create!(
+  title: 'Medicine',
+  description: "",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484871484/track_photos/hnpi8omfsnmizdhvj4zi.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484871433/track_audio/ixndsv6sqihlrnxwq6sd.mp3',
+  user_id: 6
+)
+
+Track.create!(
+  title: 'Youth',
+  description: "The band's song \"Youth\" was played in an advertisement for the Tour de France on ITV4; as well as in a commercial by Norwegian airline company Widerøe.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484871547/track_photos/sm9gmjlqup8eysysxjkx.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484871532/track_audio/zedgloyutvbvj7gnai3h.mp3',
+  user_id: 6
+)
+
+Track.create!(
+  title: 'Angel',
+  description: "Jack Johnson explained to the Sun newspaper January 25, 2008 that he originally wrote and recorded \"Angel\" as a Christmas present for his wife Kim: \"She likes the song. What keeps me writing love songs is her reaction to them when I play them to her.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484872588/track_photos/yf1apdy6aqvvzwrlz0cf.png',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484872201/Jack_Johnson_Angel_go4ei9.mp3',
+  user_id: 7
+)
+
+Track.create!(
+  title: 'Do You Remember',
+  description: "It's just a simple love song with some personal moments I wasn't afraid to share. Just kind of silly things like me locking my bike to my wife's - who wasn't even my girlfriend back then, but just this girl I was trying to get - so she couldn't ride off after class. It's just stuff I thought might make people laugh and feel good.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484872638/track_photos/tv1aluyuhumqm5v903gu.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484872198/Jack_Johnson_-_Do_You_Remember_tukiae.mp3',
+  user_id: 7
+)
+
+Track.create!(
+  title: 'Breakdown',
+  description: "\"Breakdown\" is a song written by Jack Johnson, Dan Nakamura & Paul Huston and sung by Jack Johnson. It is the eleventh track on the album In Between Dreams which was released in February 2005.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484872638/track_photos/tv1aluyuhumqm5v903gu.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484872200/Jack_Johnson_-_Breakdown_qq3gxd.mp3',
+  user_id: 7
+)
+
+Track.create!(
+  title: 'Banana Pancakes',
+  description: "\"It's a wakeup in the morning and make breakfast with your family kind of song. It started when my wife was busy doing something and I wanted to distract her.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484872638/track_photos/tv1aluyuhumqm5v903gu.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484872200/Jack_Johnson_-_banana_pancakes_e0jj90.mp3',
+  user_id: 7
 )
