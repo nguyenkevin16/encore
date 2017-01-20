@@ -22,10 +22,13 @@ class TrackFormInputs extends React.Component {
       upload_preset: window.CLOUDINARY_OPTIONS.upload_preset,
       cropping: 'server',
       cropping_aspect_ratio: 1,
+      cropping_default_selection_ratio: 1,
+      cropping_validate_dimensions: true,
       folder: 'track_photos',
       max_image_width: 300,
       max_image_height: 300,
-      theme: 'minimal'
+      theme: 'minimal',
+      resource_type: 'image'
     },
       (error, result) => {
         if (result) {
