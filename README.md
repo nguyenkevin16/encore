@@ -46,25 +46,14 @@ scan the site. This prevents 'lock-out' apathy and allows a high-level
 of interaction without ever signing up. Hopefully, this concept will
 help increase throughput and traffic.
 
-Non-users can:
-- Play audio
-- View users
-- View tracks
-
-Immediate future plans:
+>Immediate future plans:
 - Allow visitors to search for users or tracks
 
 ### User Features
 With so much interaction available to non-users already, an important
 distinction needed to be made to incentivize signing up.
 
-Users can:
-- Upload audio, images
-- Manage audio, images
-- Edit their profile pages
-- Add comments to audio tracks
-
-Immediate future plans:
+>Immediate future plans:
 - Allow users to create, view, and share playlists
 - Allow users to queue tracks
 - Allow users to like/favorite tracks
