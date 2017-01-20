@@ -85,6 +85,17 @@ User.create!(
     primarily for his work in the soft rock and acoustic genres.',
 )
 
+User.create!(
+  username: 'third eye blind',
+  password: 'password',
+  avatar_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484873578/track_photos/rpnvnduia0kr2yxcitfo.jpg',
+  description: 'Third Eye Blind is an American rock band formed in San
+    Francisco in 1993. The songwriting duo of Stephan Jenkins and Kevin
+    Cadogan signed the band\'s first major label recording contract with
+    Elektra Records in 1996, which was later reported as the largest
+    publishing deal ever for an unsigned artist.'
+)
+
 Track.create!(
   title: 'Drops of Jupiter',
   description: '"Drops of Jupiter (Tell Me)" (simply "Drops of Jupiter" on the album) is a Grammy Award-winning song written and recorded by American rock band Train.',
@@ -275,4 +286,36 @@ Track.create!(
   img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484872638/track_photos/tv1aluyuhumqm5v903gu.jpg',
   track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484872200/Jack_Johnson_-_banana_pancakes_e0jj90.mp3',
   user_id: 7
+)
+
+Track.create!(
+  title: 'Semi-Charmed Life',
+  description: "\"Semi-Charmed Life\" is a song by American alternative rock band Third Eye Blind. It was released in June 1997 as the lead single from their self-titled debut album. It was a major hit of the 1990s, reaching number 4 in the U.S., number 1 on the Modern Rock Tracks, number 2 in Canada, and making the Top 40 in the UK. VH1 has named the song as the 34th best of the 1990s.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484873648/track_photos/qiqiov15lxqfmn7mtbey.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484873248/Third_Eye_Blind_-_Semi-Charmed_Life_HQ_Official_k32apo.mp3',
+  user_id: 8
+)
+
+Track.create!(
+  title: 'Never Let You Go',
+  description: "\"Never Let You Go\" is a song by American rock band Third Eye Blind. It was released in January 2000 as the second single from their second album, Blue. The song peaked at number 14 on the US Billboard Hot 100 and also spent three weeks at number-one in Canada.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484873786/track_photos/uqq5oolun8r5a45nmf5c.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484873254/Third_Eye_Blind_-_Never_Let_You_Go_r1yqdp.mp3',
+  user_id: 8
+)
+
+Track.create!(
+  title: 'Jumper',
+  description: "\"Jumper\" is a song by the American rock band Third Eye Blind and written by vocalist Stephan Jenkins. It was released in May 1998 as the fifth and final single from their self titled album. The song reached number 5 on the U.S. Billboard Hot 100 chart The song also peaked number 9 on the U.S. Modern Rock Tracks chart.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484873831/track_photos/yrmoyznluobkogq9gwzx.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484873249/Third_Eye_Blind_-_Jumper_Complete_Official_Music_Video_eec5nc.mp3',
+  user_id: 8
+)
+
+Track.create!(
+  title: 'How\'s It Gonna Be',
+  description: "\"How's It Going to Be\" is a song by the American rock band Third Eye Blind. It was released in November 1997 as the third single from their self-titled debut album. The song deals with the trauma of the ending of a relationship and how the transition from friends to acquaintances is a brutal one. It reached number nine on the US Billboard Hot 100 chart, to become the band's second consecutive top 10 single, following \"Semi-Charmed Life\". In the UK, the single peaked at number 51.",
+  img_url: 'https://res.cloudinary.com/nguyenkevin16/image/upload/v1484873901/track_photos/abvloskrb7uce2yijcgz.jpg',
+  track_url: 'https://res.cloudinary.com/nguyenkevin16/video/upload/v1484873240/Hows_It_Gonna_Be_-_Third_Eye_Blind_idtcbv.mp3',
+  user_id: 8
 )
