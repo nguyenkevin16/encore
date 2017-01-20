@@ -4,10 +4,6 @@ import Modal from 'react-modal';
 import Root from './components/root';
 import configureStore from './store/store';
 
-import { createComment,
-         updateComment,
-         deleteComment } from './utils/comment_api_util';
-
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   let store;
@@ -24,7 +20,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // TODO: testing
   window.store = store;
-  window.createComment = createComment;
-  window.updateComment = updateComment;
-  window.deleteComment = deleteComment;
 });
