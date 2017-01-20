@@ -60,7 +60,7 @@ class User extends React.Component {
       <div className='user-show'>
         <div className='user-show-header'>
           <UserImage user={user} updateUser={updateUser} currentUser={currentUser} />
-          <UserDetails user={user}/>
+          <UserDetails user={user} updateUser={updateUser} currentUser={currentUser}/>
         </div>
 
         <div className='user-tracks'>

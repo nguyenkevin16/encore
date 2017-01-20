@@ -35,9 +35,32 @@
   }
 
   h3 {
-    width: 90%;
+    width: 100%;
     font-size: 15px;
     color: white;
+  }
+}
+
+.user-username {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    width: 120px;
+    height: 20px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+    background: rgba(101, 115, 126, 0.6);
+    color: white;
+  }
+
+  button:hover {
+    transition: all 0.4s ease 0s;
+    background: rgba(167, 173, 186, 1);
+    color: black;
+    cursor: pointer;
   }
 }
 
