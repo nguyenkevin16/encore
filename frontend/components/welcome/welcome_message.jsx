@@ -6,7 +6,7 @@ const WelcomeMessage = () => {
 
   return (
     <div className='welcome-message'>
-      <h2>music for the soul</h2>
+      <h2>"music is the universal language for mankind" - henry wadsworth longfellow</h2>
       <button onClick={ _redirect }>LISTEN NOW</button>
     </div>
   );
