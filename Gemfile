@@ -48,6 +48,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'launchy'
+  gem 'annotate'
 end
 
 group :development do
@@ -58,5 +59,4 @@ group :development do
   gem 'spring'
 
   gem 'pry-rails'
-  gem 'annotate'
 end
