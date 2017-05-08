@@ -9,7 +9,7 @@ Encore is a personal project by Kevin Nguyen.
 [encore]: http://www.encore-audio.us
 [soundcloud]: http://soundcloud.com
 
-![welcome-sceenshot][welcome]
+![welcome-sceenshot](./docs/images/welcome.png)
 [welcome]: ./docs/images/welcome.png
 
 ## Features
