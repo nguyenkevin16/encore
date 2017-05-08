@@ -10,33 +10,26 @@ Encore is a personal project by Kevin Nguyen.
 [soundcloud]: http://soundcloud.com
 
 ![welcome-sceenshot](./docs/images/welcome.png)
-[welcome]: ./docs/images/welcome.png
 
 ## Features
 
 ### User accounts with secure authentication
-![login-screenshot][login]
-[login]: ./docs/images/login.png
+![login-screenshot](./docs/images/login.png)
 
 ### Discover page displaying tracks
-![discover-screenshot][discover]
-[discover]: ./docs/images/discover.png
+![discover-screenshot](./docs/images/discover.png)
 
 ### User pages showing all tracks uploaded by a user
-![user-screenshot][user]
-[user]: ./docs/images/user.png
+![user-screenshot](./docs/images/user.png)
 
 ### Audio uploading and management
-![track-form-screenshot][track-form]
-[track-form]: ./docs/images/track_form.png
+![track-form-screenshot](./docs/images/track_form.png)
 
 ### Continuous music streaming with waveform
-![playbar-screenshot][playbar]
-[playbar]: ./docs/images/playbar_2.png
+![playbar-screenshot](./docs/images/playbar_2.png)
 
 ### Track pages showing details and comments
-![track-screenshot][track]
-[track]: ./docs/images/track.png
+![track-screenshot](./docs/images/track.png)
 
 ## Project Design
 
@@ -60,10 +53,8 @@ distinction needed to be made to incentivize signing up.
 
 ### Technical Design
 
-More information can be found in the [development readme][dev_readme]
-and [documentation][docs].
-[dev_readme]: ./docs/README.md
-[docs]: ./docs
+More information can be found in the [development readme](./docs/README.md)
+and [documentation](./docs).
 
 ## Notable Technology
 
