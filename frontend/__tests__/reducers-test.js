@@ -1,6 +1,7 @@
 /* globals jest */
 
 import UserReducer from '../reducers/user_reducer';
+import TrackReducer from '../reducers/track_reducer';
 
 describe('Reducers', () => {
   describe('UserReducer', () => {
@@ -39,6 +40,22 @@ describe('Reducers', () => {
         UserReducer(oldState, action);
         expect(oldState).toEqual({ 1: 'old' }); 
       })
+    })
+  })
+
+  describe('TrackReducer', () => {
+    it('exports a function', () => {
+      expect(typeof TrackReducer).toEqual('function');
+    })
+
+    it('should initialize with {} as default state', () => {
+      expect(TrackReducer(undefined, {})).toEqual({});
+    })
+
+    it('should return previous state if action is not matched', () => {
+      let oldState = { 1: 'old' };
+      let newState = TrackReducer(oldState, { type: 'undefined_action' });
+      expect(newState).toEqual(oldState);
     })
   })
 })
