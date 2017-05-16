@@ -18,6 +18,27 @@ describe('Reducers', () => {
       expect(newState).toEqual(oldState);
     })
 
-    
+    describe('RECEIVE_USER action', () => {
+      let action, testUser;
+
+      beforeEach(() => {
+        testUser = { id: 1, username: 'testUser' };
+        action = {
+          type: 'RECEIVE_USER',
+          user: testUser
+        };
+      })
+
+      it('should update state w/ testUser', () => {
+        const state = UserReducer(undefined, action);
+        expect(state).toEqual(testUser);
+      })
+
+      it('should not modify old state', () => {
+        let oldState = { 1: 'old' };
+        UserReducer(oldState, action);
+        expect(oldState).toEqual({ 1: 'old' }); 
+      })
+    })
   })
 })
