@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "watch": "NODE_ENV=development webpack -w --env.dev",
     "heroku-postbuild": "webpack --config webpack.config.prod.js"
   },
   "keywords": [],
