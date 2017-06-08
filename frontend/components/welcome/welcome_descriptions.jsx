@@ -8,13 +8,13 @@ const WelcomeDescriptions = () => (
         <p>Upload your own music.</p>
       </div>
 
-      <img src='https://static1.squarespace.com/static/53585febe4b02ff06cdbbba3/t/5537a674e4b08d87cbebaf0d/1429710458367/Music-Studio-Monochrome-Greyscale.jpg?format=1500w'
+      <img src='https://res.cloudinary.com/nguyenkevin16/image/upload/v1496899181/music-studio_hxg5bz.jpg'
         alt='recording studio'/>
     </div>
 
     <div className='welcome-subcontainer'>
-      <img src='https://static1.squarespace.com/static/53585febe4b02ff06cdbbba3/t/5537a674e4b08d87cbebaf0d/1429710458367/Music-Studio-Monochrome-Greyscale.jpg?format=1500w'
-        alt='recording studio'/>
+      <img src='https://res.cloudinary.com/nguyenkevin16/image/upload/c_scale,w_1500/v1496899304/egor-khomiakov-242859_ljncyp.jpg'
+        alt='music amp and speakers'/>
       
       <div className='welcome-subcontainer-text'>
         <h3>Listen to Music</h3>
@@ -28,8 +28,8 @@ const WelcomeDescriptions = () => (
         <p>Share your music with others.</p>
       </div>
 
-      <img src='https://static1.squarespace.com/static/53585febe4b02ff06cdbbba3/t/5537a674e4b08d87cbebaf0d/1429710458367/Music-Studio-Monochrome-Greyscale.jpg?format=1500w'
-        alt='recording studio'/>
+      <img src='https://res.cloudinary.com/nguyenkevin16/image/upload/c_scale,w_1500/v1496899293/mitchel-lensink-236502_vayi8i.jpg'
+        alt='music records'/>
     </div>
   </div>
 );
