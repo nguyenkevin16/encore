@@ -16,6 +16,8 @@ class Trending extends React.Component {
 
     return (
       <div className='trending'>
+        <h1>Sample tracks</h1>
+        <p>Try it out! Just click on an image below.</p>
         <div className='trending-subcontainer'>
           { tracks }
         </div>
