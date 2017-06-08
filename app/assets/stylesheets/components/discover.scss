@@ -1,15 +1,62 @@
 .discover {
   height: 100%;
   min-height: 800px;
-  padding: 50px;
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.discover-container {
+  width: 100%;
+  height: 800px;
+
+  img {
+    max-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.discover-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 15%;
+  z-index: 1;
+
+  width: 100%;
+  height: 40%;
+
+  h1, p {
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 50px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+}
+
+.discover-tracks {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  overflow: auto;
+  padding: 75px 30px;
 
-  background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/c_scale,w_1961/v1484861372/by96lar-34o-hans-vivek_1_mmds4m.jpg');
-  background-attachment: fixed;
-  background-size: cover;
+  background-color: antiquewhite;
 }
 
 .discover-item {
@@ -17,14 +64,11 @@
   justify-content: space-between;
   flex-direction: column;
   margin: 15px;
-  padding: 8px;
-
-  border: 2px solid black;
-  height: 260px;
-
-  background-color: #4f5b66;
-
+  height: 255px;
   position: relative;
+
+  box-shadow: 0 6px 4px 0 rgba(0,0,0,0.4), 0 0 0 1px rgba(0,0,0,0.2);
+  transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
 
   img {
     border: 1px solid black;
@@ -36,7 +80,7 @@
   }
 
   .discover-links {
-    background-color: #343d46;
+    background-color: rgb(41,41,41);
     padding: 5px;
     border: 1px solid black;
     width: 190px;
