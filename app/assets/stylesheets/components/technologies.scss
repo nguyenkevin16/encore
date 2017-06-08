@@ -1,0 +1,51 @@
+.tech {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+}
+
+.tech h1 {
+  font-size: 24px;
+  line-height: 60px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+
+  color: rgb(52, 52, 52);
+  margin: 0 0 50px;
+}
+
+.tech p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+
+  color: rgb(108, 114, 121);
+  margin: 15px 0px;
+}
+
+.tech div {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tech a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech div img {
+  height: 84px;
+  width: 84px;
+}
+
+.tech a:nth-child(3) img {
+  margin-left: 10px;
+}
