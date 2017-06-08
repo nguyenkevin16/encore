@@ -4,8 +4,9 @@ const WelcomeDescriptions = () => (
   <div className='welcome-descriptions'>
     <div className='welcome-subcontainer'>
       <div className='welcome-subcontainer-text'>
-        <h3>Create Music</h3>
-        <p>Upload your own music.</p>
+        <h3>Upload</h3>
+        <p>Upload your favorite tunes in any format.</p>
+        <p>Supported formats: .mp3, .ogg, .wav, .wmv, etc.</p>
       </div>
 
       <img src='https://res.cloudinary.com/nguyenkevin16/image/upload/v1496899181/music-studio_hxg5bz.jpg'
@@ -17,15 +18,15 @@ const WelcomeDescriptions = () => (
         alt='music amp and speakers'/>
       
       <div className='welcome-subcontainer-text'>
-        <h3>Listen to Music</h3>
+        <h3>Listen</h3>
         <p>Discover new music or listen to your own.</p>
       </div>
     </div>
 
     <div className='welcome-subcontainer'>
       <div className='welcome-subcontainer-text'>
-        <h3>Share Music</h3>
-        <p>Share your music with others.</p>
+        <h3>Share</h3>
+        <p>Share your profile with your friends!</p>
       </div>
 
       <img src='https://res.cloudinary.com/nguyenkevin16/image/upload/c_scale,w_1500/v1496899293/mitchel-lensink-236502_vayi8i.jpg'
