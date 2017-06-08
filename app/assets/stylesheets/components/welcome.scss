@@ -7,7 +7,7 @@
 
 .welcome-container {
   width: 100%;
-  height: 800px;
+  height: 950px;
 
   img {
     max-width: 100%;
@@ -79,31 +79,55 @@
 
 .welcome-descriptions {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   width: 100%;
-  height: 150px;
-  background-color: #8d929a;
-  border-top: 2px solid black;
+  height: 1500px;
+  background-color: white;
 }
 
 .welcome-subcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 33%;
+  width: 75%;
+
+  img {
+    height: 85%;
+    width: auto;
+    
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.4), 0 0 0 1px rgba(0,0,0,0.2);
+    transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+}
+
+.welcome-subcontainer-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  height: 100%;
-  width: 33%;
+  height: 85%;
+  width: 500px;
 
   h3 {
-    font-size: 23px;
-    font-weight: 400;
+    font-size: 24px;
+    line-height: 60px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+
+    color: rgb(52, 52, 52);
   }
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
+    line-height: 24px;
+
+    color: rgb(108, 114, 121);
   }
 }

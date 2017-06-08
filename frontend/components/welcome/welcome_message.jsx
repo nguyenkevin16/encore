@@ -7,7 +7,7 @@ const WelcomeMessage = () => {
   return (
     <div className='welcome-message'>
       <h2>ENCORE AUDIO</h2>
-      <p>A simple, elegant music sharing web application.<br/>
+      <p>A simple and elegant music sharing web application.<br/>
         Listen and share your favorite tunes.</p>
       <button onClick={ _redirect }>DISCOVER</button>
     </div>
