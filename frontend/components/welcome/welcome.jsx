@@ -3,6 +3,7 @@ import React from 'react';
 import WelcomeMessage from './welcome_message';
 import WelcomeDescriptions from './welcome_descriptions';
 import TrendingContainer from '../discover/trending_container';
+import Technologies from './technologies';
 
 const WelcomePage = () => {
   return (
@@ -14,6 +15,7 @@ const WelcomePage = () => {
 
       <WelcomeDescriptions/>
       <TrendingContainer/>
+      <Technologies/>
     </div>
   );
 };

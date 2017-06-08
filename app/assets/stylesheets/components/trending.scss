@@ -25,9 +25,12 @@
   margin: 15px;
   padding: 8px;
 
-  border: 2px solid black;
+  border: 1px solid rgb(41,41,41);
+  border-radius: 2px;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  
   height: 260px;
-
   background-color: #4f5b66;
 
   position: relative;
