@@ -136,6 +136,13 @@ class Playbar extends React.Component {
       return (
         <div id="track-info">
           <img src={this.props.track.img_url}/>
+
+          <div id='audiocontrols'>
+            <button id="playButton"
+              className="pause"
+              onClick={ this.playAudio }></button>
+          </div>
+
           <Link to={`tracks/${this.props.track.id}`}>
             <h5>
               { `${this.props.track.title}` }
@@ -213,10 +220,10 @@ class Playbar extends React.Component {
         { this.renderTrackInfo() }
 
         <div id='audiomiddle'>
-          <div id='audiocontrols'>
-            <button id="playButton"
-              className="pause"
-              onClick={ this.playAudio }></button>
+          <div id="time">
+            <input type='text'
+              id="currentTime"
+              disabled/>
           </div>
 
           <div id="timeline">
@@ -224,10 +231,6 @@ class Playbar extends React.Component {
           </div>
 
           <div id="time">
-            <input type='text'
-              id="currentTime"
-              disabled/>
-            { '/' }
             <input type='text'
               id="duration"
               disabled/>
