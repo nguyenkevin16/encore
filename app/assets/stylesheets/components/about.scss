@@ -1,3 +1,9 @@
+.about {
+  background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/c_scale,w_1600/v1496971637/sabri-tuzcu-197978_zlhjlv.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .about-content {
   display: flex;
   justify-content: flex-start;
@@ -8,7 +14,7 @@
   height: 600px;
   padding: 50px;
 
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(41, 41, 41, 0.5);
   border-top: 1px solid black;
 
   h3, ul, a {
@@ -21,6 +27,9 @@
     margin-top: 75px;
     margin-bottom: 40px;
     color: #C7F464;
+
+    text-transform: uppercase;
+    letter-spacing: 4px;
   }
 
   h1:hover {
