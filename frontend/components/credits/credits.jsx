@@ -3,7 +3,7 @@ import React from 'react';
 const Credits = () => (
   <div className='credits'>
     <div className='credits-content'>
-      <h1>Acknowledgements</h1>
+      <h1>Credits</h1>
 
       <h4>Disclaimer:</h4>
       <p>

@@ -5,19 +5,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 45px;
+  height: 100px;
   width: 100%;
-  border-top: 1px solid black;
+  border-top: 1px solid lightgray;
 
   z-index: 14;
-  background-color: #a7adba;
+  background-color: whitesmoke;
 }
 
 #audiomiddle {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
+  width: 40%;
 }
 
 #playbar-right {
@@ -32,12 +30,10 @@
 #audiocontrols {
   display: flex;
   justify-content: center;
-  margin: 0 15px;
 
   button {
-    height: 30px;
-    width: 30px;
-    margin: 2px;
+    height: 65px;
+    width: 65px;
     border: none;
     background-size: 60% 60%;
     background-repeat: no-repeat;
@@ -48,8 +44,8 @@
 }
 
 #stopButton {
-  height: 30px;
-  width: 30px;
+  height: 65px;
+  width: 65px;
   border: none;
   background-size: 50% 50%;
   background-repeat: no-repeat;
@@ -59,11 +55,11 @@
 }
 
 .play{background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484852474/play-button_2_eqqtx7.png') ;}
-.stop{background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484782669/letter-x_mgru3x.png') ;}
+.stop{background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1496969364/stop_cxtni2.png') ;}
 .pause{background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484852510/pause-button_pnhkrz.png') ;}
 
 #timeline{
-  width: 50%;
+  width: 80%;
   height: 40px;
   float: left;
 }
@@ -71,12 +67,12 @@
 #time {
   display: flex;
   justify-content: space-between;
-  width: 90px;
-  margin-left: 10px;
+  width: 20%;
 
   input {
     text-align: center;
-    width: 45px;
+    font-size: 24px;
+    width: 100%;
   }
 }
 
@@ -84,22 +80,20 @@
   position: relative;
   width: 10px;
   height: 100%;
-  background-color: #C7F464;
+  background-color: whitesmoke;
   opacity: 0.5;
 }
 
 #track-info {
   display: flex;
   align-items: center;
-  width: 30%;
+  width: 25%;
   height: 100%;
 
   img {
     float: left;
-    height: 35px;
+    height: 100%;
     width: auto;
-    margin: 0 10px;
-    border: 1px solid black;
   }
 
   h5 {
@@ -107,8 +101,10 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    font-size: 15px;
-    text-transform: capitalize;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding-left: 5px;
 
     overflow-x: scroll;
     white-space: nowrap;
@@ -119,12 +115,12 @@
   }
 
   a {
-    width: 80%;
+    width: 65%;
     height: 100%;
   }
 
   h5:hover {
-    text-transform: underline;
-    color: #C7F464;
+    text-decoration: underline;
+    color: rgb(150,150,150);
   }
 }
