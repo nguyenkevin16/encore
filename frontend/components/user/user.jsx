@@ -61,7 +61,7 @@ class User extends React.Component {
         <div className='user-show-header'>
           <UserImage user={user} updateUser={updateUser} currentUser={currentUser} />
         </div>
-        
+
         <div className='user-show-header-details'>
           <UserDetails user={user} updateUser={updateUser} currentUser={currentUser}/>
         </div>
