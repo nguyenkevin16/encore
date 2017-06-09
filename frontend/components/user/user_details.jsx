@@ -56,8 +56,8 @@ class UserDetails extends React.Component {
     return (
       <div className='user-details'>
         <h1>{ user.username }</h1>
-        { this.showButton() }
         <h3>{ user.description }</h3>
+        { this.showButton() }
 
         <Modal
           isOpen={this.state.modalIsOpen}
