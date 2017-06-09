@@ -3,24 +3,22 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 20px 0;
   width: 100%;
   height: 100%;
+  margin: 20px 0;
 
-  overflow: scroll;
+  background-color: whitesmoke;
 }
 
 .track-index-item {
-  display: block;
   position: relative;
+  width: 65%;
+  height: 300px;
+  margin: 25px 0;
 
-  padding: 10px;
-  margin: 5px 20px;
-  width: 85%;
-  height: 210px;
-
-  background: rgba(101, 115, 126, 0.8);
-  border: 1px solid black;
+  background: rgba(60, 60, 65, 1);
+  box-shadow: 0 6px 4px 0 rgba(0,0,0,0.4), 0 0 0 1px rgba(0,0,0,0.2);
+  transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
 
   h3 {
     color: #C7F464;
@@ -29,29 +27,20 @@
   h5 {
     color: white;
   }
-
-  audio {
-    margin: 5px;
-  }
 }
 
 .track-index-item-img {
   float: left;
-  width: 200px;
-  height: 200px;
-  margin: 3px;
-  margin-right: 17px;
-
-  background-color: black;
-  border: 1px solid black;
-
+  width: 300px;
+  height: 300px;
   position: relative;
+  margin-right: 100px;
 
   img {
     height: 100%;
     width: 100%;
 
-    z-index: 9;
+    z-index: 5;
     text-align: center;
   }
 }
@@ -61,18 +50,17 @@
   justify-content: center;
   flex-direction: column;
   height: 100%;
-  // width: 60%;
-  overflow: auto;
+  overflow: scroll;
 
   h3 {
     font-size: 18px;
-    width: 100%;
+    width: 80%;
     margin-bottom: 10px;
   }
 
   h5 {
     font-size: 14px;
-    width: 100%;
+    width: 80%;
   }
 
   a:hover {
@@ -107,10 +95,8 @@
 
 .track-item-overlay {
   position: absolute;
-  height: 202px;
-  width: 202px;
-  top: 13px;
-  left: 13px;
+  height: 300px;
+  width: 300px;
   z-index: 3;
 }
 
@@ -118,10 +104,8 @@
   background: url('https://res.cloudinary.com/nguyenkevin16/image/upload/v1484676444/System/play-button_2_lfji5p.png') center center no-repeat;
   background-color: rgba(0, 0, 0, 0.2);
   position: absolute;
-  height: 202px;
-  width: 202px;
-  top: 13px;
-  left: 13px;
+  height: 300px;
+  width: 300px;
   z-index: 3;
   cursor: pointer;
 }
