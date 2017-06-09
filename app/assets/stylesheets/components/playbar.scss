@@ -5,12 +5,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 45px;
+  height: 100px;
   width: 100%;
-  border-top: 1px solid black;
+  border-top: 1px solid lightgray;
 
   z-index: 14;
-  background-color: #a7adba;
+  background-color: whitesmoke;
 }
 
 #audiomiddle {
@@ -35,8 +35,8 @@
   margin: 0 15px;
 
   button {
-    height: 30px;
-    width: 30px;
+    height: 65px;
+    width: 65px;
     margin: 2px;
     border: none;
     background-size: 60% 60%;
@@ -96,10 +96,8 @@
 
   img {
     float: left;
-    height: 35px;
+    height: 100%;
     width: auto;
-    margin: 0 10px;
-    border: 1px solid black;
   }
 
   h5 {
@@ -107,8 +105,10 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    font-size: 15px;
-    text-transform: capitalize;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding-left: 30px;
 
     overflow-x: scroll;
     white-space: nowrap;

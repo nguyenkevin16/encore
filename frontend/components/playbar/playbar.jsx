@@ -138,7 +138,9 @@ class Playbar extends React.Component {
           <img src={this.props.track.img_url}/>
           <Link to={`tracks/${this.props.track.id}`}>
             <h5>
-              { `${this.props.track.title} - ${this.props.track.user.username}` }
+              { `${this.props.track.title}` }
+              <br/>
+              { `${this.props.track.user.username}` }
             </h5>
           </Link>
         </div>
@@ -200,7 +202,7 @@ class Playbar extends React.Component {
     $timeline.css({
       'background': `url('${waveform}')`,
       'background-repeat': 'no-repeat',
-      'background-size': 'contain',
+      'background-size': '100% 100%',
       'background-position': 'center'
     });
   }
