@@ -23,7 +23,7 @@ Encore is a personal project by Kevin Nguyen.
 ![user-screenshot](./docs/images/encore-user.png)
 
 ### Audio uploading and management
-![track-form-screenshot](./docs/images/encore-track_form.png)
+![track-form-screenshot](./docs/images/encore-trackform.png)
 
 ### Continuous music streaming with waveform
 ![playbar-screenshot](./docs/images/encore-playbar.png)
