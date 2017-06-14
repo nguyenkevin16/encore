@@ -2,34 +2,34 @@
 
 [Encore][encore] is a full-stack web application inspired by [SoundCloud][soundcloud],
 and is built on Ruby on Rails and React.js/Redux. Encore allows users to create,
-stream, and share their music. Encore was designed and built in 9 days.
+stream, and share their music.
 
 Encore is a personal project by Kevin Nguyen.
 
 [encore]: http://www.encore-audio.us
 [soundcloud]: http://soundcloud.com
 
-![welcome-sceenshot](./docs/images/welcome.png)
+![welcome-sceenshot](./docs/images/encore-main.png)
 
 ## Features
 
 ### User accounts with secure authentication
-![login-screenshot](./docs/images/login.png)
+![login-screenshot](./docs/images/encore-login.png)
 
 ### Discover page displaying tracks
-![discover-screenshot](./docs/images/discover.png)
+![discover-screenshot](./docs/images/encore-discover.png)
 
 ### User pages showing all tracks uploaded by a user
-![user-screenshot](./docs/images/user.png)
+![user-screenshot](./docs/images/encore-user.png)
 
 ### Audio uploading and management
-![track-form-screenshot](./docs/images/track_form.png)
+![track-form-screenshot](./docs/images/encore-track_form.png)
 
 ### Continuous music streaming with waveform
-![playbar-screenshot](./docs/images/playbar_2.png)
+![playbar-screenshot](./docs/images/encore-playbar.png)
 
 ### Track pages showing details and comments
-![track-screenshot](./docs/images/track.png)
+![track-screenshot](./docs/images/encore-track.png)
 
 ## Project Design
 
